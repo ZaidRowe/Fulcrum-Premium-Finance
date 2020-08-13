@@ -1,0 +1,215 @@
+/* MAIN FULCRUM FONTS
+   ========================================================================== */
+
+   @font-face {
+    font-family: 'museo100';
+    src: url('web/assets/fonts/museo100-regular-webfont.woff2') format('woff2'),
+         url('web/assets/fonts/museo100-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo300';
+    src: url('web/assets/fonts/museo300-regular-webfont.woff2') format('woff2'),
+         url('web/assets/fonts/museo300-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo500';
+    src: url('web/assets/fonts/museo500-regular-webfont.woff2') format('woff2'),
+         url('web/assets/fonts/museo500-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo700';
+    src: url('/web/assets/fonts/museo700-regular-webfont.woff2') format('woff2'),
+         url('/web/assets/fonts/museo700-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo900';
+    src: url('/web/assets/fonts/museo900-regular-webfont.woff2') format('woff2'),
+         url('/web/assets/fonts/museo900-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+/* Body
+   ========================================================================== */
+   h1 {
+    font-family: 'museo700', 'Roboto', Arial, sans-serif;
+    font-size: 5.333em;
+    color: #007E8C;
+}
+
+h2 {
+    font-family: 'museo700', 'Roboto', Arial, sans-serif;
+    font-size: 4.583em;
+    color: #007E8C;
+}
+
+h3 {
+    font-family: 'museo700', 'Roboto', Arial, sans-serif;
+    font-size: 3em;
+    color: #093C3D;
+}
+
+h4 {
+    font-family: 'museo900', 'Roboto', Arial, sans-serif;
+    font-size: 1.667em;
+    color: #007E8C;
+}
+
+h5 {
+    font-family: 'museo900', 'Roboto', Arial, sans-serif;
+    font-size: 1.667em;
+    color: #093C3D;
+}
+
+p {
+    font-family: 'museo900', 'Roboto', Arial, sans-serif;
+    font-size: 1.667em;
+    color: #3E4545;
+}
+
+
+/* BASIC CONTENT STYLING
+   ========================================================================== */
+
+.section-grey {
+    background-color: #F4F4F4;
+    padding: 50px 0px;
+    width: 100%
+}
+
+.section-grad {
+    background: linear-gradient(269.8deg, #007E8C 0.17%, #0C3A39 99.83%), #007E8C;
+    padding: 50px 0px;
+    width: 100%
+}
+
+.section-contact-form {
+    background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(Fulcrum_Nebula_Med);
+    padding: 50px 0px;
+    width: 100%
+}
+
+.row {
+    margin: auto;
+    width: 80%;
+    max-width: 1080px;
+    padding: 0px;
+    display: flex;
+}
+
+.learn-mre-btn {
+    font-family: 'museo700', 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 0.00855263px;
+    color: #007E8C;
+    background-color: #DEDD00;
+    width: 218px;
+    height: 55px;
+}
+
+.learn-mre-btn:hover {
+    color:  #DEDD00 ;
+    background-color: #007E8C;
+}
+
+
+/* HOME PAGE
+   ========================================================================== */
+
+/* HEADER SECTION */
+
+
+/* LANDING PAGES
+   ========================================================================== */
+
+/* HEADER SECTION */
+
+/* HEADER SECTION */
+#lp_header-section {
+    background-image: url(fulcrum-lp-header-background-image.png);
+    background-size: cover;
+    background-repeat: none;
+    min-height: 870px;
+}
+
+.lp-header-left {
+    background-image: url(fulcrum-lp-header-image-of-representative.png);
+    background-size: auto;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    padding-right: 50px;
+    display: inline-block;
+    margin: 0px;
+    padding: 50px 0px;
+}
+
+.lp-header-right:before {
+    right: -26.5em;
+    background-color: #007E8C;
+    content: '';
+    position: absolute;
+    width: 26.5em;
+    top: 0;
+    bottom: 0;
+}
+
+.lp-header-right {
+    background-color: #007E8C;
+    width: 100%;
+    display: inline-block;
+    margin: 0px;
+    width: 38%;
+    border: none;
+}
+
+.heading-text {
+    font-family: 'museo700', 'Roboto', Arial, sans-serif;
+    font-size: 50px;
+    color: #007E8C;
+}
+
+.tagline {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+
+.lp-header-circle-container {
+    background-image: url(/fulcrum-lp-header-bubble-temp-image.png);
+    background-size: auto;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    height: 400px;
+    z-index: -5;
+}
+
+
+
+/* BENEFITS SECTION 2 */
+.benefit-container {
+    width: 50%;
+    padding: 15px;
+}
+
+.benefit-container img{
+    width: 136px;
+}
