@@ -83,6 +83,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
             'crafttests\\fixtures\\' => 20,
             'craftcms\\oauth2\\client\\' => 23,
             'craft\\redactor\\' => 15,
+            'craft\\contactform\\' => 18,
             'craft\\composer\\' => 15,
             'craft\\' => 6,
             'cebe\\markdown\\' => 14,
@@ -309,6 +310,10 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\redactor\\' => 
         array (
             0 => __DIR__ . '/..' . '/craftcms/redactor/src',
+        ),
+        'craft\\contactform\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/craftcms/contact-form/src',
         ),
         'craft\\composer\\' => 
         array (
@@ -3057,6 +3062,12 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\console\\controllers\\utils\\FixElementUidsController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/utils/FixElementUidsController.php',
         'craft\\console\\controllers\\utils\\PruneRevisionsController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/utils/PruneRevisionsController.php',
         'craft\\console\\controllers\\utils\\RepairController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/utils/RepairController.php',
+        'craft\\contactform\\Mailer' => __DIR__ . '/..' . '/craftcms/contact-form/src/Mailer.php',
+        'craft\\contactform\\Plugin' => __DIR__ . '/..' . '/craftcms/contact-form/src/Plugin.php',
+        'craft\\contactform\\controllers\\SendController' => __DIR__ . '/..' . '/craftcms/contact-form/src/controllers/SendController.php',
+        'craft\\contactform\\events\\SendEvent' => __DIR__ . '/..' . '/craftcms/contact-form/src/events/SendEvent.php',
+        'craft\\contactform\\models\\Settings' => __DIR__ . '/..' . '/craftcms/contact-form/src/models/Settings.php',
+        'craft\\contactform\\models\\Submission' => __DIR__ . '/..' . '/craftcms/contact-form/src/models/Submission.php',
         'craft\\controllers\\AppController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/AppController.php',
         'craft\\controllers\\AssetSettingsController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/AssetSettingsController.php',
         'craft\\controllers\\AssetTransformsController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/AssetTransformsController.php',

@@ -432,6 +432,60 @@
         ]
     },
     {
+        "name": "craftcms/contact-form",
+        "version": "2.2.7",
+        "version_normalized": "2.2.7.0",
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/craftcms/contact-form/zipball/eea67de8fad2507770fdc25fe76bba32924e9e87",
+            "reference": "eea67de8fad2507770fdc25fe76bba32924e9e87",
+            "shasum": ""
+        },
+        "require": {
+            "craftcms/cms": "^3.1.0"
+        },
+        "time": "2020-08-12T12:54:10+00:00",
+        "type": "craft-plugin",
+        "extra": {
+            "name": "Contact Form",
+            "handle": "contact-form",
+            "documentationUrl": "https://github.com/craftcms/contact-form/blob/v2/README.md",
+            "components": {
+                "mailer": "craft\\contactform\\Mailer"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "craft\\contactform\\": "src/"
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Pixel & Tonic",
+                "homepage": "https://pixelandtonic.com/"
+            }
+        ],
+        "description": "Add a simple contact form to your Craft CMS site",
+        "keywords": [
+            "cms",
+            "contact",
+            "craftcms",
+            "form",
+            "yii2"
+        ],
+        "support": {
+            "email": "support@craftcms.com",
+            "issues": "https://github.com/craftcms/contact-form/issues?state=open",
+            "source": "https://github.com/craftcms/contact-form",
+            "docs": "https://github.com/craftcms/contact-form/blob/v2/README.md",
+            "rss": "https://github.com/craftcms/contact-form/commits/v2.atom"
+        }
+    },
+    {
         "name": "craftcms/oauth2-craftid",
         "version": "1.0.0.1",
         "version_normalized": "1.0.0.1",

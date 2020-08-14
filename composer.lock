@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eb8035731d7e0a9807baf2362cde29f8",
+    "content-hash": "42a5197f7d72d8c1b6117058bbc04cba",
     "packages": [
         {
             "name": "cebe/markdown",
@@ -423,6 +423,58 @@
                 "yii2"
             ],
             "time": "2020-07-22T14:02:22+00:00"
+        },
+        {
+            "name": "craftcms/contact-form",
+            "version": "2.2.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/craftcms/contact-form/zipball/eea67de8fad2507770fdc25fe76bba32924e9e87",
+                "reference": "eea67de8fad2507770fdc25fe76bba32924e9e87",
+                "shasum": ""
+            },
+            "require": {
+                "craftcms/cms": "^3.1.0"
+            },
+            "type": "craft-plugin",
+            "extra": {
+                "name": "Contact Form",
+                "handle": "contact-form",
+                "documentationUrl": "https://github.com/craftcms/contact-form/blob/v2/README.md",
+                "components": {
+                    "mailer": "craft\\contactform\\Mailer"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "craft\\contactform\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pixel & Tonic",
+                    "homepage": "https://pixelandtonic.com/"
+                }
+            ],
+            "description": "Add a simple contact form to your Craft CMS site",
+            "keywords": [
+                "cms",
+                "contact",
+                "craftcms",
+                "form",
+                "yii2"
+            ],
+            "support": {
+                "email": "support@craftcms.com",
+                "issues": "https://github.com/craftcms/contact-form/issues?state=open",
+                "source": "https://github.com/craftcms/contact-form",
+                "docs": "https://github.com/craftcms/contact-form/blob/v2/README.md",
+                "rss": "https://github.com/craftcms/contact-form/commits/v2.atom"
+            },
+            "time": "2020-08-12T12:54:10+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",

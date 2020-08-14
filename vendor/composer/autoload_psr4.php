@@ -35,6 +35,7 @@ return array(
     'crafttests\\fixtures\\' => array($vendorDir . '/craftcms/cms/tests/fixtures'),
     'craftcms\\oauth2\\client\\' => array($vendorDir . '/craftcms/oauth2-craftid/src'),
     'craft\\redactor\\' => array($vendorDir . '/craftcms/redactor/src'),
+    'craft\\contactform\\' => array($vendorDir . '/craftcms/contact-form/src'),
     'craft\\composer\\' => array($vendorDir . '/craftcms/plugin-installer/src'),
     'craft\\' => array($vendorDir . '/craftcms/cms/src'),
     'cebe\\markdown\\' => array($vendorDir . '/cebe/markdown'),
