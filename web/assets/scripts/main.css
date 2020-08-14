@@ -81,6 +81,11 @@
 
 /* BASIC CONTENT STYLING
    ========================================================================== */
+.section {
+    background-color: #F4F4F4;
+    padding: 50px 0px;
+    width: 100%
+}
 
 .section-grey {
     background-color: #F4F4F4;
@@ -100,7 +105,7 @@
     width: 100%
 }
 
-.learn-mre-btn {
+.standard-btn {
     font-family: 'museo700', 'Roboto', Arial, sans-serif;
     font-weight: bold;
     font-size: 25px;
@@ -113,7 +118,7 @@
     height: 55px;
 }
 
-.learn-mre-btn:hover {
+.standard-btn:hover {
     color:  #DEDD00 ;
     background-color: #007E8C;
 }
