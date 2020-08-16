@@ -1,0 +1,40 @@
+dateModified: 1597495573
+email:
+  fromEmail: zatonihon@gmail.com
+  fromName: Fulcrum
+  transportType: craft\mail\transportadapters\Sendmail
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+plugins:
+  bootstrap:
+    edition: standard
+    enabled: true
+    schemaVersion: 0.0.0
+    settings:
+      includeJquery: '1'
+      includePopper: '1'
+      production: production
+      useCdn: '1'
+      useEverywhere: '1'
+  contact-form:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  redactor:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.3.0
+system:
+  edition: solo
+  live: true
+  name: Fulcrum
+  schemaVersion: 3.5.12
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: ''
+  photoVolumeUid: null
+  requireEmailVerification: true

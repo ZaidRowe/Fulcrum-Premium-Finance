@@ -1,0 +1,17 @@
+contentColumnType: text
+fieldGroup: 51411613-bd67-417e-8a4d-14de88c84b3f
+handle: summary
+instructions: ''
+name: Summary
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: null
+  code: ''
+  columnType: null
+  initialRows: '1'
+  multiline: '1'
+  placeholder: Summary
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

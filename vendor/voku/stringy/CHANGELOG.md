@@ -1,3 +1,80 @@
+# Changelog
+
+### 6.3.1 (2020-05-24)
+- update vendor (ASCII)
+
+### 6.3.0 (2020-05-14)
+- add "callUserFunction()"
+- update vendor lib "voku/arrayy"
+- move code examples into the code
+- use "voku/simple-php-code-parser" for building the "README" 
+
+### 6.2.2 (2020-02-23)
+- fix "isEqualsCaseInsensitive()" -> thanks to psalm
+- update vendor lib "voku/arrayy"
+
+### 6.2.1 (2020-01-31)
+- update vendor lib "voku/arrayy"
+
+### 6.2.0 (2020-01-04)
+- add "newLineToHtmlBreak()"
+- update vendor lib "voku/arrayy" (support for generics via phpstan & psalm)
+
+### 6.1.0 (2019-12-30)
+- use "@psalm-mutation-free"
+- update vendor (ASCII)
+- update vendor (Arrayy)
+- use CollectionStringy() (optional)
+- add "nth()"
+- add "isSimilar()"
+- add "similarity()"
+- add "isWhitespace()"
+- add "wrap()"
+- add "words()"
+- add "format()"
+- add "chunk()"
+- add "isNotEmpty()"
+- add "isEquals()"
+- add "softWrap()"
+- add "hardWrap()"
+- add "before()"
+- add "after()"
+- add "crypt()"
+- add "bcrypt()"
+- add "encrypt()"
+- add "decrypt()"
+- add "setInternalEncoding()"
+- add "encode()"
+- add "isNumeric()"
+- add "studlyCase()" (pascalCase)
+- add "snakeCase()"
+- add "kebabCase()"
+- add "appendStringy()"
+- add "prependStringy()"
+- add "urlEncodeRaw()"
+- add "urlEncode()"
+- add "urlDecodeRaw()" / "urlDecodeRawMulti()"
+- add "urlDecode()" / "urlDecodeMulti()"
+
+
+### 6.0.2 (2019-11-17)
+- update "Arrayy" (collection lib)
+- fix errors reported by psalm
+
+
+### 6.0.1 (2019-10-14)
+- update "Portable ASCII" from v1.2 -> v1.3
+
+
+### 6.0.0 (2019-09-28)
+- breaking-change: we always use language "en" instead of "de" as default
+- breaking-change: "urlify()" has changed parameter order ($strToLower was replaced with $replacements)
+
+
+### 5.2.0 (2019-09-07)
+- update "slugify" -> use the Portable ASCII lib
+
+
 ### 5.1.1 (2019-08-21)
 - extend "titleize" -> allow to specify what a word is
 - extend "slugify" -> allow to specify replacements in the string

@@ -1,0 +1,25 @@
+fieldLayouts:
+  a213e5db-2bf3-432b-951d-52c8055f0c15:
+    tabs:
+      -
+        elements:
+          -
+            instructions: null
+            label: Title
+            type: craft\fieldlayoutelements\EntryTitleField
+          -
+            fieldUid: c0b16368-e220-4955-80c2-f0f7dd25c6ae
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+          -
+            fieldUid: b8cad510-dd2b-4b4c-bdb8-6750d0696e40
+            required: false
+            type: craft\fieldlayoutelements\CustomField
+        name: 'Landing Page'
+        sortOrder: 1
+handle: insuredLandingPage
+hasTitleField: true
+name: 'Insured Landing Page'
+section: 419bc2c6-ed13-416c-bdb6-399cd37695d6
+sortOrder: 1
+titleFormat: ''

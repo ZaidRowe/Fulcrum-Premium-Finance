@@ -1,0 +1,24 @@
+fieldLayouts:
+  bb622842-3898-4ddf-af65-84330d0559b6:
+    tabs:
+      -
+        fields:
+          9159b08b-1673-4952-b3da-0cf1d6400457:
+            required: false
+            sortOrder: 4
+          91e2f522-5f63-4925-912c-0e2319902571:
+            required: false
+            sortOrder: 2
+          a03b0081-4fdb-4449-b6d6-8fbe66a7e4d2:
+            required: false
+            sortOrder: 5
+          a4fa3b42-fa6c-4256-8fad-7735b3dd7619:
+            required: false
+            sortOrder: 1
+          dba85567-93d0-4b2f-98a8-37b4456a1d30:
+            required: false
+            sortOrder: 3
+        name: 'Social media urls'
+        sortOrder: 1
+handle: socialMedia
+name: 'Social media'

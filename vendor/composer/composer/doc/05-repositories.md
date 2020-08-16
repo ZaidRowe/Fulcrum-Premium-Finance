@@ -11,7 +11,7 @@ understand some of the basic concepts that Composer is built on.
 ### Package
 
 Composer is a dependency manager. It installs packages locally. A package is
-essentially just a directory containing something. In this case it is PHP
+essentially a directory containing something. In this case it is PHP
 code, but in theory it could be anything. And it contains a package
 description which has a name and a version. The name and the version are used
 to identify the package.
@@ -57,9 +57,9 @@ The main repository type is the `composer` repository. It uses a single
 `packages.json` file that contains all of the package metadata.
 
 This is also the repository type that packagist uses. To reference a
-`composer` repository, just supply the path before the `packages.json` file.
+`composer` repository, supply the path before the `packages.json` file.
 In the case of packagist, that file is located at `/packages.json`, so the URL of
-the repository would be `packagist.org`. For `example.org/packages.json` the
+the repository would be `repo.packagist.org`. For `example.org/packages.json` the
 repository URL would be `example.org`.
 
 #### packages
@@ -177,7 +177,7 @@ integrity, for example:
 The file above declares that acme/foo and acme/bar can be found in this
 repository, by loading the file referenced by `providers-url`, replacing
 `%package%` by the vendor namespaced package name and `%hash%` by the
-sha256 field. Those files themselves just contain package definitions as
+sha256 field. Those files themselves contain package definitions as
 described [above](#packages).
 
 These fields are optional. You probably don't need them for your own custom
@@ -305,12 +305,10 @@ After creating an OAuth consumer in the BitBucket control panel, you need to set
 the credentials like this (more info [here](https://getcomposer.org/doc/06-config.md#bitbucket-oauth)):
 ```json
 {
-    "config": {
-        "bitbucket-oauth": {
-            "bitbucket.org": {
-                "consumer-key": "myKey",
-                "consumer-secret": "mySecret"
-            }
+    "bitbucket-oauth": {
+        "bitbucket.org": {
+            "consumer-key": "myKey",
+            "consumer-secret": "mySecret"
         }
     }
 }
@@ -606,7 +604,7 @@ private packages:
 }
 ```
 
-Each zip artifact is just a ZIP archive with `composer.json` in root folder:
+Each zip artifact is a ZIP archive with `composer.json` in root folder:
 
 ```sh
 unzip -l acme-corp-parser-10.3.5.zip
@@ -628,12 +626,14 @@ especially useful when dealing with monolithic repositories.
 
 For instance, if you have the following directory structure in your repository:
 ```
-- apps
-\_ my-app
-  \_ composer.json
-- packages
-\_ my-package
-  \_ composer.json
+...
+├── apps
+│   └── my-app
+│       └── composer.json
+├── packages
+│   └── my-package
+│       └── composer.json
+...
 ```
 
 Then, to add the package `my/package` as a dependency, in your
@@ -659,7 +659,7 @@ be explicitly defined in the package's `composer.json` file. If the version
 cannot be resolved by these means, it is assumed to be `dev-master`.
 
 The local package will be symlinked if possible, in which case the output in
-the console will read `Symlinked from ../../packages/my-package`. If symlinking
+the console will read `Symlinking from ../../packages/my-package`. If symlinking
 is _not_ possible the package will be copied. In that case, the console will
 output `Mirrored from ../../packages/my-package`.
 
@@ -667,6 +667,10 @@ Instead of default fallback strategy you can force to use symlink with
 `"symlink": true` or mirroring with `"symlink": false` option. Forcing
 mirroring can be useful when deploying or generating package from a
 monolithic repository.
+
+> **Note:** On Windows, directory symlinks are implemented using NTFS junctions
+> because they can be created by non-admin users. Mirroring will always be used
+> on versions below Windows 7 or if `proc_open` has been disabled.
 
 ```json
 {

@@ -43,7 +43,7 @@ Required for published packages (libraries).
 
 ### description
 
-A short description of the package. Usually this is just one line long.
+A short description of the package. Usually this is one line long.
 
 Required for published packages (libraries).
 
@@ -104,7 +104,7 @@ Out of the box, Composer supports four types:
   [dedicated article](articles/custom-installers.md).
 
 Only use a custom type if you need custom logic during installation. It is
-recommended to omit this field and have it just default to `library`.
+recommended to omit this field and have it default to `library`.
 
 ### keywords
 
@@ -127,6 +127,12 @@ An URL to the website of the project.
 
 Optional.
 
+### readme
+
+A relative path to the readme document.
+
+Optional.
+
 ### time
 
 Release date of the version.
@@ -145,10 +151,10 @@ The recommended notation for the most common licenses is (alphabetical):
 - BSD-2-Clause
 - BSD-3-Clause
 - BSD-4-Clause
-- GPL-2.0
-- GPL-3.0
-- LGPL-2.1
-- LGPL-3.0
+- GPL-2.0-only / GPL-2.0-or-later
+- GPL-3.0-only / GPL-3.0-or-later
+- LGPL-2.1-only / LGPL-2.1-or-later
+- LGPL-3.0-only / LGPL-3.0-or-later
 - MIT
 
 Optional, but it is highly recommended to supply this. More identifiers are
@@ -172,8 +178,8 @@ An Example for disjunctive licenses:
 ```json
 {
     "license": [
-       "LGPL-2.1",
-       "GPL-3.0+"
+       "LGPL-2.1-only",
+       "GPL-3.0-or-later"
     ]
 }
 ```
@@ -182,7 +188,7 @@ Alternatively they can be separated with "or" and enclosed in parenthesis;
 
 ```json
 {
-    "license": "(LGPL-2.1 or GPL-3.0+)"
+    "license": "(LGPL-2.1-only or GPL-3.0-or-later)"
 }
 ```
 
@@ -237,6 +243,7 @@ Support information includes the following:
 * **source:** URL to browse or download the sources.
 * **docs:** URL to the documentation.
 * **rss:** URL to the RSS feed.
+* **chat:** URL to the chat channel.
 
 An example:
 
@@ -246,6 +253,39 @@ An example:
         "email": "support@example.org",
         "irc": "irc://irc.freenode.org/composer"
     }
+}
+```
+
+Optional.
+
+### funding
+
+A list of URLs to provide funding to the package authors for maintenance and
+development of new functionality.
+
+Each entry consists of the following
+
+* **type:** The type of funding or the platform through which funding can be provided, e.g. patreon, opencollective, tidelift or github.
+* **url:** URL to a website with details and a way to fund the package.
+
+An example:
+
+```json
+{
+    "funding": [
+        {
+            "type": "patreon",
+            "url": "https://www.patreon.com/phpdoctrine"
+        },
+        {
+            "type": "tidelift",
+            "url": "https://tidelift.com/subscription/pkg/packagist-doctrine_doctrine-bundle"
+        },
+        {
+            "type": "other",
+            "url": "https://www.doctrine-project.org/sponsorship.html"
+        }
+    ]
 }
 ```
 
@@ -269,10 +309,11 @@ Example:
 
 All links are optional fields.
 
-`require` and `require-dev` additionally support stability flags ([root-only](04-schema.md#root-package)).
+`require` and `require-dev` additionally support _stability flags_ ([root-only](04-schema.md#root-package)).
+They take the form "_constraint_@_stability flag_". 
 These allow you to further restrict or expand the stability of a package beyond
 the scope of the [minimum-stability](#minimum-stability) setting. You can apply
-them to a constraint, or just apply them to an empty constraint if you want to
+them to a constraint, or apply them to an empty _constraint_ if you want to
 allow unstable packages of a dependency for example.
 
 Example:
@@ -307,7 +348,9 @@ releases for the `doctrine/data-fixtures` package :
 `require` and `require-dev` additionally support explicit references (i.e.
 commit) for dev versions to make sure they are locked to a given state, even
 when you run update. These only work if you explicitly require a dev version
-and append the reference with `#<ref>`.
+and append the reference with `#<ref>`. This is also a
+[root-only](04-schema.md#root-package) feature and will be ignored in
+dependencies.
 
 Example:
 
@@ -406,7 +449,7 @@ simply list it in `provide`.
 #### suggest
 
 Suggested packages that can enhance or work well with this package. These are
-just informational and are displayed after the package is installed, to give
+informational and are displayed after the package is installed, to give
 your users a hint that they could add more packages, even though they are not
 strictly required.
 
@@ -711,7 +754,7 @@ Use `"prefer-stable": true` to enable.
 
 Custom package repositories to use.
 
-By default Composer just uses the packagist repository. By specifying
+By default Composer only uses the packagist repository. By specifying
 repositories you can get packages from elsewhere.
 
 Repositories are not resolved recursively. You can only add them to your main
@@ -731,7 +774,7 @@ The following repository types are supported:
   project.
 * **package:** If you depend on a project that does not have any support for
   composer whatsoever you can define the package inline using a `package`
-  repository. You basically just inline the `composer.json` object.
+  repository. You basically inline the `composer.json` object.
 
 For more information on any of these, see [Repositories](05-repositories.md).
 
@@ -858,6 +901,22 @@ Example:
 
 The example will include `/dir/foo/bar/file`, `/foo/bar/baz`, `/file.php`,
 `/foo/my.test` but it will exclude `/foo/bar/any`, `/foo/baz`, and `/my.test`.
+
+Optional.
+
+### abandoned
+
+Indicates whether this package has been abandoned.
+
+It can be boolean or a package name/URL pointing to a recommended alternative.
+
+Examples:
+
+Use `"abandoned": true` to indicates this package is abandoned.
+Use `"abandoned": "monolog/monolog"` to indicates this package is abandoned and the
+recommended alternative is  `monolog/monolog`.
+
+Defaults to false.
 
 Optional.
 

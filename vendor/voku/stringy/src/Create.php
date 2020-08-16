@@ -19,3 +19,39 @@ if (!\function_exists('Stringy\create')) {
         return new Stringy($str, $encoding);
     }
 }
+
+if (!\function_exists('Stringy\collection')) {
+    /**
+     * @param string[]|Stringy[]|null $input
+     *
+     * @throws \TypeError
+     *
+     * @return CollectionStringy<int,Stringy>
+     */
+    function collection($input = null)
+    {
+        // init
+        $newCollection = new CollectionStringy();
+
+        if ($input === null) {
+            return $newCollection;
+        }
+
+        /**
+         * @psalm-suppress DocblockTypeContradiction
+         */
+        if (!\is_array($input)) {
+            $input = [$input];
+        }
+
+        foreach ($input as &$stringOrStringy) {
+            if (\is_string($stringOrStringy)) {
+                $stringOrStringy = new Stringy($stringOrStringy);
+            }
+
+            $newCollection[] = $stringOrStringy;
+        }
+
+        return $newCollection;
+    }
+}

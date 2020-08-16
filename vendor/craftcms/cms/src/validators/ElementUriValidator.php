@@ -8,7 +8,6 @@
 namespace craft\validators;
 
 use Craft;
-use craft\base\Element;
 use craft\errors\OperationAbortedException;
 use craft\helpers\ElementHelper;
 use yii\base\InvalidConfigException;
@@ -42,7 +41,6 @@ class ElementUriValidator extends UriValidator
         }
 
         // If this is a draft or revision and it already has a URI, leave it alone
-        /** @var Element $model */
         if (
             $model->uri &&
             (
@@ -57,7 +55,7 @@ class ElementUriValidator extends UriValidator
             ElementHelper::setUniqueUri($model);
         } catch (OperationAbortedException $e) {
             // Not a big deal if the element isn't enabled yet
-            if ($model->enabled && $model->enabledForSite) {
+            if ($model->enabled && $model->getEnabledForSite()) {
                 $this->addError($model, $attribute, Craft::t('app', 'Could not generate a unique URI based on the URI format.'));
                 return;
             }

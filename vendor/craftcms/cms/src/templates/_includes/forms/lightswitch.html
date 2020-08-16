@@ -1,3 +1,4 @@
+{%- set id = id ?? ('lightswitch'~random()) %}
 {%- set on = on ?? false %}
 {%- set indeterminate = not on and (indeterminate ?? false) %}
 {%- set value = value ?? '1' %}
@@ -6,9 +7,11 @@
 {%- set toggle = toggle ?? null %}
 {%- set reverseToggle = reverseToggle ?? null %}
 {%- set disabled = (disabled ?? false) ? true : false %}
+{%- set onLabel = onLabel ?? label ?? false %}
+{%- set offLabel = offLabel ?? false %}
 
 {%- set containerAttributes = {
-    id: id ?? null,
+    id: id,
     class: [
         'lightswitch',
         on ? 'on',
@@ -24,7 +27,9 @@
         'target': toggle ?: false,
         'reverse-target': reverseToggle ?: false,
     },
+    role: 'switch',
     aria: {
+        checked: on ? 'true' : (indeterminate ? 'mixed' : 'false'),
         labelledby: labelId ?? null,
     },
 }|merge(containerAttributes ?? [], recursive=true) %}
@@ -33,11 +38,27 @@
     {%- set containerAttributes = containerAttributes|merge(('<div ' ~ block('attr') ~ '>')|parseAttr, recursive=true) %}
 {% endif %}
 
-<div {{ attr(containerAttributes) }}>
-    <div class="lightswitch-container">
-        <div class="handle"></div>
+{% set input %}
+    <div {{ attr(containerAttributes) }}>
+        <div class="lightswitch-container">
+            <div class="handle"></div>
+        </div>
+        {% if name is defined -%}
+            {{ hiddenInput(name, on ? value : (indeterminate ? indeterminateValue : ''), {disabled: disabled}) }}
+        {%- endif %}
     </div>
-    {% if name is defined -%}
-        {{ hiddenInput(name, on ? value : (indeterminate ? indeterminateValue : ''), {disabled: disabled}) }}
-    {%- endif %}
-</div>
+{% endset %}
+
+{% if onLabel is not same as(false) or offLabel is not same as(false) -%}
+    <div class="lightswitch-outer-container">
+        {% if offLabel is not same as(false) %}
+            <label for="{{ id }}" data-toggle="off">{{ offLabel }}</label>
+        {% endif %}
+        {{ input }}
+        {% if onLabel is not same as(false) %}
+            <label for="{{ id }}" data-toggle="on">{{ onLabel }}</label>
+        {% endif %}
+    </div>
+{% else %}
+    {{ input }}
+{%- endif %}

@@ -3,40 +3,40 @@
 
    @font-face {
     font-family: 'museo100';
-    src: url('web/assets/fonts/museo100-regular-webfont.woff2') format('woff2'),
-         url('web/assets/fonts/museo100-regular-webfont.woff') format('woff');
+    src: url('museo100-regular-webfont.woff2') format('woff2'),
+         url('museo100-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo300';
-    src: url('web/assets/fonts/museo300-regular-webfont.woff2') format('woff2'),
-         url('web/assets/fonts/museo300-regular-webfont.woff') format('woff');
+    src: url('museo300-regular-webfont.woff2') format('woff2'),
+         url('museo300-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo500';
-    src: url('web/assets/fonts/museo500-regular-webfont.woff2') format('woff2'),
-         url('web/assets/fonts/museo500-regular-webfont.woff') format('woff');
+    src: url('museo500-regular-webfont.woff2') format('woff2'),
+         url('museo500-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo700';
-    src: url('/web/assets/fonts/museo700-regular-webfont.woff2') format('woff2'),
-         url('/web/assets/fonts/museo700-regular-webfont.woff') format('woff');
+    src: url('museo700-regular-webfont.woff2') format('woff2'),
+         url('museo700-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo900';
-    src: url('/web/assets/fonts/museo900-regular-webfont.woff2') format('woff2'),
-         url('/web/assets/fonts/museo900-regular-webfont.woff') format('woff');
+    src: url('museo900-regular-webfont.woff2') format('woff2'),
+         url('museo900-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -46,7 +46,8 @@
 
 /* Body
    ========================================================================== */
-   h1 {
+
+h1 {
     font-family: 'museo700', 'Roboto', Arial, sans-serif;
     font-size: 5.333em;
     color: #007E8C;
@@ -86,22 +87,29 @@ p {
 /* BASIC CONTENT STYLING
    ========================================================================== */
 
+.section {
+    padding: 100px 0px;
+}
+
 .section-grey {
     background-color: #F4F4F4;
-    padding: 50px 0px;
-    width: 100%
+    padding: 100px 0px;
+    width: 100%;
+    margin: auto;
 }
 
 .section-grad {
     background: linear-gradient(269.8deg, #007E8C 0.17%, #0C3A39 99.83%), #007E8C;
-    padding: 50px 0px;
-    width: 100%
+    padding: 100px 0px;
+    width: 100%;
+    margin: auto;
 }
 
 .section-contact-form {
     background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(Fulcrum_Nebula_Med);
-    padding: 50px 0px;
-    width: 100%
+    padding: 100px 0px;
+    width: 100%;
+    margin: auto;
 }
 
 .row {
@@ -109,10 +117,11 @@ p {
     width: 80%;
     max-width: 1080px;
     padding: 0px;
-    display: flex;
+    width: 100%;
+    margin: auto;
 }
 
-.learn-mre-btn {
+.standard-btn {
     font-family: 'museo700', 'Roboto', Arial, sans-serif;
     font-weight: bold;
     font-size: 25px;
@@ -123,11 +132,13 @@ p {
     background-color: #DEDD00;
     width: 218px;
     height: 55px;
+    padding: 15px 30px;
 }
 
-.learn-mre-btn:hover {
+.standard-btn:hover {
     color:  #DEDD00 ;
     background-color: #007E8C;
+    font-style: none;
 }
 
 
@@ -140,14 +151,11 @@ p {
 /* LANDING PAGES
    ========================================================================== */
 
-/* HEADER SECTION */
-
-/* HEADER SECTION */
+/* SECTION 1 - HEADER */
 #lp_header-section {
     background-image: url(fulcrum-lp-header-background-image.png);
     background-size: cover;
     background-repeat: none;
-    min-height: 870px;
 }
 
 .lp-header-left {
@@ -162,7 +170,7 @@ p {
 }
 
 .lp-header-right:before {
-    right: -26.5em;
+    right: -26.25em;
     background-color: #007E8C;
     content: '';
     position: absolute;
@@ -194,7 +202,7 @@ p {
 
 
 .lp-header-circle-container {
-    background-image: url(/fulcrum-lp-header-bubble-temp-image.png);
+    background-image: url(fulcrum-lp-header-bubble-temp-image.png);
     background-size: auto;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -204,12 +212,377 @@ p {
 
 
 
-/* BENEFITS SECTION 2 */
-.benefit-container {
-    width: 50%;
-    padding: 15px;
+/* SECTION 2 - BENEFITS */
+#lp_section-two {
+    background-image: url(lp-section-2-background-insured.png);
+    background-size: cover;
+    background-repeat: none;
+    min-height: 870px;
 }
 
-.benefit-container img{
+.benefits-header {
+    text-align: center;
+    font-size: 64px;
+    padding: 50px;
+}
+
+.benefits-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.benefit-container {
+    width: 45%;
+    margin: 2.5%;
+    box-sizing: border-box;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.benefit-icon {
     width: 136px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.benefit-text {
+    font-size: 18px;
+    text-align: center;
+    font-family: 'museo500';
+    line-height: 1.2em;
+}
+
+
+/* SECTION 3 - TESTIMONIAL */
+
+.testimonial {
+    margin-bottom: 55px;
+}
+
+.open-quote {
+    width: 50px;
+    left: 0;
+    margin: 2%;
+    margin-bottom: 3%;
+}
+
+.close-quote {
+    width: 50px;
+    float: right;
+    margin-right: 16%;
+    margin-top: -2%;
+}
+
+.testimonial-quote {
+    color: #ffffff;
+    line-height: 1.2em;
+    text-align: left;
+    font-size: 48px;
+    line-height: 55px;
+    padding-left: 5%;
+    padding-right: 15%;
+    margin-bottom: 5%;
+}
+
+.testimonial-name {
+    font-size: 20px;
+    color: #D8DE00;
+    margin-bottom: 5px;
+    padding-left: 5%;
+}
+
+.testimonial-job-description {
+    font-size: 18px;
+    color: #fff;
+    font-family: 'museo100';
+    padding-left: 5%;
+}
+
+
+/* SECTION 4 - WHY USE US */
+
+.why-use-us {
+    margin-bottom: 50px;
+}
+
+.Why-use-us-heading {
+    text-align: center;
+    font-size: 64px;
+    padding-bottom: 25px;
+}
+
+.Why-use-use-text {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'museo100';
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.reason-container {
+    text-align: center;
+    background-image: url(/Users/admin/Desktop/Test/lp-options-section-box.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    height: 305px;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.reason-subheading {
+    padding-top: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'museo300';
+    color: #0C3A39;
+}
+
+.reason-heading {
+    text-align: center;
+    font-size: 50px;
+}
+
+.reason-hr {
+    border: 2px solid #DEDD00;
+    width: 60px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+
+}
+
+.reason-text {
+    font-size: 18px;
+    font-family: 'museo100';
+    line-height: 1.3em;
+}
+
+/* BUBBLE GRAPHIC */
+.bubble-graphic {
+    background-image: url(/Users/admin/Desktop/Test/Fulcrum\ -\ gradient\ circles-02.png);
+    background-size: cover;
+    background-position: center right;
+    width: 26.667em;
+    height: 35em;
+    top: 3120px;
+    z-index: 5;
+    margin-bottom: -210px;
+    margin-top: -210px;
+}
+
+/* SECTION 5 - FINAL PITCH */
+
+.final-heading {
+    text-align: center;
+    font-size: 45px;
+    padding: 0px 5% 25px 5%;
+}
+
+.final-text {
+    text-align: center;
+    font-size: 18px;
+    font-family: 'museo100';
+    padding: 0 5%;
+    margin-bottom: 5%;
+}
+
+.final-pitch-container {
+    text-align: center;
+    margin: auto;
+}
+
+/* LANDING PAGE - FOOTER */
+
+#landingpage-footer-section {
+    padding-top: 80px;
+}
+
+.landingpage-footer-container {
+    width: 100%;
+    display: inline-box;
+}
+
+.lp-footer-logo img{
+    width: 170px;
+    margin-bottom: 60px;
+}
+
+.lp-footer-text {
+    font-size: 12px;
+    color: white;
+    font-family: 'museo100';
+    display: block;
+}
+
+.left-lp-footer-col {
+    display: block;
+    box-sizing: border-box;
+    float: left;
+}
+
+.right-lp-footer-col {
+    background-image: url(/Users/admin/Desktop/Test/Fulcrum\ -\ gradient\ circles-02.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 196px;
+    width: 334px;
+    align-items: center;
+    justify-content: center;
+    display: block;
+    box-sizing: border-box;
+    float: right;
+    margin-top: -62px;
+}
+
+.right-lp-footer-col-heading-container {
+    width: 100%;
+    margin-right: 0px;    
+}
+
+.follow-us {
+    font-family: 'museo500';
+    font-size: 12px;
+    line-height: 1.2em;
+    margin-bottom: 0px;
+    color:  #DEDD00 ;
+    width: 100%;
+    padding-left: 25px;
+    padding-top: 60px;
+}
+
+.lp-footer-social-media-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+
+.lp-footer-social-icon {
+    width: 23px;
+    box-sizing: border-box;
+}
+
+#lp-footer-instagram, #lp-footer-facebook, #lp-footer-twitter, #lp-footer-youtube {
+    margin-right: 35px;
+}
+
+/* Slider */
+
+.slick-slide {
+    margin: 0px 20px;
+}
+
+.slick-slide img {
+    width: 100%;
+}
+
+.slick-slider
+{
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
 }

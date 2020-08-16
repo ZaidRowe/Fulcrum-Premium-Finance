@@ -9,9 +9,8 @@ namespace craft\gql\types\elements;
 
 use Craft;
 use craft\elements\Asset as AssetElement;
-use craft\gql\base\ObjectType;
-use craft\gql\interfaces\Element as ElementInterface;
 use craft\gql\interfaces\elements\Asset as AssetInterface;
+use craft\helpers\Gql;
 use GraphQL\Type\Definition\ResolveInfo;
 
 /**
@@ -44,15 +43,7 @@ class Asset extends Element
 
         if ($fieldName === 'url' && !empty($arguments)) {
             $generateNow = $arguments['immediately'] ?? Craft::$app->getConfig()->general->generateTransformsBeforePageLoad;
-            unset($arguments['immediately']);
-
-            if (!empty($arguments['handle'])) {
-                $transform = $arguments['handle'];
-            } else if (!empty($arguments['transform'])) {
-                $transform = $arguments['transform'];
-            } else {
-                $transform = $arguments;
-            }
+            $transform = Gql::prepareTransformArguments($arguments);
 
             return $source->getUrl($transform, $generateNow);
         }

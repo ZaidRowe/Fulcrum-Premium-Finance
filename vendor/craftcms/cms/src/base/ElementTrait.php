@@ -45,6 +45,12 @@ trait ElementTrait
     public $uid;
 
     /**
+     * @var int|null The ID of the element’s record in the `elements_sites` table
+     * @since 3.5.2
+     */
+    public $siteSettingsId;
+
+    /**
      * @var int|null The element’s field layout ID
      */
     public $fieldLayoutId;
@@ -154,6 +160,7 @@ trait ElementTrait
 
     /**
      * @var int[] The site IDs that the element was just propagated to for the first time.
+     * @since 3.2.9
      */
     public $newSiteIds = [];
 

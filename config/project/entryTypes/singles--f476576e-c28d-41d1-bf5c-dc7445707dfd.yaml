@@ -1,0 +1,7 @@
+handle: singles
+hasTitleField: false
+name: Singles
+section: 040816d2-3482-460a-b74c-bf97c9c51c25
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleLabel: null

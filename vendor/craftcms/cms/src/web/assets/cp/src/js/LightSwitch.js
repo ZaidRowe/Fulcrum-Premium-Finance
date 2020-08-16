@@ -42,11 +42,6 @@ Craft.LightSwitch = Garnish.Base.extend(
             this.on = this.$outerContainer.hasClass('on');
             this.indeterminate = this.$outerContainer.hasClass('indeterminate');
 
-            this.$outerContainer.attr({
-                role: 'checkbox',
-                'aria-checked': this.on ? 'true' : (this.indeterminate ? 'mixed' : 'false'),
-            });
-
             this.addListener(this.$outerContainer, 'mousedown', '_onMouseDown');
             this.addListener(this.$outerContainer, 'keydown', '_onKeyDown');
 
@@ -57,6 +52,19 @@ Craft.LightSwitch = Garnish.Base.extend(
                 onDrag: $.proxy(this, '_onDrag'),
                 onDragStop: $.proxy(this, '_onDragStop')
             });
+
+            if (this.$outerContainer.attr('id')) {
+                $(`label[for="${this.$outerContainer.attr('id')}"`).on('click', () => {
+                    this.$outerContainer.focus();
+                });
+            }
+
+            // Does the input have on/off labels?
+            let $wrapper = this.$outerContainer.parent('.lightswitch-outer-container');
+            if ($wrapper.length) {
+                this.addListener($wrapper.children('label[data-toggle="off"]'), 'click', this.turnOff);
+                this.addListener($wrapper.children('label[data-toggle="on"]'), 'click', this.turnOn);
+            }
         },
 
         turnOn: function(muteEvent) {
@@ -132,7 +140,7 @@ Craft.LightSwitch = Garnish.Base.extend(
 
         onChange: function() {
             this.trigger('change');
-            this.settings.onChange();
+            this.settings.onChange(this.on);
             this.$outerContainer.trigger('change');
         },
 

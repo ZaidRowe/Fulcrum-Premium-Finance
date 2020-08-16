@@ -57,11 +57,10 @@ class SvnDownloader extends VcsDownloader
             throw new \RuntimeException('The .svn directory is missing from '.$path.', see https://getcomposer.org/commit-deps for more information');
         }
 
+        $util = new SvnUtil($url, $this->io, $this->config);
         $flags = "";
-        if (0 === $this->process->execute('svn --version', $output)) {
-            if (preg_match('{(\d+(?:\.\d+)+)}', $output, $match) && version_compare($match[1], '1.7.0', '>=')) {
-                $flags .= ' --ignore-ancestry';
-            }
+        if (version_compare($util->binaryVersion(), '1.7.0', '>=')) {
+            $flags .= ' --ignore-ancestry';
         }
 
         $this->io->writeError(" Checking out " . $ref);
@@ -131,11 +130,11 @@ class SvnDownloader extends VcsDownloader
         $this->io->writeError(sprintf('    <error>The package has modified file%s:</error>', $countChanges === 1 ? '' : 's'));
         $this->io->writeError(array_slice($changes, 0, 10));
         if ($countChanges > 10) {
-            $remaingChanges = $countChanges - 10;
+            $remainingChanges = $countChanges - 10;
             $this->io->writeError(
                 sprintf(
-                    '    <info>'.$remaingChanges.' more file%s modified, choose "v" to view the full list</info>',
-                    $remaingChanges === 1 ? '' : 's'
+                    '    <info>'.$remainingChanges.' more file%s modified, choose "v" to view the full list</info>',
+                    $remainingChanges === 1 ? '' : 's'
                 )
             );
         }
@@ -193,7 +192,7 @@ class SvnDownloader extends VcsDownloader
             $fromRevision = preg_replace('{.*@(\d+)$}', '$1', $fromReference);
             $toRevision = preg_replace('{.*@(\d+)$}', '$1', $toReference);
 
-            $command = sprintf('svn log -r%s:%s --incremental', $fromRevision, $toRevision);
+            $command = sprintf('svn log -r%s:%s --incremental', ProcessExecutor::escape($fromRevision), ProcessExecutor::escape($toRevision));
 
             $util = new SvnUtil($baseUrl, $this->io, $this->config);
             $util->setCacheCredentials($this->cacheCredentials);
