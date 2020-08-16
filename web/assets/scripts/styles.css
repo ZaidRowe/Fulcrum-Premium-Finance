@@ -153,13 +153,13 @@ p {
 
 /* SECTION 1 - HEADER */
 #lp_header-section {
-    background-image: url(fulcrum-lp-header-background-image.png);
+    background-image: url(/web/assets/landingpages/fulcrum-lp-header-background-image.png);
     background-size: cover;
     background-repeat: none;
 }
 
 .lp-header-left {
-    background-image: url(fulcrum-lp-header-image-of-representative.png);
+    background-image: url(/web/assets/landingpages/fulcrum-lp-header-image-of-representative.png);
     background-size: auto;
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -202,7 +202,7 @@ p {
 
 
 .lp-header-circle-container {
-    background-image: url(fulcrum-lp-header-bubble-temp-image.png);
+    background-image: url(/web/assets/landingpages/fulcrum-lp-header-bubble-temp-image.png);
     background-size: auto;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -214,7 +214,7 @@ p {
 
 /* SECTION 2 - BENEFITS */
 #lp_section-two {
-    background-image: url(lp-section-2-background-insured.png);
+    background-image: url(/web/assets/landingpages/lp-section-2-background-insured.png);
     background-size: cover;
     background-repeat: none;
     min-height: 870px;
@@ -322,7 +322,7 @@ p {
 
 .reason-container {
     text-align: center;
-    background-image: url(/Users/admin/Desktop/Test/lp-options-section-box.svg);
+    background-image: url(/web/assets/landingpages/lp-options-section-box.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -360,7 +360,7 @@ p {
 
 /* BUBBLE GRAPHIC */
 .bubble-graphic {
-    background-image: url(/Users/admin/Desktop/Test/Fulcrum\ -\ gradient\ circles-02.png);
+    background-image: url(/web/assets/landingpages/Fulcrum\ -\ gradient\ circles-02.png);
     background-size: cover;
     background-position: center right;
     width: 26.667em;
@@ -422,7 +422,7 @@ p {
 }
 
 .right-lp-footer-col {
-    background-image: url(/Users/admin/Desktop/Test/Fulcrum\ -\ gradient\ circles-02.png);
+    background-image: url(/web/assets/landingpages/Fulcrum\ -\ gradient\ circles-02.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
