@@ -3,40 +3,40 @@
 
    @font-face {
     font-family: 'museo100';
-    src: url('museo100-regular-webfont.woff2') format('woff2'),
-         url('museo100-regular-webfont.woff') format('woff');
+    src: url(/web/assets/fonts/museo100-regular-webfont.woff2) format('woff2'),
+         url(/web/assets/fonts/museo100-regular-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo300';
-    src: url('museo300-regular-webfont.woff2') format('woff2'),
-         url('museo300-regular-webfont.woff') format('woff');
+    src: url(/web/assets/fonts/museo300-regular-webfont.woff2) format('woff2'),
+         url(/web/assets/fonts/museo300-regular-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo500';
-    src: url('museo500-regular-webfont.woff2') format('woff2'),
-         url('museo500-regular-webfont.woff') format('woff');
+    src: url(/web/assets/fonts/museo500-regular-webfont.woff2) format('woff2'),
+         url(/web/assets/fonts/museo500-regular-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo700';
-    src: url('museo700-regular-webfont.woff2') format('woff2'),
-         url('museo700-regular-webfont.woff') format('woff');
+    src: url(/web/assets/fonts/museo700-regular-webfont.woff2) format('woff2'),
+         url(/web/assets/fonts/museo700-regular-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo900';
-    src: url('museo900-regular-webfont.woff2') format('woff2'),
-         url('museo900-regular-webfont.woff') format('woff');
+    src: url(/web/assets/fonts/museo900-regular-webfont.woff2) format('woff2'),
+         url(/web/assets/fonts/museo900-regular-webfont.woff) format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -48,39 +48,51 @@
    ========================================================================== */
 
 h1 {
-    font-family: 'museo700', 'Roboto', Arial, sans-serif;
+    font-family: museo, Roboto, Arial, sans-serif;
     font-size: 5.333em;
     color: #007E8C;
+    font-weight: 700;
+    font-style: bold;
 }
 
 h2 {
-    font-family: 'museo700', 'Roboto', Arial, sans-serif;
+    font-family: museo, Roboto, Arial, sans-serif;
     font-size: 4.583em;
     color: #007E8C;
+    font-weight: 700;
+    font-style: none;
 }
 
 h3 {
-    font-family: 'museo700', 'Roboto', Arial, sans-serif;
+    font-family: museo, Roboto, Arial, sans-serif;
     font-size: 3em;
     color: #093C3D;
+    font-weight: 700;
+    font-style: none;
 }
 
 h4 {
-    font-family: 'museo900', 'Roboto', Arial, sans-serif;
+    font-family: museo, Roboto, Arial, sans-serif;
     font-size: 1.667em;
     color: #007E8C;
+    font-weight: 900;
+    font-style: none;
 }
 
 h5 {
-    font-family: 'museo900', 'Roboto', Arial, sans-serif;
+    font-family: museo, Roboto, Arial, sans-serif;
     font-size: 1.667em;
     color: #093C3D;
+    font-weight: 900;
+    font-style: none;
 }
 
 p {
-    font-family: 'museo900', 'Roboto', Arial, sans-serif;
+    font-family: museo, Roboto, Arial, sans-serif;
     font-size: 1.667em;
     color: #3E4545;
+    font-weight: 900; 
+    font-style: none;
 }
 
 
@@ -89,6 +101,7 @@ p {
 
 .section {
     padding: 100px 0px;
+    margin: auto;
 }
 
 .section-grey {
@@ -113,17 +126,14 @@ p {
 }
 
 .row {
-    margin: auto;
+    margin: auto!important;
     width: 80%;
     max-width: 1080px;
-    padding: 0px;
-    width: 100%;
-    margin: auto;
 }
 
 .standard-btn {
-    font-family: 'museo700', 'Roboto', Arial, sans-serif;
-    font-weight: bold;
+    font-family: museo, roboto, Arial, sans-serif;
+    font-weight: 700;
     font-size: 25px;
     line-height: 30px;
     text-align: center;
@@ -153,9 +163,10 @@ p {
 
 /* SECTION 1 - HEADER */
 #lp_header-section {
-    background-image: url(/web/assets/landingpages/fulcrum-lp-header-background-image.png);
-    background-size: cover;
     background-repeat: none;
+    background:url(/web/assets/landingpages/fulcrum-lp-header-background-image.png) rgba(196, 196, 196, 0.31);
+    background-size:cover;
+    background-blend-mode: multiply;
 }
 
 .lp-header-left {
@@ -224,6 +235,7 @@ p {
     text-align: center;
     font-size: 64px;
     padding: 50px;
+    font-weight: 700!important;
 }
 
 .benefits-container {
@@ -249,7 +261,8 @@ p {
 .benefit-text {
     font-size: 18px;
     text-align: center;
-    font-family: 'museo500';
+    font-family: museo;
+    font-weight: 500;
     line-height: 1.2em;
 }
 
@@ -283,6 +296,7 @@ p {
     padding-left: 5%;
     padding-right: 15%;
     margin-bottom: 5%;
+    font-weight: 700!important;
 }
 
 .testimonial-name {
@@ -309,15 +323,17 @@ p {
 .Why-use-us-heading {
     text-align: center;
     font-size: 64px;
-    padding-bottom: 25px;
+    padding-bottom: 25px; 
+    font-weight: 700!important;
 }
 
 .Why-use-use-text {
     text-align: center;
     font-size: 18px;
-    font-family: 'museo100';
+    font-family: museo;
     padding-left: 15%;
     padding-right: 15%;
+    font-weight: 700!important;
 }
 
 .reason-container {
@@ -342,6 +358,7 @@ p {
 .reason-heading {
     text-align: center;
     font-size: 50px;
+    font-weight:700!important;
 }
 
 .reason-hr {
@@ -354,8 +371,9 @@ p {
 
 .reason-text {
     font-size: 18px;
-    font-family: 'museo100';
+    font-family: museo;
     line-height: 1.3em;
+    font-weight: 100!important;
 }
 
 /* BUBBLE GRAPHIC */
@@ -377,14 +395,16 @@ p {
     text-align: center;
     font-size: 45px;
     padding: 0px 5% 25px 5%;
+    font-weight: 700!important;
 }
 
 .final-text {
     text-align: center;
     font-size: 18px;
-    font-family: 'museo100';
+    font-family: museo;
     padding: 0 5%;
     margin-bottom: 5%;
+    font-weight:700 
 }
 
 .final-pitch-container {
@@ -393,7 +413,7 @@ p {
 }
 
 /* LANDING PAGE - FOOTER */
-
+ 
 #landingpage-footer-section {
     padding-top: 80px;
 }
