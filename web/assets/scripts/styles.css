@@ -91,7 +91,7 @@ p {
     font-family: museo, Roboto, Arial, sans-serif;
     font-size: 1.667em;
     color: #3E4545;
-    font-weight: 900; 
+    font-weight: 100; 
     font-style: none;
 }
 
@@ -119,7 +119,7 @@ p {
 }
 
 .section-contact-form {
-    background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(Fulcrum_Nebula_Med);
+    background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(/web/assets/landingpages/Fulcrum_Nebula_Med);
     padding: 100px 0px;
     width: 100%;
     margin: auto;
@@ -174,7 +174,7 @@ p {
     background-size: auto;
     background-position: bottom right;
     background-repeat: no-repeat;
-    padding-right: 50px;
+    padding-right: 80px;
     display: inline-block;
     margin: 0px;
     padding: 50px 0px;
@@ -200,9 +200,12 @@ p {
 }
 
 .heading-text {
-    font-family: 'museo700', 'Roboto', Arial, sans-serif;
+    font-family: museo, 'Roboto', Arial, sans-serif;
     font-size: 50px;
     color: #007E8C;
+    padding-right: 30px;
+    line-height: 1.2em!important;
+    font-weight: 700;
 }
 
 .tagline {
@@ -210,25 +213,177 @@ p {
     font-weight: 900;
 }
 
-
-
 .lp-header-circle-container {
-    background-image: url(/web/assets/landingpages/fulcrum-lp-header-bubble-temp-image.png);
-    background-size: auto;
-    background-position: bottom left;
-    background-repeat: no-repeat;
-    height: 400px;
-    z-index: -5;
+    height: 370px;
+    z-index: -900;
 }
+
+.lp-header-circle-container img{
+    height: 350px;
+    z-index: -900;
+    margin-left: -100px;
+}
+
+/* LANDING PAGE CONTACT FORM */
+.lp-contact-form-input {
+    width: 100%!important;
+    border: none;
+    background-color: #f4f4f4;
+    height: 40px;
+    color: #007E8C;
+    padding-left: 15px;
+}
+
+.lp-contact-form-label {
+    font-size: 17px;
+    color:#DEDD00;
+    font-weight: 700;
+    margin-top: 15px;
+    font-family: 'museo700';
+    font-family: museo;
+    font-style: none;
+    margin-bottom: 0px;
+}
+
+.lp-contact-form-check-box {
+    width: 20px;
+    height: 20px;
+}
+
+.lp-getintouch-form-container {
+    padding-left: 50px;
+    padding-top: 170px;
+}
+
+.lp-getintouch-heading {
+    font-size: 36px;
+    color:#DEDD00;
+    font-weight: 700;
+}
+
+.lp-getintouch-text {
+    font-size: 15px;
+    font-weight: 100;
+    color: #fff;
+    line-height: 1.2em;
+}
+
+/* The container */
+.lp-contact-form-privacy-policy-accept-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .lp-contact-form-privacy-policy-accept-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    font-size: 15px;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #f4f4f4;;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .lp-contact-form-privacy-policy-accept-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .lp-contact-form-privacy-policy-accept-container input:checked ~ .checkmark {
+    background-color: #DEDD00;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .lp-contact-form-privacy-policy-accept-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .lp-contact-form-privacy-policy-accept-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid #007E8C;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .lp-contact-form-privacy-policy-accept-container {
+    font-size: 16px;
+    color: white;
+    font-family: museo;
+    font-weight: 100;
+    line-height: 1.2em;
+  }
+
+  .privacy-link {
+    color:  #DEDD00;
+  }
+
+  .lp-contact-form-submit-btn {
+    border: none!important;
+    width: 100%;
+    background-color:  #DEDD00;
+    font-family: museo;
+    font-weight: 700;
+    font-style: none;
+    text-align: center;
+    font-size: 26px;
+    color: #007E8C;
+    margin-top: 15px;
+  }
+
+  .lp-contact-form-submit-btn:hover {
+    background-color: #fff;
+    color:  #007E8C;
+  }
 
 
 
 /* SECTION 2 - BENEFITS */
 #lp_section-two {
     background-image: url(/web/assets/landingpages/lp-section-2-background-insured.png);
-    background-size: cover;
-    background-repeat: none;
+    background-size: 45%;
+    background-repeat: no-repeat;
     min-height: 870px;
+    background-position: bottom right;
+}
+
+#lp_broker-section-two {
+    background-image: url(/web/assets/landingpages/lp-section-2-background-broker.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    min-height: 870px;
+    background-position: center right;
 }
 
 .benefits-header {
@@ -237,6 +392,32 @@ p {
     padding: 50px;
     font-weight: 700!important;
 }
+
+.broker-benefits-header {
+    font-family: museo;
+    text-align: left;
+    font-size: 64px;
+    font-weight: 700!important;
+    padding-left: 50px;
+}
+
+.broker-benefit-heading {
+    font-family: museo;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700!important;
+    color:  #007E8C; 
+}
+
+.broker-benefit-text {
+    font-family: museo;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300!important;
+    color: #003744;
+    line-height: 1.2em;
+}
+
 
 .benefits-container {
     display: flex;
@@ -264,6 +445,10 @@ p {
     font-family: museo;
     font-weight: 500;
     line-height: 1.2em;
+}
+
+.benefits-btn {
+    margin-left: 50px;
 }
 
 
@@ -309,12 +494,15 @@ p {
 .testimonial-job-description {
     font-size: 18px;
     color: #fff;
-    font-family: 'museo100';
+    font-family: museo;
     padding-left: 5%;
 }
 
 
 /* SECTION 4 - WHY USE US */
+#lp_section-four {
+    padding-bottom: 35px;
+}
 
 .why-use-us {
     margin-bottom: 50px;
@@ -327,13 +515,13 @@ p {
     font-weight: 700!important;
 }
 
-.Why-use-use-text {
+.Why-use-us-text {
     text-align: center;
     font-size: 18px;
     font-family: museo;
     padding-left: 15%;
     padding-right: 15%;
-    font-weight: 700!important;
+    font-weight: 300!important;
 }
 
 .reason-container {
@@ -376,17 +564,48 @@ p {
     font-weight: 100!important;
 }
 
+/* WHY USE US BROKER */
+.broker-reason-container {
+    text-align: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.broker-reason-heading {
+    text-align: center;
+    font-size: 70px;
+    font-weight:900!important;
+    color:  #007E8C; 
+    line-height: 0.8em;
+}
+
+.broker-reason-subheading {
+    text-align: center;
+    font-size: 50px;
+    font-weight:300!important;
+    color:  #DEDD00; 
+    line-height: 1em;
+}
+
+.broker-reason-text {
+    text-align: center;
+    font-size: 20px;
+    font-weight:100!important;
+    color: #3E4545; 
+    line-height: 1em;
+}
+
+
+
+
+
 /* BUBBLE GRAPHIC */
-.bubble-graphic {
-    background-image: url(/web/assets/landingpages/Fulcrum\ -\ gradient\ circles-02.png);
-    background-size: cover;
-    background-position: center right;
-    width: 26.667em;
-    height: 35em;
-    top: 3120px;
-    z-index: 5;
-    margin-bottom: -210px;
-    margin-top: -210px;
+.bubble-graphic img{
+    width: 25em;
+    z-index: 9999999;
+    margin-bottom: -320px;
+    margin-top: -300px;
+    margin-left: -12em;
 }
 
 /* SECTION 5 - FINAL PITCH */
@@ -404,7 +623,7 @@ p {
     font-family: museo;
     padding: 0 5%;
     margin-bottom: 5%;
-    font-weight:700 
+    font-weight: 300;
 }
 
 .final-pitch-container {
@@ -416,6 +635,7 @@ p {
  
 #landingpage-footer-section {
     padding-top: 80px;
+    padding-bottom: 30px;
 }
 
 .landingpage-footer-container {
@@ -442,7 +662,7 @@ p {
 }
 
 .right-lp-footer-col {
-    background-image: url(/web/assets/landingpages/Fulcrum\ -\ gradient\ circles-02.png);
+    background-image: url(/web/assets/landingpages/Fulcrum-gradient_circles-02.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;

@@ -1,48 +1,59 @@
 {% extends "_layout" %}
-
 {% block content %}
 
 <!-- Landing page section one HEADER -->
     <div id="lp_header-section" class="main-header">
-        <div class="row">
-            <!-- Left Column  -->
-            <div class="lp-header-left col-md-8">
-                
-                <!-- top nav  -->
-                <div style="padding-bottom: 70px" class="lp-top-nav">
-                    <div class="lp-menu-logo">
-                        <a href="" ><img src="/web/assets/landingpages/Fulcrum_Premium_Finance-lp-header-logo.svg"/></a> 
+        <div class="">
+           <div class="row">
+                <!-- Left Column  -->
+               <div class="lp-header-left col-md-8">
+                   
+                    <!-- top nav  -->
+                    <div style="padding-bottom: 70px" class="lp-top-nav">
+                        <div class="lp-menu-logo">
+                       <a href="" ><img src="/web/assets/landingpages/Fulcrum_Premium_Finance-lp-header-logo.svg"/></a> 
+                        </div>
                     </div>
-                </div>
     
-                <!-- Main header text  -->
-                <div class="lp-header-text">
-                    <h5 class="tagline">South Africa’s trusted provider of insurance Premium Financing</h5>
-                    <h1 class="heading-text">The seamless solution for businesses with annual insurance to preserve cash flow.<h1>
-                </div>
-
-
-                <!-- Fulcrum Offering - circles  -->
-                <div class="lp-header-circle-container">
-                    <div class="lp-header-cicrle-container">
-                        <p class="lp-header-cicrle-text"></p>
+                    <!-- Main header text  -->
+                    <div class="lp-header-text">
+                        <h5 class="tagline">South Africa’s trusted provider of insurance Premium Financing</h5>
+                        <h1 class="heading-text">The seamless solution for businesses with annual insurance to preserve cash flow.<h1>
                     </div>
-                </div>
-                
-            </div>
 
-            <!-- Right Column  -->
-            <div class="lp-header-right col-md-4">
 
-                <!-- Fulcrum GET IN TOUCH form  -->
-                <div class="lp-getintouch-form">
-                    <div class="lp-getintouch-form-container">
-                        <h2 class="lp-getintouch-heading"></h2>
-                        <p class="lp-getintouch-text"></p>
-                        <form></form>
+                    <!-- Fulcrum Offering - circles  -->
+                    <div class="lp-header-circle-container">
+                            <img src="/web/assets/landingpages/fulcrum-lp-header-bubble-temp-image.png">
                     </div>
+
                 </div>
+
+                <!-- Right Column  -->
+                <div class="lp-header-right col-md-4">
+
+                    <!-- Fulcrum GET IN TOUCH form  -->
+                    <div class="lp-getintouch-form">
+                        <div class="lp-getintouch-form-container">
+                            <h2 class="lp-getintouch-heading">Get in touch</h2>
+                            <p class="lp-getintouch-text">Our highly experienced team of specialists, backed by best-in-class systems delivers an unparrel </p>
+                            <form class="lp-contact-form" action="/action_page.php">
+                                <label class="lp-contact-form-label" for="fname">Your name:</label><br>
+                                <input class="lp-contact-form-input"type="text" id="fname" name="fname" value=""><br>
+                                <label class="lp-contact-form-label" for="lname">Email:</label><br>
+                                <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br>
+                                <label class="lp-contact-form-label" for="lname">Company:</label><br>
+                                <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br><br>
+                                <label class="lp-contact-form-privacy-policy-accept-container"for="privacy-policy-accept">I agree to Fulcrum's conditions of use and <a class="privacy-link" href="" >privacy policy</a>.
+                                    <input class="lp-contact-form-check-box" type="checkbox" id="Privacy" name="privacy" value="accept">
+                                    <span class="checkmark"></span><br>
+                               </label>
+                                <input class="lp-contact-form-submit-btn" type="submit" value="Lets chat">
+                            </form>
+                        </div>
+                    </div>
         
+                </div>
             </div>
         </div>
     </div>
@@ -58,7 +69,7 @@
 
          <!-- Benefits Points -->
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <div class="benefits-container">
 
                     <!-- Benefits Point One -->
@@ -132,7 +143,7 @@
             <!-- Why use us heading-->
             <div class="why-use-us">
                 <h2 class="Why-use-us-heading">Why use us?</h2>
-                <p class="Why-use-use-text">In times of uncertainty businesses need a seamless and safe solution. Fulcrum remains SA’s most trusted, professional and reliable provider. </p>
+                <p class="Why-use-us-text">In times of uncertainty businesses need a seamless and safe solution. Fulcrum remains SA’s most trusted, professional and reliable provider. </p>
             </div>           
         </div>
 
@@ -173,7 +184,7 @@
         </div>  
     </div>
 
-    <div class="bubble-graphic"></div>
+    <div class="bubble-graphic"><img src="/web/assets/landingpages/Fulcrum-gradient_circles-02.png" ></div>
 
 
 <!-- Landing page section five FINAL PITCH-->
@@ -222,6 +233,7 @@
                 </div>
         </div>
     </div>
+
 
 {% endblock %}
 
