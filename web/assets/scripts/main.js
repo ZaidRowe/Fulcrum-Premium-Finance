@@ -20,3 +20,22 @@ $(document).ready(function(){
         }]
     });
 });
+
+/*  MAIN WEBSITE SIDENAV */
+function openNav() {
+    document.getElementById("menu_mySidenav").style.width = "320px";
+  }
+  
+  function closeNav() {
+    document.getElementById("menu_mySidenav").style.width = "0";
+  }
+
+
+/*  LANDING PAGE CONTACT FORM SIDENAV  */
+function openForm() {
+    document.getElementById("lp-contact_Form").style.width = "500px";
+  }
+  
+  function closeForm() {
+    document.getElementById("lp-contact_Form").style.width = "0";
+  }

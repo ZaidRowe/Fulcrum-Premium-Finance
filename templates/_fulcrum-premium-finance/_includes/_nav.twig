@@ -1,14 +1,37 @@
-<nav class="container mx-auto py-4 px-4" role="navigation" aria-label="Main">
-  {% set firstSegment = craft.app.request.getSegment(1) %}
-  <ul class="flex">
-    <li class="mr-6">
-      <a class="text-blue-600 {{ firstSegment == '' ? 'border-b border-blue-400' }}" href="{{ siteUrl }}">Home</a>
-    </li>
-    <li class="mr-6">
-      <a class="text-blue-600 {{ firstSegment == 'blog' ? 'border-b border-blue-400' }}" href="{{ url('blog') }}">Blog</a>
-    </li>
-    <li class="mr-6">
-      <a class="text-blue-600 {{ firstSegment == 'about' ? 'border-b border-blue-400' }}" href="{{ url('about') }}">About</a>
-    </li>
-  </ul>
-</nav>
+<div class="main-navbar">
+  <div class="row">
+
+    <!-- LEFT COLUMN -->
+    <div class="menubar-left col-md-6">        
+        <!-- FULCRUM LOGO -->
+        <div id="fulcrum-menu-logo" class="navbar-logo"><a class="menu-logo" href="/web/homepage"><img width="150px" src="/web/assets/general/misc/Fulcrum_Premium_Finance-White_logo.svg" alt=""></a></div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="menubar-right col-md-6">
+    <a class="burgermenu" onclick="openNav()"><img width="25px" src="/web/assets/general/misc/fulcrum-premium-finance_burger_menu.svg"></a>
+    </div>
+
+  </div>
+
+  <div id="menu_mySidenav" class="menu_sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="">
+    	    <a class="menu-item" href="/web/about-us">About us</a>
+    	    <a class="menu-item" href="/web/what-we-offer">What we offer</a>
+      	  <a class="menu-item" href="/web/about-us/#meet-the-team">Meet the team</a>
+     	    <a class="menu-item" href="#">Case studies</a>
+      	  <a class="menu-item" href="#">Community</a>
+      	  <a class="menu-item" href="/web/contact-us">Contact us</a>
+      	  <a class="menu-item" href="#">FAQ's</a>
+      	  <a class="menu-item" href="/web/blog">Blog</a>
+        </div>
+        <div class="menu-social-media-icons-container">
+      	  <a id="menu-instagram" class="menu-social-icon"><img src="/web/assets/general/misc/social_media_icons/instagram_icon.svg"></a>
+          <a id="menu-facebook" class="menu-social-icon"><img src="/web/assets/general/misc/social_media_icons/facebook_icon.svg"></a>
+          <a id="menu-twitter" class="menu-social-icon"><img src="/web/assets/general/misc/social_media_icons/twitter_icon.svg"></a>
+          <a id="menu-youtube" class="menu-social-icon"><img src="/web/assets/general/misc/social_media_icons/youtube_icon.svg"></a>
+          <a id="menu-linkedin" class="menu-social-icon"><img src="/web/assets/general/misc/social_media_icons/linkedin_icon.svg"></a>
+        </div>
+      </div>  
+</div>

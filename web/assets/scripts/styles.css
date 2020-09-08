@@ -1,7 +1,7 @@
 /* MAIN FULCRUM FONTS [ START ]
    ========================================================================== */
 
-   @font-face {
+@font-face {
     font-family: 'museo100';
     src: url(museo100-regular-webfont.woff2) format('woff2'),
          url(museo100-regular-webfont.woff) format('woff');
@@ -109,6 +109,13 @@ p {
 
 .section {
     padding: 100px 0px;
+    margin: auto;
+}
+
+.section-white {
+    background-color: #fff;
+    padding: 100px 0px;
+    width: 100%;
     margin: auto;
 }
 
@@ -243,19 +250,225 @@ p {
    ========================================================================== */
 
 
+
+
+
+
+/* SIDENAV MENU [ START ]
+========================================================================== */
+
+.main-navbar {
+    text-align: center;
+    height: 80px;
+    background: transparent;
+    z-index: 9999;
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+}
+
+.main-navbar:hover {
+    background-color:rgba(0, 126, 140, 0.2);
+    background-blend-mode: multiply ;
+}
+
+.navbar-logo {
+    padding-top: 18px;
+    width: 150px;
+    height: 80px;
+}
+
+.menu-logo {
+    width: 150px;
+}
+
+.menu_sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 121, 140, 0.90);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 100px;
+  }
+  
+  .menu_sidenav a {
+    padding: 8px 25px 8px 32px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    text-align: right;
+    font-weight: 300;
+    font-family: museo;
+  }
+  
+  .menu_sidenav a:hover {
+    color: #DEDD00;
+  }
+
+  .burgermenu {
+      position: absolute;
+      padding-top: 25px;
+      right: 0;
+      
+  }
+  
+  .menu_sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 34px;
+    margin-left: 50px;
+    color: #DEDD00;
+    margin-bottom: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .menu_sidenav {padding-top: 15px;}
+    .menu_sidenav a {font-size: 18px;}
+  }
+
+.menu-social-media-icons-container{
+    position: absolute;
+    bottom: 30px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+.menu-social-icon {
+    transition: 0.3s;
+    padding: 3px 3px 3px 3px;
+    width: 30px;
+}
+
+/* SIDENAV MENU [ END ]
+========================================================================== */
+
+
+
+
+
+
+/* CONTACT-FORM (FOOTER) START
+========================================================================== */
+
+.contact-us-footer {
+    background-image: url(/web/assets/general/misc/Fulcrum_Nebula_background.png);
+    background-blend-mode: multiply;
+    background-color: rgba(0, 121, 140, 0.47);
+    background-position: center;
+    background-size: cover;
+}
+
+.contact-us-footer-container {
+    background-color: #ffffff;
+    width: 360px;
+    padding: 40px;
+    text-align: center;
+}
+
+.contact-us-footer-heading {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.2em;
+    color: #007E8C;
+}
+
+.contact-us-footer-input {
+    height: 40px;
+    text-align: center;
+    border: none;
+    background-color: #f2f2f2;
+    color: #003744;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: museo;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.contact-us-footer-submit-btn {
+    background-color: #007E8C;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-family: museo;
+    font-weight: 700;
+    font-size: 17px;
+    border: none;
+    margin: 10px 0px;
+}
+
+.contact-us-footer-submit-btn {
+    background-color: #007E8C;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+}
+
+.contact-us-footer-submit-btn:hover {
+    background-color: #DEDD00;
+    width: 100%;
+    height: 40px;
+    color: #007E8C;
+}
+
+.contact-us-footer-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.3em;
+    padding: 0px 20px;
+    margin-top: 20px;
+    color: #003744;
+}
+
+.contact-us-footer-right-side-header {
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.1em;
+    font-size: 49px;
+    margin-bottom: 35px;
+    letter-spacing: 1px;
+}
+
+.contact-us-footer-right-side-text {
+    color: #DEDD00;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 1.2em;
+    width: 80%;
+}
+
+/* CONTACT-FORM (FOOTER) [ END ]
+   ========================================================================== */
+
+
+
+
+
+
 /* FOOTERS STYLING START
 ========================================================================== */
 
 /*  FOOTER MAIN WEBSITE */
 .footer-section {
-    background: url(Fulcrum-gradient_circles-footer_01.png), linear-gradient(269.8deg, #007E8C 0.17%, #0C3A39 99.83%), #007E8C;;
+    background: url(/web/assets/general/misc/Fulcrum-gradient_circles-footer_01.png), linear-gradient(269.8deg, #007E8C 0.17%, #0C3A39 99.83%), #007E8C;;
     background-repeat: no-repeat;
     background-position: bottom left;
+    background-size: auto;
     padding: 50px 0px;
 }
 
 .fulcrum-footer-logo {
-    width: 80px;
+    width: 120px;
 }
 
 .footer-menu-heading {
@@ -324,7 +537,7 @@ p {
 
 .right-footer-col-heading-container {
     margin-left: -30px;
-    background-image: url(Fulcrum-gradient_circles-02.png);
+    background-image: url(/web/assets/general/misc/Fulcrum-gradient_circles-02.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -377,7 +590,7 @@ p {
 }
 
 .right-lp-footer-col {
-    background-image: url(/web/assets/landingpages/Fulcrum\ -\ gradient\ circles-02.png);
+    background-image: url(/web/assets/general/misc/Fulcrum-gradient_circles-02.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -427,13 +640,22 @@ p {
     box-sizing: border-box;
 }
 
+/* FOOTER STYLING [ END ]
+   ========================================================================== */
 
-/* HOME PAGE
+
+
+
+
+
+
+
+/* HOMEPAGE [ START ]
    ========================================================================== */
 
 /* HOMEPAGE HEADER - SECTION 1 */
 .homepage-header {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1),  rgba(0, 0, 0, 0.1)), url(fulcrum-premium-finance-homepage-header-background.png);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1),  rgba(0, 0, 0, 0.1)), url(/web/assets/general/homepage/fulcrum-premium-finance-homepage-header-background.png);
     background-blend-mode: multiply;
     background-size: cover;
     background-repeat: no-repeat;
@@ -491,19 +713,13 @@ p {
     text-align: center;
 }
 
-.about-us-graphic { 
-}
-
 
 /* WHY CHOOSE US - SECTION 3 */
 .homepage-why-us {
-    background-image: url(lp-section-2-background-insured.png);
+    background-image: url(/web/assets/general/homepage/homepage-section-2-background_why-our-clients-choose-us.png);
     background-repeat: no-repeat;
-    background-position: right center;
-    background-size: contain;
-}
-
-.why-our-clients-container {
+    background-position: center center;
+    background-size: cover;
 }
 
 .why-our-clients-tagline {
@@ -679,7 +895,7 @@ p {
 
 /* OUR PREMIUM FINANCING SOLUTION - SECTION 6 */
 #our-premium-financing {
-    background-image: url(fulcrum-premium-finance-our-solution-background-image.png);
+    background-image: url(/web/assets/general/homepage/fulcrum-premium-finance-our-solution-background-image.png);
     background-repeat: no-repeat;
     background-position-x: 50vw;
     background-size: contain;
@@ -700,30 +916,7 @@ p {
     width: 80%;
 }
 
-.our-premium-btn.standard-btn {
-}
-
-.our-premium-bubble {
-}
-
-.reasons-section.section-grey {
-}
-
-.reason-container.col-md-4 {
-}
-
-.reason-subheading {
-}
-
-.reason-heading {
-}
-
-.reason-hr {
-}
-
-.reason-text {
-}
-
+/*  BUBBLE GRAPHIC */
 .bubble-graphic-homepage img{
     width: 52em;
     z-index: 9999999;
@@ -731,14 +924,6 @@ p {
     margin-top: -24em;
     margin-left: -28em;
 }
-
-.how-to-decide.section {
-
-
-}
-
-
-
 
 /* HOW TO DECIDE - SECTION 7 */
 .how-to-decide-container {
@@ -761,199 +946,74 @@ p {
     font-size: 20px;
     margin-bottom: 65px;
     line-height: 1.2em;
- 
 }
 
 
-
-/* CONTACT US FOOTER - SECTION 8 */
-.contact-us-footer {
-    background-image: url(fulcrum-premium-finance-footer-contact-us-background-image.png);
-    background-position: center;
-    background-size: cover;
-}
-
-.contact-us-footer-container {
-    background-color: #ffffff;
-    width: 360px;
-    padding: 40px;
-    text-align: center;
-}
-
-.contact-us-footer-heading {
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 1.2em;
-    color: #007E8C;
-}
-
-.contact-us-footer-input {
-    height: 40px;
-    text-align: center;
-    border: none;
-    background-color: #f2f2f2;
-    color: #003744;
-    width: 100%;
-    margin-bottom: 10px;
-    font-family: museo;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.contact-us-footer-submit-btn {
-    background-color: #007E8C;
-    width: 100%;
-    height: 40px;
-    color: #fff;
-    font-family: museo;
-    font-weight: 700;
-    font-size: 17px;
-    border: none;
-    margin: 10px 0px;
-}
-
-.contact-us-footer-submit-btn {
-    background-color: #007E8C;
-    width: 100%;
-    height: 40px;
-    color: #fff;
-}
-
-.contact-us-footer-submit-btn:hover {
-    background-color: #DEDD00;
-    width: 100%;
-    height: 40px;
-    color: #007E8C;
-}
-
-.contact-us-footer-text {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.3em;
-    padding: 0px 20px;
-    margin-top: 20px;
-    color: #003744;
-}
-
-.contact-us-footer-heading {
-}
-
-.cont {
-}
-
-.contact-us-footer-submit-btn {
-}
-
-.contact-us-footer-text {
-}
-
-.contact-us-footer-right-side-container {
-}
-
-.contact-us-footer-right-side-header {
-    color: #fff;
-    font-weight: 600;
-    line-height: 1.1em;
-    font-size: 49px;
-    margin-bottom: 35px;
-    letter-spacing: 1px;
-}
-
-.contact-us-footer-right-side-text {
-    color: #DEDD00;
-    font-weight: 100;
-    font-size: 18px;
-    line-height: 1.2em;
-    width: 80%;
-
-}
-
-
-
-
-
-/* HOME PAGE END
+/* HOMEPAGE [ END ]
    ========================================================================== */
 
 
 
 
-/* LANDING PAGES
+
+
+/* LANDING PAGE CONTACT FORM NAV [ START ]
    ========================================================================== */
-   
-/* SECTION 1 - HEADER */
-#lp_header-section {
-    background-repeat: none;
-    background:url(/web/assets/landingpages/fulcrum-lp-header-background-image.png) rgba(196, 196, 196, 0.31);
-    background-size:cover;
-    background-blend-mode: multiply;
-    height: 100vh;
-    overflow: hidden;
-}
 
-.lp-header-left {
-    background-image: url(/web/assets/landingpages/fulcrum-lp-header-image-of-representative.png);
-    background-size: auto;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    padding-right: 80px;
-    display: inline-block;
-    margin: 0px;
-    padding: 50px 0px;
-    height: 100vh;
-
-}
-
-.lp-header-right:before {
-    right: -26.25em;
-    background-color: #007E8C;
-    content: '';
-    position: absolute;
-    width: 26.5em;
+   .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999999999;
     top: 0;
-    bottom: 0;
-}
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
 
-.lp-header-right {
-    background-color: #007E8C;
-    width: 100%;
-    display: inline-block;
-    margin: 0px;
-    width: 38%;
-    border: none;
-    height: 100vh;
-}
 
-.heading-text {
-    font-family: museo, 'Roboto', Arial, sans-serif;
-    font-weight: 700;
-    font-size: 3.8em;
-    color: #007E8C;
-    padding-right: 40px;
-    line-height: 1.1em;
-}
 
-.tagline {
-    font-size: 20px;
-    font-weight: 900;
-    margin-bottom: 20px;;
-}
 
-.lp-header-circle-container {
-    height: 370px;
-    z-index: 650;
 
-}
 
-.lp-header-circle-container img{
-    height: 350px;
-    z-index: 650;
-    margin-left: -100px;
-}
+
+
+
+
+
+
 
 /* LANDING PAGE CONTACT FORM */
 .lp-contact-form-input {
-    width: 100%!important;
+    width: 100%;
     border: none;
     background-color: #f4f4f4;
     height: 40px;
@@ -974,7 +1034,7 @@ p {
 
 .lp-getintouch-form-container {
     padding-left: 50px;
-    padding-top: 170px;
+    padding-top: 210px;
 }
 
 .lp-getintouch-heading {
@@ -1081,14 +1141,102 @@ p {
 
   .lp-contact-form-submit-btn:hover {
     background-color: #fff;
-    color:  #007E8C;
-  }
+    color: #007E8C}
+
+/* LANDING PAGE CONTACT FORM NAV [ END ]
+   ========================================================================== */
+
+
+
+
+
+
+/* LANDING PAGES
+   ========================================================================== */
+   
+/* VIDEO BACKGROUND */
+#myVideo {
+    z-index: -999;
+    position: fixed;
+    Left:0;
+    right: 0;
+    bottom: 0;
+    width: 100vw; 
+    top:0
+}
+
+/* FULCRUM HEADER LOGO */
+.lp-header-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width:100%;
+    z-index: 999;
+}
+
+.lp-header-menu-logo img{
+    width: 25%;
+}
+
+/* SECTION 1 - HEADER */
+#lp_header-section {
+    background-repeat: none;
+    background-color: rgba(0, 126, 140, 0.4);
+    background-blend-mode: multiply;
+    height: 100vh;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.lp-header-container{
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.heading-text {
+    font-family: museo, 'Roboto', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 3.8em;
+    color: #fff;
+    padding-right: 40px;
+    line-height: 1.1em;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.header-btn {
+    text-align: center;
+}
+
+.lp-header-circle-container {
+    height: 370px;
+    z-index: 650;
+}
+
+.lp-header-circle-container img{
+    height: 350px;
+    z-index: 650;
+    margin-left: -100px;
+}
 
 
 
 /* SECTION 2 - BENEFITS */
 #lp-section-two-second-container {
-    background-image: url(/web/assets/landingpages/lp-sectn-2-background-insured-client.png);
+    background-image: url(/web/assets/landingpages/insured/lp-sectn-2-background-insured-client.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -1096,7 +1244,7 @@ p {
 }
 
 #lp_broker-section-two {
-    background-image: url(/web/assets/landingpages/lp-section-2-background-broker.png);
+    background-image: url(/web/assets/landingpages/broker/lp-section-2-background-broker.png);
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 870px;
@@ -1219,6 +1367,7 @@ p {
 
 /* SECTION 4 - WHY USE US */
 #lp_section-four {
+    background-color: #fff;
     padding-bottom: 35px;
 }
 
@@ -1244,7 +1393,7 @@ p {
 
 .reason-container {
     text-align: center;
-    background-image: url(/web/assets/landingpages/lp-options-section-box.svg);
+    background-image: url(/web/assets/landingpages/insured/lp-options-section-box.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto;
@@ -1321,9 +1470,13 @@ p {
 .bubble-graphic img{
     width: 25em;
     z-index: 9999999;
-    margin-bottom: -320px;
-    margin-top: -300px;
+    margin-bottom: -350px;
+    margin-top: -350px;
     margin-left: -12em;
+}
+
+.bubble-graphic {
+    position:sticky;
 }
 
 /* SECTION 5 - FINAL PITCH */
@@ -1351,6 +1504,11 @@ p {
 
 
 
+
+
+
+
+  
 
 
 

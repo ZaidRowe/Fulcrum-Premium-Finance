@@ -1,0 +1,56 @@
+{% extends "_layout"%}
+{% block content %}
+
+<!-- CONTACT US - HEADER SECTION-->
+<div id="contact-us-header-section" class="main-header animate__backInLeft">
+    <div class="row">
+        
+        <!-- LEFT COLUMN -->
+        <div class="contact-us-left col-md-8">
+    
+            <!-- MAIN HEADER TEXT  -->
+            <div class="lp-header-text">
+                <h5 class="tagline">South Africa’s trusted provider of insurance Premium Financing</h5>
+                <h1 class="heading-text">A trusted and attractive financing solution for businesses with complex or costly annualised insurance.<h1>
+            </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN  -->
+        <div class="contact-us-right col-md-4">
+
+            <!-- FULCRUM GET IN TOUCH FORM  -->
+            <div class="contact-us-getintouch-form">
+                <div class="contact-us-form-container">
+                    <h2 class="contact-us-heading">Get in touch</h2>
+                    <p class="contact-us-text">Our highly experienced team of specialists, backed by best-in-class systems delivers an unparrel </p>
+                    <form class="contact-us-form" action="/action_page.php">
+                        <label class="contact-us-form-label" for="fname">Your name:</label><br>
+                            <input class="contact-us-form-input"type="text" id="fname" name="fname" value=""><br>
+                        <label class="contact-us-form-label" for="lname">Email:</label><br>
+                            <input class="contact-us-form-input"type="text" id="lname" name="lname" value=""><br>
+                        <label class="contact-us-form-label" for="lname">Company:</label><br>
+                            <input class="contact-us-form-input"type="text" id="lname" name="lname" value=""><br><br>
+                        <label class="contact-us-form-privacy-policy-accept-container"for="privacy-policy-accept">I agree to Fulcrum's conditions of use and <a class="privacy-link" href="" >privacy policy</a>.
+                            <input class="contact-us-form-check-box" type="checkbox" id="Privacy" name="privacy" value="accept">
+                                <span class="checkmark"></span><br>
+                        </label>
+                        <input class="contact-us-form-submit-btn" type="submit" value="Lets chat">
+                    </form>
+                </div>
+            </div>
+        
+        </div>
+    
+    </div>
+</div>
+
+{% include "_fulcrum-premium-finance/_includes/_footer" %}
+{% endblock %}
+    
+
+
+
+
+
+

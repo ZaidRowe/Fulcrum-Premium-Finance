@@ -1,11 +1,13 @@
+{% extends "_layout"%}
+{% block content %}
 <!-- HEADER - Section 1-->
-<div class="homepage-header section">
+<div id="homepage" class="homepage-header section animate__animated animate__slideInRight">
     <div class="row">
 
         <!-- Homepage heading -->
-        <div class="homepage-header-container">
-            <h1>South Africa's trusted provider of insurance Premium Financing</h1>
-            <p>Fulcrum is the largest an most reputable solutions within the South African marketplace</p>
+        <div id="homepage-header-container" class="col-md-8">
+            <h1 class="homepage-heading animate__animated animate__zoomIn animate__delay-1s">South Africa's <br>trusted provider<br> of insurance Premium Financing</h1>
+            <p class="homepage-header-text animate__animated animate__zoomIn animate__delay-2s">Fulcrum is the largest and most reputable provider of Premium Finance solutions within the South African marketplace.</p>
             
             <!-- Homepage Header Buttons -->
             <div class="homepage-header-buttons-container">
@@ -28,12 +30,12 @@
     <div class="row">
 
         <!-- FULCRUM LOGO -->
-        <div class="about-us-fulcrum-logo"><img src="" alt=""></div>
+        <div class="about-us-fulcrum-logo"><img src="/web/assets/general/homepage/fulcrun_homepage-about-us-logo.svg" alt=""></div>
         
         <!-- ABOUT US BUBBLE GRAPHIC -->
         <div class="about-us-graphic-container">
             <div class="about-us-graphic">
-                <img src="">
+                <img src="/web/assets/general/homepage/home-page-about-us-temp-image.png">
             </div>
         </div>
 
@@ -42,35 +44,35 @@
 
 <!-- WHY OUR CLIENTS CHOOSE US - Section 3 -->
 <div class="homepage-why-us section-grey">
-    <div clas="row">    
-        <div class="col-md-8">
+    <div class="row">    
+        <div class="col-md-6">
 
             <!-- WHY OUR CLIENTS CHOOSE US - Header -->
             <div class="why-our-clients-container">
-                <h3 class="why-our-clients-tagline"></h3>
-                <h2 class="why-our-clients-heading"></h2>
-                <p class="why-our-clients-text"></p>
+                <h3 class="why-our-clients-tagline">South Africa’s trusted provider of insurance Premium Financing</h3>
+                <h2 class="why-our-clients-heading">Why our clients choose us</h2>
+                <p class="why-our-clients-text">Our highly experienced team of specialists, backed by best-in-class systems, delivers an unparalleled experience to discerning clients.</p>
             </div>
 
             <!-- WHY OUR CLIENTS CHOOSE US - Reasona container -->
             <div class="why-our-clients-reasons-container">
 
                 <!-- WHY OUR CLIENTS CHOOSE US - Reason 1 -->
-                <div class="why-our-clients-reason-one"> 
-                    <img src="">
-                    <p></p>
+                <div class="why-our-clients-reason"> 
+                    <img class="why-our-clients-icon" src="/web/assets/general/homepage/why-our-clients-icons/why-our-clients-choose-us_icon-1.svg">
+                    <p class="why-our-clients-reason-text">Frees up cash flow for reinvestment in operations</p>
                 </div>
 
                 <!-- WHY OUR CLIENTS CHOOSE US - Reason 2 -->
-                <div class="why-our-clients-reason-one"> 
-                    <img src="">
-                    <p></p>
+                <div class="why-our-clients-reason"> 
+                    <img class="why-our-clients-icon" src="/web/assets/general/homepage/why-our-clients-icons/why-our-clients-choose-us_icon-2.svg">
+                    <p class="why-our-clients-reason-text">Enables leverage at attractive, sustainable rates</p>
                 </div>
 
                 <!-- WHY OUR CLIENTS CHOOSE US - Reason 3 -->
-                <div class="why-our-clients-reason-one"> 
-                    <img src="">
-                    <p></p>
+                <div class="why-our-clients-reason"> 
+                    <img class="why-our-clients-icon" src="/web/assets/general/homepage/why-our-clients-icons/why-our-clients-choose-us_icon-3.svg">
+                    <p class="why-our-clients-reason-text">Claim sustantial VAT refunds upfront</p>
                 </div>
 
             </div>
@@ -86,32 +88,32 @@
 
 <!-- WHAT ARE THE BENEFITS - Section 4 -->
 <div class="homepage-benefits section">
-    <div clas="row">
+    <div class="row">
 
         <div class="homepage-benefits-container">
 
             <!-- Benefits header -->
-            <h2 class="hompage-benefits-heading"><h2>
+            <h2 class="hompage-benefits-heading">What are the benefits of <br>Premium Financing for brokers?<h2>
 
             <!-- Benfits points -->
             <div class="hompage-benefits-point-container">
                 
                 <div class="homepage-benefit">
-                    <img class="homepage-benefit-icon" src="">
-                    <h2 class="homepage-benfits-header"></h2>
-                    <p class="homepage-benefit-text"></p>
+                    <img class="homepage-benefit-icon" src="/web/assets/general/homepage/benefit-icons/fulcrum-premium-finance_benefits-icon-1.svg">
+                    <h2 class="homepage-benfits-header">Financial Benefit</h2>
+                    <p class="homepage-benefit-text">Brokers will receive their full annual fees and commissions upfront.</p>
                 </div>
 
                 <div class="homepage-benefit">
-                    <img class="homepage-benefit-icon" src="">
-                    <h2 class="homepage-benfits-header"></h2>
-                    <p class="homepage-benefit-text"></p>
+                    <img class="homepage-benefit-icon" src="/web/assets/general/homepage/benefit-icons/fulcrum-premium-finance_benefits-icon-2.svg">
+                    <h2 class="homepage-benfits-header">Client retention</h2>
+                    <p class="homepage-benefit-text">Financed clients are less susceptible to being poached by other Brokers during the term of the policy.</p>
                 </div>
 
                 <div class="homepage-benefit">
-                    <img class="homepage-benefit-icon" src="">
-                    <h2 class="homepage-benfits-header"></h2>
-                    <p class="homepage-benefit-text"></p>
+                    <img class="homepage-benefit-icon" src="/web/assets/general/homepage/benefit-icons/fulcrum-premium-finance_benefits-icon-3.svg">
+                    <h2 class="homepage-benfits-header">Reduced administration</h2>
+                    <p class="homepage-benefit-text">Fulcrum handles the debit orders and credit control collections, covered</p>
                 </div>
             
             </div>
@@ -122,45 +124,224 @@
 
 <!-- TESTIMONIALS - Section 5 -->
 <div class="homepage-testimonials section-grad">
+
     <div class="row">
 
-        <div id="testimonial-carousel" class="carousel slide" data-ride="carousel">
-                        
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#testimonial-carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#testimonial-carousel" data-slide-to="1"></li>
-                <li data-target="#testimonial-carousel" data-slide-to="2"></li>
-            </ol>
+        <div class="client-testimonial-header">
+            <h2 class="client-testimonial-heading">People talk about us</h2>
+        </div>
+
+    </div>
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+        <div class="row">
 
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="la.jpg" alt="Los Angeles">
+        
+                    <div class="testimonials-container">
+                        <div class="testimonial-image">
+                            <img src="/web/assets/general/homepage/client-testimonials/Client-profile-image-01.png" alt="Client-profile-image-01">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="client-name">Client Name</h3>
+                            <p class="client-testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h4 class="client-company">Amazon</h4>
+                        </div>
+                    </div> 
+
+                    <div class="testimonials-container-right">
+                        <div class="testimonial-image">
+                            <img src="/web/assets/general/homepage/client-testimonials/Client-profile-image-02.png" alt="Client-profile-image-02">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="client-name">Client Name</h3>
+                            <p class="client-testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h4 class="client-company">Amazon</h4>
+                        </div>
+                    </div>    
+
                 </div>
 
                 <div class="item">
-                    <img src="chicago.jpg" alt="Chicago">
+
+                    <div class="testimonials-container">
+                        <div class="testimonial-image">
+                            <img src="/web/assets/general/homepage/client-testimonials/Client-profile-image-02.png" alt="Client-profile-image-02">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="client-name">Client Name</h3>
+                            <p class="client-testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h4 class="client-company">Eskom</h4>
+                        </div>
+                    </div> 
+                    
+                    <div class="testimonials-container-right">
+                        <div class="testimonial-image">
+                            <img src="/web/assets/general/homepage/client-testimonials/Client-profile-image-01.png" alt="Client-profile-image-01">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="client-name">Client Name</h3>
+                            <p class="client-testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h4 class="client-company">Amazon</h4>
+                        </div>
+                    </div>
+
                 </div>
 
+
                 <div class="item">
-                    <img src="ny.jpg" alt="New York">
-                </div>
+
+                    <div class="testimonials-container">
+                        <div class="testimonial-image">
+                            <img src="/web/assets/general/homepage/client-testimonials/Client-profile-image-01.png" alt="Client-profile-image-01">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="client-name">Client Name</h3>
+                            <p class="client-testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h4 class="client-company">Eskom</h4>
+                        </div>
+                    </div> 
+                    
+                    <div class="testimonials-container-right">
+                        <div class="testimonial-image">
+                            <img src="/web/assets/general/homepage/client-testimonials/Client-profile-image-01.png" alt="Client-profile-image-01">
+                        </div>
+                        <div class="testimonial-content">
+                            <h3 class="client-name">Client-name</h3>
+                            <p class="client-testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h4 class="client-company">Amazon</h4>
+                        </div>
+                    </div>
+
+                </div>   
             </div>
+        </div>
+    
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+        <div class="row">
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+
+        </div>
+
+        <div class="row">
 
             <!-- Left and right controls -->
-            <a class="left carousel-control" href="testimonial-carousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
             
-            <a class="right carousel-control" href="testimonial-carousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
+        </div>    
+
+</div>
+
+
     </div>
 </div>
+
+<!-- OUR PREMIUM FINANCING SOLUTION - Section 6 -->
+<div id="our-premium-financing" class="section">
+    <div class="row">
+        
+        <!-- Left Column -->
+        <div class="col-md-6">
+            <h2 class="our-premium-heading">Our Premium Financing solution</h2>
+            <p class="our-premium-text">Our simple, established and independently funded financing solution is provided at sustainable rates that still beat the bank and undercut the premiums charged by insurers themselves. </p>
+            <a href="" class="our-premium-btn standard-btn">Learn more</a>
+        </div>
+
+        <!-- Bubble graphic -->
+        <div class="our-premium-bubble">
+            <img src="">
+        </div>
+    
+    </div>
+</div>
+
+<!-- REASONS - Section 7 -->
+<div class="reasons-section section-grey">
+    <div class="row">
+
+        <!-- Reason one -->
+        <div class="reason-container col-md-4">
+            <div id="reason-one">
+                <h4 class="reason-subheading">SAVINGS</h4>
+                <h2 class="reason-heading">Over R20k</h2>
+                <hr class="reason-hr"/>
+                <p class="reason-text">Average annual savings for brokers and business who swich to Premium Financing</p>
+            </div>     
+        </div>
+
+        <!-- Reason two -->
+        <div class="reason-container col-md-4">
+            <div id="reason-two">
+                <h4 class="reason-subheading">CLIENTS</h4>
+                <h2 class="reason-heading">2 800+</h2>
+                <hr class="reason-hr"/>
+                <p class="reason-text">People trust us to insure what’s important to them</p>
+            </div>     
+        </div>
+
+        <!-- Reason three -->
+        <div class="reason-container col-md-4">
+            <div id="reason-three">
+                <h4 class="reason-subheading">BROKERS</h4>
+                <h2 class="reason-heading">80+</h2>
+                <hr class="reason-hr"/>
+                <p class="reason-text">Brokers rely on us to assist their clients in aquiring the best Premium Finance solution</p>
+            </div>     
+        </div>
+
+    </div>   
+</div>
+
+<!-- BUBBLE GRAPHIC-->
+<div class="bubble-graphic-homepage"><img src="/web/assets/general/misc/Fulcrum-gradient_circles-03.png" ></div>
+
+<!-- HOW TO DECIDE - Section 8 -->
+<div class="how-to-decide section">
+    <div class="row">
+        
+        <!-- HEADING -->
+        <div class="how-to-decide-container">
+            <h2 class="how-to-decide-heading">How to decide if Premium Finance is right for you?</h2>
+            <p class="how-to-decide-text">In times of uncertainty businesses need a seamless and safe solution. Fulcrum remains SA’s most trusted, professional and reliable provider. </p>
+            <a href="" class="how-to-decide-letstalk-btn standard-btn">Lets talk</a>
+        </div>
+
+        <!-- Client logo Carousel -->
+        <div class="container">
+            <section class="customer-logos slider">
+                <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-1-grey.svg"></div>
+                <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-2-grey.svg"></div>
+                <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-3-grey.svg"></div>
+                <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-4-grey.svg"></div>
+                <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-5-grey.svg"></div>
+                <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-6-grey.svg"></div>
+                <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-1-grey.svg"></div>
+                <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-2-grey.svg"></div>
+            </section>
+        </div>
+    
+    </div>
+</div>
+{% include "_fulcrum-premium-finance/_includes/_contact-form" %}
+{% include "_fulcrum-premium-finance/_includes/_footer" %}
+{% endblock %}
 
 
 
