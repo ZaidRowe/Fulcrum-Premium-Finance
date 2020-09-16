@@ -17,10 +17,10 @@
                     <label class="lp-contact-form-label" for="lname">Contact number:</label><br>
                     <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br>
                     <label class="lp-contact-form-label" for="lname">Company:</label><br>                                <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br><br>
-                    <label class="lp-contact-form-privacy-policy-accept-containe">I agree to Fulcrum's conditions of use and <a class="privacy-link" href="" >privacy policy</a>.
+                    <!--<label class=" ">I agree to Fulcrum's conditions of use and <a class="privacy-link" href="" >privacy policy</a>.
                         <input class="" type="checkbox" id="Privacy" name="privacy" value="accept" checked="">
                         <span class="checkmark"></span><br>
-                    </label>
+                    </label> -->
                     <input class="lp-contact-form-submit-btn" type="submit" value="Lets chat">
                 </form>
             </div>
@@ -40,8 +40,8 @@
 
 <!-- FULCRUM HEADER LOGO -->
 <div class="lp-header-logo">
-    <div class="lp-header-logo-container animate__animated animate__fadeInLeft animate__delay-2s">
-        <a class="lp-header-menu-logo" href="#"><img class="fulcrum-lp-logo" src="/web/assets/landingpages/Fulcrum-Premium-Finance_HoldingShape_TopLeft_02.png"/></a> 
+    <div class="lp-header-logo-container ">
+        <a class="lp-header-menu-logo animate__animated animate__fadeInLeft animate__delay-2s" href="#"><img class="fulcrum-lp-logo" src="/web/assets/general/misc/Fulcrum_Premium_Finance-White_logo.svg"/></a> 
     </div>
 </div>
 
@@ -62,21 +62,29 @@
                 <span class="header-btn standard-btn animate__animated animate__zoomIn animate__delay-1s" onclick="openForm()">Find out more</span>
             </div>
 
-            <!-- Fulcrum Offering - circles 
-            <div class="lp-header-circle-container animate__animated animate__zoomIn animate__delay-5s">
-                <img src="/web/assets/landingpages/fulcrum-lp-header-bubble-temp-image.png">
-            </div> -->
-
         </div>
     </div>
 
 </div>
 
+<!-- ABOUT US - Section 2-->
+<div class="homepage-about-us section-grey">
+    <div class="row">
+        
+        <!-- ABOUT US BUBBLE GRAPHIC -->
+        <div class="about-us-graphic-container">
+            <div class="about-us-graphic">
+                <img src="/web/assets/general/homepage/home-page-about-us-temp-image.png">
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
 <!--********* BROKER LANDING SECTION-2 BENEFITS **********-->
 
-    <div id="lp_broker-section-two" class="section animate__animated animate__slideInRight">
+    <div id="lp_broker-section-two" class="section-grey">
 
         <!-- Benefits Heading -->
         <div class="row">
@@ -123,7 +131,7 @@
         
         <!-- Benefits LETS CHAT button -->
         <div class="row">
-            <a class="benefits-btn standard-btn animate__animated animate__zoomIn animate__delay-1s" href="#lp_header-section" >Lets Chat</a>
+            <a class="benefits-btn standard-btn animate__animated animate__zoomIn animate__delay-1s" onclick="openForm()" >Lets Chat</a>
         </div>
 
     </div>
@@ -131,7 +139,7 @@
 
 
 <!-- Landing page section three TESTIMONIAL-->
-    <div id="lp_section-four" class="section-grad animate__animated animate__slideInRight ">
+    <div id="lp_section-four" class="section-grad">
         <div class="row">
 
             <!--Testimonial-->
@@ -163,7 +171,7 @@
     </div>
 
 <!-- Landing page section four WHY USE US-->
-    <div id="lp_section-four" class="section animate__animated animate__zoomIn animate__delay-1s">
+    <div id="lp_section-four" class="section">
 
         <div class="row">
             <!-- Why use us heading-->
@@ -207,22 +215,39 @@
         </div>  
     </div>
 
-    <div class="bubble-graphic animate__animated animate__zoomIn animate__delay-1s"><img src="/web/assets/general/misc/Fulcrum-gradient_circles-02.png" ></div>
+    <div class="bubble-graphic"><img class="animate__animated animate__zoomIn animate__delay-1s" src="/web/assets/general/misc/Fulcrum-gradient_circles-02.png" ></div>
+
+<!-- Landing page section six HOW WE ADD IT ALL UP-->
+    <div id="lp_section-six" class="">
+        <div class="how-we-add-it-up_container animate__animated animate__slideInRight">
+            <div class="row">
+            
+                <!-- Final Pitch text -->
+                <div class="how-add-it-up-text-container">
+                    <h2 class="how-add-it-up-heading animate__animated animate__zoomIn animate__delay-1s">How we add it all up</h2>  
+                </div>
+        
+            </div>
+        </div>    
+    </div>
+
 
 
 <!-- Landing page section five FINAL PITCH-->
-    <div id="lp_section-five" class="section-grey animate__slideInRight">
+    <div id="lp_section-five" class="section-grey">
             <div class="row">
             
                 <!-- Final Pitch text -->
                 <div class="final-pitch-container">
                     <h2 class="final-heading animate__animated animate__zoomIn animate__delay-1s">A trusted and attractive financing solution for businesses with complex or costly annualised insurance.</h2>
                     <p class="final-text animate__animated animate__zoomIn animate__delay-1s">Where your clients have multiple lines of insurance with different insurers or where those insurers require premiums to be paid annually, Premium Finance may be the only solution.</p>
-                    <a class="contact-btn standard-btn animate__animated animate__zoomIn animate__delay-2s" href="#lp_header-section">Contact us today</a>
+                    <a class="contact-btn standard-btn animate__animated animate__zoomIn animate__delay-2s" onclick="openForm()">Contact us today</a>
                 </div>
         
             </div>
     </div>
+
+
 
 {% include "_fulcrum-premium-finance/_includes/_landingpage-footer" %}
 {% endblock %}

@@ -1,66 +1,94 @@
 {% extends "_layout" %}
 {% block content %}
 
-<!-- Landing page section one HEADER -->
-    <div id="lp_header-section" class="main-header animate__animated animate__fadeInRight">
-        <div class="">
-           <div class="row">
-                <!-- Left Column  -->
-               <div class="lp-header-left col-md-8 animate__animated animate__slideInUp animate__delay-1s">
-                   
-                    <!-- top nav  -->
-                    <div style="padding-bottom: 70px" class="lp-top-nav">
-                        <div class="lp-menu-logo animate__animated animate__zoomIn animate__delay-2s">
-                       <a href="" ><img width="300px" src="/web/assets/landingpages/Fulcrum_Premium_Finance-lp-header-logo.svg"/></a> 
-                        </div>
-                    </div>
-    
-                    <!-- Main header text  -->
-                    <div class="lp-header-text">
-                        <h5 class="tagline animate__animated animate__zoomIn animate__delay-3s">South Africa’s trusted provider of insurance Premium Financing</h5>
-                        <h1 class="heading-text animate__animated animate__zoomIn animate__delay-4s">The seamless solution for businesses with annual insurance to preserve cash flow.<h1>
-                    </div>
 
-
-                    <!-- Fulcrum Offering - circles  -->
-                    <div class="lp-header-circle-container animate__animated animate__zoomIn animate__delay-5s">
-                            <img src="/web/assets/landingpages/fulcrum-lp-header-bubble-temp-image.png">
-                    </div>
-
-                </div>
-
-                <!-- Right Column  -->
-                <div class="lp-header-right col-md-4">
-
-                    <!-- Fulcrum GET IN TOUCH form  -->
-                    <div class="lp-getintouch-form animate__animated ">
-                        <div class="lp-getintouch-form-container">
-                            <h2 class="lp-getintouch-heading animate__animated animate__zoomIn animate__delay-5s">Get in touch</h2>
-                            <p class="lp-getintouch-text animate__animated animate__zoomIn animate__delay-5s">Our highly experienced team of specialists, backed by best-in-class systems delivers an unparrel </p>
-                            <form class="lp-contact-form" action="/action_page.php">
-                                <label class="lp-contact-form-label animate__animated animate__zoomIn animate__delay-5s" for="fname">Your name:</label><br>
-                                <input class="lp-contact-form-input animate__animated animate__zoomIn animate__delay-5s"type="text" id="fname" name="fname" value=""><br>
-                                <label class="lp-contact-form-label animate__animated animate__zoomIn animate__delay-5s" for="lname">Email:</label><br>
-                                <input class="lp-contact-form-input animate__animated animate__zoomIn animate__delay-5s"type="text" id="lname" name="lname" value=""><br>
-                                <label class="lp-contact-form-label animate__animated animate__zoomIn animate__delay-5s" for="lname">Contact number:</label><br>
-                                <input class="lp-contact-form-input animate__animated animate__zoomIn animate__delay-5s"type="text" id="lname" name="lname" value=""><br>
-                                <label class="lp-contact-form-label animate__animated animate__zoomIn animate__delay-5s" for="lname">Company:</label><br>
-                                <input class="lp-contact-form-input animate__animated animate__zoomIn animate__delay-5s"type="text" id="lname" name="lname" value=""><br><br>
-                                <label class="lp-contact-form-privacy-policy-accept-container animate__animated animate__zoomIn animate__delay-5s">I agree to Fulcrum's conditions of use and <a class="privacy-link" href="" >privacy policy</a>.
-                                    <input class="animate__animated animate__zoomIn animate__delay-5s" type="checkbox" id="Privacy" name="privacy" value="accept" checked="">
-                                    <span class="checkmark animate__animated animate__zoomIn animate__delay-5s"></span><br>
-                                </label>
-                                <input class="lp-contact-form-submit-btn animate__animated animate__zoomIn animate__delay-5s" type="submit" value="Lets chat">
-                            </form>
-                        </div>
-                    </div>
-        
-                </div>
+<!-- FULCRUM GET IN TOUCH FORM   -->
+<div id="lp-contact_Form" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeForm()">&times;</a>
+        <div class="lp-getintouch-form">
+            <div class="lp-getintouch-form-container">
+                <h2 class="lp-getintouch-heading">Get in touch</h2>
+                <p class="lp-getintouch-text">Our highly experienced team of specialists, backed by best-in-class systems delivers an unparrel </p>
+                <form class="lp-contact-form" action="/action_page.php">
+                    <label class="lp-contact-form-label" for="fname">Your name:</label><br>
+                    <input class="lp-contact-form-input"type="text" id="fname" name="fname" value=""><br>
+                    <label class="lp-contact-form-label" for="lname">Email:</label><br>
+                    <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br>
+                    <label class="lp-contact-form-label" for="lname">Contact number:</label><br>
+                    <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br>
+                    <label class="lp-contact-form-label" for="lname">Company:</label><br>                                <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br><br>
+                    <label class="lp-contact-form-privacy-policy-accept-containe">I agree to Fulcrum's conditions of use and <a class="privacy-link" href="" >privacy policy</a>.
+                        <input class="" type="checkbox" id="Privacy" name="privacy" value="accept" checked="">
+                        <span class="checkmark"></span><br>
+                    </label>
+                    <input class="lp-contact-form-submit-btn" type="submit" value="Lets chat">
+                </form>
             </div>
         </div>
-    </div>
+</div>
 
-<!-- Landing page section BENEFITS -->
+
+
+
+<!--  VIDEO BACKGROUND  -->
+<video class="bg-video animate__animated animate__zoomIn" autoplay muted loop id="myVideo">
+  <source src="/web/assets/landingpages/insured/AdobeStock_371449647_Video_HD_Preview.mp4" type="video/mp4">
+</video>
+
+
+
+
+<!-- FULCRUM HEADER LOGO -->
+<div class="lp-header-logo">
+    <div class="lp-header-logo-container animate__animated animate__fadeInLeft animate__delay-2s">
+        <a class="lp-header-menu-logo" href="#"><img class="fulcrum-lp-logo" src="/web/assets/landingpages/Fulcrum-Premium-Finance_HoldingShape_TopLeft_02.png"/></a> 
+    </div>
+</div>
+
+
+
+<!--********* INSURED CLIENT LANDING PAGE HEADER **********-->
+
+<!-- TOP HEADER SECTION -->
+<div id="lp_header-section" class="main-header animate__animated animate__fadeInRight">
+    <div class="row">
+        <div class="lp-header-container animate__animated animate__slideInUp animate__delay-1s">
+            
+            <!-- MAIN HEADER TEXT  -->
+            <div class="lp-header-text">
+                <h5 class="tagline animate__animated animate__zoomIn animate__delay-3s">South Africa’s trusted provider of insurance Premium Financing</h5>
+                <h1 class="heading-text animate__animated animate__zoomIn animate__delay-4s">The seamless solution for businesses with annual insurance to preserve cash flow.<h1>
+                <span class="header-btn standard-btn animate__animated animate__zoomIn animate__delay-1s" onclick="openForm()">Find out more</span>
+            </div>
+
+            <!-- Fulcrum Offering - circles 
+            <div class="lp-header-circle-container animate__animated animate__zoomIn animate__delay-5s">
+                <img src="/web/assets/landingpages/fulcrum-lp-header-bubble-temp-image.png">
+            </div> -->
+
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT US - Section 2-->
+<div class="homepage-about-us section-grey">
+    <div class="row">
+
+        <!-- FULCRUM LOGO -->
+        <div class="about-us-fulcrum-logo"><img src="/web/assets/general/homepage/fulcrun_homepage-about-us-logo.svg" alt=""></div>
+        
+        <!-- ABOUT US BUBBLE GRAPHIC -->
+        <div class="about-us-graphic-container">
+            <div class="about-us-graphic">
+                <img src="/web/assets/general/homepage/home-page-about-us-temp-image.png">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--********* INSURED CLIENT LANDING SECTION-2 BENEFITS **********-->
+
     <div id="lp-section-two-second-container" class="section animate__animated animate__slideInRight">
         <div class="lp-section-two-first-container">
             <!-- Benefits Heading -->
@@ -77,25 +105,25 @@
 
                         <!-- Benefits Point One -->
                         <div class="benefit-container benefit-1 animate__animated animate__zoomIn animate__delay-1s">
-                            <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/lp-benefit-icon-1.svg"/>
+                            <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/insured/benefit-icons/lp-benefit-icon-1.svg"/>
                             <p class="benefit-text">Access to aggressive funding.</p>
                         </div>
 
                         <!-- Benefits Point Two -->
                         <div class="benefit-container benefit-2 animate__animated animate__zoomIn animate__delay-1s">
-                            <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/lp-benefit-icon-2.svg"/>
+                            <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/insured/benefit-icons/lp-benefit-icon-2.svg"/>
                             <p class="benefit-text">Preservation of capital by amortising insurance payment over the year.</p>
                         </div>
 
                         <!-- Benefits Point One -->
                         <div class="benefit-container benefit-3 animate__animated animate__zoomIn animate__delay-1s">
-                            <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/lp-benefit-icon-3.svg"/>
+                            <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/insured/benefit-icons/lp-benefit-icon-3.svg"/>
                             <p class="benefit-text">Additional source of finance at competitive rates which does not affect current banking facilities.</p>
                         </div>
 
                         <!-- Benefits Point One -->
                         <div class="benefit-container benefit-4 animate__animated animate__zoomIn animate__delay-1s">
-                            <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/lp-benefit-icon-4.svg"/>
+                            <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/insured/benefit-icons/lp-benefit-icon-4.svg"/>
                             <p class="benefit-text">Earn more on retained capital than through repaying annual insurance premiums.</p>
                         </div>
 
@@ -114,9 +142,9 @@
             <!--Testimonial-->
             <div class="testimonial">
                 <div class="testimonial-container">
-                    <img class="open-quote animate__animated animate__zoomIn animate__delay-2s" src="/web/assets/landingpages/open-quote-mark.svg" alt="open-quote">
+                    <img class="open-quote animate__animated animate__zoomIn animate__delay-2s" src="/web/assets/general/testimonial/open-quote-mark.svg" alt="open-quote">
                     <h2 class="testimonial-quote animate__animated animate__zoomIn animate__delay-1s">Fulcrum provides seamless, <br>rapid Premium Finance solutions while taking care of collections.</h2>
-                    <img class="close-quote animate__animated animate__zoomIn animate__delay-2s" src="/web/assets/landingpages/closing-quote-mark.svg" alt="close-quote"> 
+                    <img class="close-quote animate__animated animate__zoomIn animate__delay-2s" src="/web/assets/general/testimonial/closing-quote-mark.svg" alt="close-quote"> 
                     <h5 class="testimonial-name animate__animated animate__fadeIn animate__delay-3s">Delarey van Dyk</h5>
                     <p class="testimonial-job-description animate__animated animate__fadeIn animate__delay-4s">Managing Director at Fulcrum Premium Finance</p>
                     
@@ -126,14 +154,14 @@
             <!-- Client logo Carousel -->
             <div class="container">
                 <section class="customer-logos slider animate__animated animate__zoomIn animate__delay-5s">
-                    <div class="slide"><img src="/web/assets/landingpages/Client-icon-1.svg"></div>
-                    <div class="slide"><img src="/web/assets/landingpages/Client-icon-2.svg"></div>
-                    <div class="slide"><img src="/web/assets/landingpages/Client-icon-3.svg"></div>
-                    <div class="slide"><img src="/web/assets/landingpages/Client-icon-4.svg"></div>
-                    <div class="slide"><img src="/web/assets/landingpages/Client-icon-5.svg"></div>
-                    <div class="slide"><img src="/web/assets/landingpages/Client-icon-6.svg"></div>
-                    <div class="slide"><img src="/web/assets/landingpages/Client-icon-1.svg"></div>
-                    <div class="slide"><img src="/web/assets/landingpages/Client-icon-2.svg"></div>
+                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-1.svg"></div>
+                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-2.svg"></div>
+                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-3.svg"></div>
+                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-4.svg"></div>
+                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-5.svg"></div>
+                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-6.svg"></div>
+                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-1.svg"></div>
+                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-2.svg"></div>
                 </section>
             </div> 
         
@@ -188,7 +216,7 @@
         </div>  
     </div>
 
-    <div class="bubble-graphic animate__animated animate__zoomIn animate__delay-1s"><img src="/web/assets/landingpages/Fulcrum-gradient_circles-02.png" ></div>
+    <div class="bubble-graphic"><img class="animate__animated animate__zoomIn animate__delay-1s" src="/web/assets/landingpages/Fulcrum-gradient_circles-02.png" ></div>
 
 
 <!-- Landing page section five FINAL PITCH-->

@@ -966,8 +966,8 @@ p {
     position: fixed;
     z-index: 9999999999;
     top: 0;
-    left: 0;
-    background-color: #111;
+    right: 0;
+    background-color: rgba(0, 121, 140, 0.95);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -977,7 +977,7 @@ p {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #D8DE00;
     display: block;
     transition: 0.3s;
   }
@@ -998,17 +998,6 @@ p {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* LANDING PAGE CONTACT FORM */
@@ -1034,7 +1023,8 @@ p {
 
 .lp-getintouch-form-container {
     padding-left: 50px;
-    padding-top: 210px;
+    padding-top: 50px;
+    padding-right: 50px;
 }
 
 .lp-getintouch-heading {
@@ -1080,8 +1070,6 @@ p {
   /* PRIVACY POLICY ACCEPT CUSTOM CHECKBOX */
   .checkmark {
     position: absolute;
-    top: 0;
-    left: 0;
     height: 25px;
     width: 25px;
     background-color: #eee;
@@ -1101,7 +1089,7 @@ p {
   .checkmark:after {
     content: "";
     position: absolute;
-    display: none;
+    display: none!important;
   }
   
   /* PRIVACY POLICY ACCEPT - SHOWS CHECKMARK WHEN CHECKED */
@@ -1120,10 +1108,19 @@ p {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  } 
+
+  .lp-contact-form-privacy-policy-accept-container {
+    font-family: museo;
+    font-weight: 300;
+    font-size: 16px;
   }
 
   .privacy-link {
-    color:  #DEDD00;
+    color: #DEDD00;
+    font-family: museo;
+    font-weight: 700;
+    font-size: 18px!important;
   }
 
   .lp-contact-form-submit-btn {
@@ -1136,7 +1133,7 @@ p {
     text-align: center;
     font-size: 26px;
     color: #007E8C;
-    margin-top: 15px;
+    margin-top: 18px;
   }
 
   .lp-contact-form-submit-btn:hover {
@@ -1168,10 +1165,10 @@ p {
 /* FULCRUM HEADER LOGO */
 .lp-header-logo {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 50px;
+    top: 50px;
     display: block;
-    width:100%;
+    width:70%;
     z-index: 999;
 }
 
@@ -1199,19 +1196,23 @@ p {
     justify-content: center;
 }
 
+.lp-header-text {
+    text-align: center;
+}
 
 .heading-text {
     font-family: museo, 'Roboto', Arial, sans-serif;
     font-weight: 700;
-    font-size: 3.8em;
+    font-size: 4em;
     color: #fff;
-    padding-right: 40px;
+    padding-right: 10%;
+    padding-left: 10%;
     line-height: 1.1em;
     text-align: center;
 }
 
 .tagline {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 900;
     margin-bottom: 20px;
     text-align: center;
@@ -1236,11 +1237,12 @@ p {
 
 /* SECTION 2 - BENEFITS */
 #lp-section-two-second-container {
-    background-image: url(/web/assets/landingpages/insured/lp-sectn-2-background-insured-client.png);
+    background-image: url(/web/assets/landingpages/insured/lp-section-2-background-insured.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     overflow: hidden;
+    background-color: #fff;
 }
 
 #lp_broker-section-two {
@@ -1249,8 +1251,12 @@ p {
     background-repeat: no-repeat;
     min-height: 870px;
     background-position: center center;
+    background-color: #f4f4f4;
 }
+.benefit-1:hover {
 
+
+}
 .benefits-header {
     text-align: center;
     font-size: 64px;
@@ -1368,7 +1374,6 @@ p {
 /* SECTION 4 - WHY USE US */
 #lp_section-four {
     background-color: #fff;
-    padding-bottom: 35px;
 }
 
 .why-use-us {
@@ -1470,13 +1475,14 @@ p {
 .bubble-graphic img{
     width: 25em;
     z-index: 9999999;
-    margin-bottom: -350px;
-    margin-top: -350px;
+    margin-top: -100px;
     margin-left: -12em;
+    position: absolute;
 }
 
 .bubble-graphic {
     position:sticky;
+    z-index: 9999999;
 }
 
 /* SECTION 5 - FINAL PITCH */
@@ -1502,6 +1508,27 @@ p {
     margin: auto;
 }
 
+
+/* SECTION 5 - HOWE WE ADD IT ALL UP */
+
+#lp_section-six {
+   z-index: -3;
+}
+.how-we-add-it-up_container {
+    background-image: url(/web/assets/landingpages/Fulcrum-Premium-Finance_how-we-add-it-all-up.png);
+    background-size: cover;
+    background-position: bottom right;
+    height: 850px;
+}
+
+.how-add-it-up-text-container {
+    margin: auto;
+}
+
+.how-add-it-up-heading {
+    padding-top: 80px;
+    text-align: center!important;
+}
 
 
 

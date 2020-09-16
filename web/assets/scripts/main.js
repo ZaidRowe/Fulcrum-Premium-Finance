@@ -33,7 +33,7 @@ function openNav() {
 
 /*  LANDING PAGE CONTACT FORM SIDENAV  */
 function openForm() {
-    document.getElementById("lp-contact_Form").style.width = "500px";
+    document.getElementById("lp-contact_Form").style.width = "380px";
   }
   
   function closeForm() {
