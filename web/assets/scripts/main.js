@@ -39,3 +39,9 @@ function openForm() {
   function closeForm() {
     document.getElementById("lp-contact_Form").style.width = "0";
   }
+
+
+	VanillaTilt.init(document.querySelector(".bubble-animation-container"), {
+		max: 25,
+		speed: 400
+	});

@@ -31,9 +31,11 @@
 
 
 <!--  VIDEO BACKGROUND  -->
-<video class="bg-video animate__animated animate__zoomIn" autoplay muted loop id="myVideo">
-  <source src="/web/assets/landingpages/broker/AdobeStock_242857209_Video_4K_Preview.mp4" type="video/mp4">
+<video class="broker_bg-video" autoplay muted loop id="myVideo">
+  <source src="/web/assets/landingpages/broker/Fulcrum-Premium-Finance_Landing-page_header-video_BROKER_1.mp4" type="video/mp4">
 </video>
+
+
 
 
 
@@ -57,8 +59,8 @@
             
             <!-- MAIN HEADER TEXT  -->
             <div class="lp-header-text">
-                <h5 class="tagline animate__animated animate__zoomIn animate__delay-3s">South Africa’s trusted provider of insurance Premium Financing</h5>
-                <h1 class="heading-text animate__animated animate__zoomIn animate__delay-4s">A trusted and attractive financing solution for businesses with complex or costly annualised insurance.<h1>
+                <h1 class="heading-text animate__animated animate__zoomIn animate__delay-2s">South Africa’s trusted provider of insurance Premium Financing</h1>
+                <h5 class="tagline animate__animated animate__zoomIn animate__delay-3s">A trusted and attractive financing solution for businesses with complex or costly annualised insurance.<h5>
                 <span class="header-btn standard-btn animate__animated animate__zoomIn animate__delay-1s" onclick="openForm()">Find out more</span>
             </div>
 
@@ -71,12 +73,30 @@
 <div class="homepage-about-us section-grey">
     <div class="row">
         
-        <!-- ABOUT US BUBBLE GRAPHIC -->
-        <div class="about-us-graphic-container">
-            <div class="about-us-graphic">
-                <img src="/web/assets/general/homepage/home-page-about-us-temp-image.png">
-            </div>
+        <div class="bubble-animation-container">
+            <h2 class="about-us-heading">Fulcrum offers businesses a simple, sustainable financing solution that enables them to pay of their annual insurance premiums monthly thus, preserving cash flow and releasing VAT.</h2>
+            <img data-tilt class="centre-circle" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__center.svg"/>
+
+            <img class="left-large" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__left-large.svg"/>
+
+            <img class="left-small" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__left-small.svg"/>
+
+            <img class="right-small" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__right-small.svg"/>
+
+            <img class="right-large" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__right-large.svg"/>
         </div>
+
+        <script type="text/javascript">
+	VanillaTilt.init(document.querySelector(".bubble-animation-container"), {
+		max: 25,
+		speed: 400
+	});
+	
+</script>
+
+
+</div>
+</div>
 
     </div>
 </div>
@@ -98,28 +118,28 @@
                 <div class="benefits-container">
 
                     <!-- Benefits Point One -->
-                    <div class="benefit-container benefit-1 animate__animated animate__zoomIn animate__delay-1s">
+                    <div class="benefit-container benefit-1 ">
                         <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-1.svg"/>
                         <h4 class="broker-benefit-heading">Financial Benefit</h4>
                         <p class="broker-benefit-text">Brokers will receive their full annual fees and commissions upfront.</p>
                     </div>
 
                     <!-- Benefits Point Two -->
-                    <div class="benefit-container benefit-2 animate__animated animate__zoomIn animate__delay-1s">
+                    <div class="benefit-container benefit-2 ">
                         <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-2.svg"/>
                         <h4 class="broker-benefit-heading">Client retention</h4>
                         <p class="broker-benefit-text">Financed clients are are less susceptible to being poached by other Brokers during the term of the policy.</p>
                     </div>
 
                     <!-- Benefits Point One -->
-                    <div class="benefit-container benefit-3 animate__animated animate__zoomIn animate__delay-1s">
+                    <div class="benefit-container benefit-3">
                         <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-3.svg"/>
                         <h4 class="broker-benefit-heading">Reduced administration</h4>
                         <p class="broker-benefit-text">Fulcrum handles the debit orders and credit control.</p>
                     </div>
 
                     <!-- Benefits Point One -->
-                    <div class="benefit-container benefit-4 animate__animated animate__zoomIn animate__delay-1s">
+                    <div class="benefit-container benefit-4">
                         <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-4.svg"/>
                         <h4 class="broker-benefit-heading">Fulcrum Collections</h4>
                         <p class="broker-benefit-text">As a member of the Fulcrum Group, we can handle collection requirements.</p>
@@ -226,7 +246,64 @@
                 <div class="how-add-it-up-text-container">
                     <h2 class="how-add-it-up-heading animate__animated animate__zoomIn animate__delay-1s">How we add it all up</h2>  
                 </div>
-        
+
+
+                <div class="how-we-add-it-up_cal_container">
+                    <div class="how-we-add-it-up-table">
+                        <table>
+                            <tr>
+                                <th class"how-we-add-it-header">Annual Premium</th>
+                                <th class"how-we-add-it-header">R500,000.00</th>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm">Interest Rate @ e.g. 3.6% ﬂat:</td>
+                                <td class"how-we-add-it-text">R18,000.00</td>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm">(9.53% NACM*)</td>
+                                <td class"how-we-add-it-text"></td>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm">Admin Fee</td>
+                                <td class"how-we-add-it-text">TBA</td>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm">Total Amount Due</td>
+                                <td class"how-we-add-it-text">R518,000.00</td>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm">Repayable:</td>
+                                <td class"how-we-add-it-text"></td>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm">First Installment is collected</td>
+                                <td class"how-we-add-it-text">R51,800.00</td>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm">(On signature of agreement)</td>
+                                <td class"how-we-add-it-text"></td>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm" >Remaining nine installments collected</td>
+                                <td class"how-we-add-it-text">R51,800.00</td>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm">(Monthly by Debit order)</td>
+                                <td class"how-we-add-it-text"></td>
+                            </tr>
+                            <tr>
+                                <td class"how-we-add-it-text left-colm">VAT Beneﬁt:</td>
+                                <td class"how-we-add-it-text"></td>
+                            </tr>
+
+                                <td class"how-we-add-it-text ">(Claimable upfront at beginning of period)</td>
+                                <td class"how-we-add-it-text">R62,217.39</td>
+                            </tr>
+                
+                        </table>
+                        </div>
+                </div>
+
             </div>
         </div>    
     </div>
