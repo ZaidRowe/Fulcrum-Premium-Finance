@@ -11,14 +11,35 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
     <link rel="stylesheet" href="/web/assets/scripts/animate.min.css" />
-    <script src="/web/assets/scripts/main.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/web/assets/scripts/styles.css">
+    <script src="/web/assets/scripts/main.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="/web/assets/scripts/styles.scss">
     <script type="text/javascript" src="/web/assets/scripts/vanilla-tilt.js"></script>
+    <link rel="stylesheet" type="text/css" href="/web/assets/scripts/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="/web/assets/scripts/slick/slick-theme.css"/>
+    
+
   <body>
+
       {% block content %}
       {% endblock %}
-    </div>
+  
+  
+  
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="/web/assets/scripts/slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+$('.autoplay').slick({
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+});
+  </script>
   </body>
 </html>

@@ -2,30 +2,7 @@
 {% block content %}
 
 
-<!-- FULCRUM GET IN TOUCH FORM   -->
-<div id="lp-contact_Form" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeForm()">&times;</a>
-        <div class="lp-getintouch-form">
-            <div class="lp-getintouch-form-container">
-                <h2 class="lp-getintouch-heading">Get in touch</h2>
-                <p class="lp-getintouch-text">Our highly experienced team of specialists, backed by best-in-class systems delivers an unparrel </p>
-                <form class="lp-contact-form" action="/action_page.php">
-                    <label class="lp-contact-form-label" for="fname">Your name:</label><br>
-                    <input class="lp-contact-form-input"type="text" id="fname" name="fname" value=""><br>
-                    <label class="lp-contact-form-label" for="lname">Email:</label><br>
-                    <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br>
-                    <label class="lp-contact-form-label" for="lname">Contact number:</label><br>
-                    <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br>
-                    <label class="lp-contact-form-label" for="lname">Company:</label><br>                                <input class="lp-contact-form-input"type="text" id="lname" name="lname" value=""><br><br>
-                    <!--<label class=" ">I agree to Fulcrum's conditions of use and <a class="privacy-link" href="" >privacy policy</a>.
-                        <input class="" type="checkbox" id="Privacy" name="privacy" value="accept" checked="">
-                        <span class="checkmark"></span><br>
-                    </label> -->
-                    <input class="lp-contact-form-submit-btn" type="submit" value="Lets chat">
-                </form>
-            </div>
-        </div>
-</div>
+{% include "_fulcrum-premium-finance/_includes/_landingpage-contact-form" %}
 
 
 
@@ -38,12 +15,10 @@
 
 
 
-
-
 <!-- FULCRUM HEADER LOGO -->
 <div class="lp-header-logo">
     <div class="lp-header-logo-container ">
-        <a class="lp-header-menu-logo animate__animated animate__fadeInLeft animate__delay-2s" href="#"><img class="fulcrum-lp-logo" src="/web/assets/general/misc/Fulcrum_Premium_Finance-White_logo.svg"/></a> 
+        <a class="lp-header-menu-logo" href="#"><img data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="fulcrum-lp-logo" src="/web/assets/general/misc/Fulcrum_Premium_Finance-White_logo.svg"/></a> 
     </div>
 </div>
 
@@ -53,15 +28,15 @@
 <!--********* BROKER LANDING PAGE HEADER **********-->
 
 <!-- TOP HEADER SECTION -->
-<div id="lp_header-section" class="main-header animate__animated animate__fadeInRight">
+<div id="lp_header-section" class="main-header">
     <div class="row">
-        <div class="lp-header-container animate__animated animate__slideInUp animate__delay-1s">
+        <div data-aos="zoom-in-up" data-aos-duration="2000" class="lp-header-container">
             
             <!-- MAIN HEADER TEXT  -->
             <div class="lp-header-text">
-                <h1 class="heading-text animate__animated animate__zoomIn animate__delay-2s">South Africa’s trusted provider of insurance Premium Financing</h1>
-                <h5 class="tagline animate__animated animate__zoomIn animate__delay-3s">A trusted and attractive financing solution for businesses with complex or costly annualised insurance.<h5>
-                <span class="header-btn standard-btn animate__animated animate__zoomIn animate__delay-1s" onclick="openForm()">Find out more</span>
+                <h1 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="heading-text">South Africa’s trusted provider of insurance Premium Financing</h1>
+                <h5 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="tagline">A trusted and attractive financing solution for businesses with complex or costly annualised insurance.<h5>
+                <span data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="header-btn standard-btn" onclick="openForm()">Find out more</span>
             </div>
 
         </div>
@@ -69,164 +44,141 @@
 
 </div>
 
-<!-- ABOUT US - Section 2-->
+
+<!-- ABOUT US - SECTION 2-->
 <div class="homepage-about-us section-grey">
     <div class="row">
         
-        <div class="bubble-animation-container">
-            <h2 class="about-us-heading">Fulcrum offers businesses a simple, sustainable financing solution that enables them to pay of their annual insurance premiums monthly thus, preserving cash flow and releasing VAT.</h2>
-            <img data-tilt class="centre-circle" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__center.svg"/>
-
-            <img class="left-large" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__left-large.svg"/>
-
-            <img class="left-small" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__left-small.svg"/>
-
-            <img class="right-small" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__right-small.svg"/>
-
-            <img class="right-large" src="http://risingartstudio.co.za/web/assets/general/misc/bubble-animation/fulcrum-premium-fiance-animation__right-large.svg"/>
-        </div>
-
-        <script type="text/javascript">
-	VanillaTilt.init(document.querySelector(".bubble-animation-container"), {
-		max: 25,
-		speed: 400
-	});
-	
-</script>
-
-
-</div>
-</div>
+        {% include "_fulcrum-premium-finance/_includes/_about-us" %}
 
     </div>
 </div>
+
 
 
 <!--********* BROKER LANDING SECTION-2 BENEFITS **********-->
 
-    <div id="lp_broker-section-two" class="section-grey">
+<div id="lp_broker-section-two" class="section-grey">
 
-        <!-- Benefits Heading -->
-        <div class="row">
-            <h1 class="broker-benefits-header animate__animated animate__zoomIn animate__delay-1s">How do brokers <br>benefit<h1>
-        </div>
+     <!-- BENEFITS HEADING -->
+    <div class="row">
+        <h1 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="broker-benefits-header">How do brokers <br>benefit<h1>
+    </div>
 
+    <!-- BENEFITS POINTS -->
+    <div class="row">
+        <div class="col-md-7">
+            <div class="benefits-container">
 
-         <!-- Benefits Points -->
-        <div class="row">
-            <div class="col-md-6">
-                <div class="benefits-container">
+                <!-- BENEFITS - POINT ONE -->
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="benefit-container benefit-1 ">
+                    <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-1.svg"/>
+                    <h4 class="broker-benefit-heading">Financial Benefit</h4>
+                    <p class="broker-benefit-text">Brokers will receive their full annual fees and commissions upfront.</p>
+                </div>
 
-                    <!-- Benefits Point One -->
-                    <div class="benefit-container benefit-1 ">
-                        <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-1.svg"/>
-                        <h4 class="broker-benefit-heading">Financial Benefit</h4>
-                        <p class="broker-benefit-text">Brokers will receive their full annual fees and commissions upfront.</p>
-                    </div>
+                <!-- BENEFITS - POINT TWO -->
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="benefit-container benefit-2 ">
+                    <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-2.svg"/>
+                    <h4 class="broker-benefit-heading">Client retention</h4>
+                    <p class="broker-benefit-text">Financed clients are are less susceptible to being poached by other Brokers during the term of the policy.</p>
+                </div>
 
-                    <!-- Benefits Point Two -->
-                    <div class="benefit-container benefit-2 ">
-                        <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-2.svg"/>
-                        <h4 class="broker-benefit-heading">Client retention</h4>
-                        <p class="broker-benefit-text">Financed clients are are less susceptible to being poached by other Brokers during the term of the policy.</p>
-                    </div>
+                <!-- BENEFITS - POINT THREE-->
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="benefit-container benefit-3">
+                    <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-3.svg"/>
+                    <h4 class="broker-benefit-heading">Reduced administration</h4>
+                    <p class="broker-benefit-text">Fulcrum handles the debit orders and credit control.</p>
+                </div>
 
-                    <!-- Benefits Point One -->
-                    <div class="benefit-container benefit-3">
-                        <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-3.svg"/>
-                        <h4 class="broker-benefit-heading">Reduced administration</h4>
-                        <p class="broker-benefit-text">Fulcrum handles the debit orders and credit control.</p>
-                    </div>
-
-                    <!-- Benefits Point One -->
-                    <div class="benefit-container benefit-4">
-                        <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-4.svg"/>
-                        <h4 class="broker-benefit-heading">Fulcrum Collections</h4>
-                        <p class="broker-benefit-text">As a member of the Fulcrum Group, we can handle collection requirements.</p>
-                    </div>
+                <!-- BENEFITS - POINT FOUR -->
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="benefit-container benefit-4">
+                    <img class="benefit-icon hvr-bob" src="/web/assets/landingpages/broker/lp-broker-benefit-icon-4.svg"/>
+                    <h4 class="broker-benefit-heading">Fulcrum Collections</h4>
+                    <p class="broker-benefit-text">As a member of the Fulcrum Group, we can handle collection requirements.</p>
+                </div>
                 
-                </div>
             </div>
         </div>
+    </div>
         
-        <!-- Benefits LETS CHAT button -->
-        <div class="row">
-            <a class="benefits-btn standard-btn animate__animated animate__zoomIn animate__delay-1s" onclick="openForm()" >Lets Chat</a>
-        </div>
-
+    <!-- BENEFITS - LETS CHAT BUTTON -->
+    <div class="row">
+        <a data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="benefits-btn standard-btn" onclick="openForm()" >Lets Chat</a>
     </div>
 
+</div>
 
 
-<!-- Landing page section three TESTIMONIAL-->
-    <div id="lp_section-four" class="section-grad">
-        <div class="row">
 
-            <!--Testimonial-->
-            <div class="testimonial">
-                <div class="testimonial-container">
-                    <img class="open-quote animate__animated animate__zoomIn animate__delay-2s" src="/web/assets/general/testimonial/open-quote-mark.svg" alt="open-quote">
-                    <h2 class="testimonial-quote animate__animated animate__zoomIn animate__delay-1s">Fulcrum provides seamless, <br>rapid Premium Finance solutions while taking care of collections.</h2>
-                    <img class="close-quote animate__animated animate__zoomIn animate__delay-2s" src="/web/assets/general/testimonial/closing-quote-mark.svg" alt="close-quote"> 
-                    <h5 class="testimonial-name animate__animated animate__fadeIn animate__delay-3s">Delarey van Dyk</h5>
-                    <p class="testimonial-job-description animate__animated animate__fadeIn animate__delay-4s">Managing Director at Fulcrum Premium Finance</p>
-                </div>
+<!-- LANDING PAGE SECTION THREE TESTIMONIAL-->
+<div id="lp_section-four" class="section-grad">
+    <div class="row">
+
+        <!-- TESTIMONIAL -->
+        <div class="testimonial">
+            <div class="testimonial-container">
+                <img data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="open-quote" src="/web/assets/general/testimonial/open-quote-mark.svg" alt="open-quote">
+                <h2 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="testimonial-quote">Fulcrum provides seamless, <br>rapid Premium Finance solutions while taking care of collections.</h2>
+                <img data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="close-quote" src="/web/assets/general/testimonial/closing-quote-mark.svg" alt="close-quote"> 
+                <h5 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="testimonial-name">Delarey van Dyk</h5>
+                <p data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="testimonial-job-description">Managing Director at Fulcrum Premium Finance</p>
             </div>
-
-            <!-- Client logo Carousel -->
-            <div class="container animate__animated animate__zoomIn animate__delay-5s">
-                <section class="customer-logos slider">
-                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-1.svg"></div>
-                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-2.svg"></div>
-                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-3.svg"></div>
-                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-4.svg"></div>
-                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-5.svg"></div>
-                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-6.svg"></div>
-                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-1.svg"></div>
-                    <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-2.svg"></div>
-                </section>
-            </div> 
-        
-        </div>      
-    </div>
-
-<!-- Landing page section four WHY USE US-->
-    <div id="lp_section-four" class="section">
-
-        <div class="row">
-            <!-- Why use us heading-->
-            <div class="why-use-us">
-                <h2 class="Why-use-us-heading animate__animated animate__zoomIn animate__delay-1s">Why use us?</h2>
-                <p class="Why-use-us-text animate__animated animate__zoomIn animate__delay-1s">In times of uncertainty businesses need a seamless and safe solution. Fulcrum remains SA’s most trusted, professional and reliable provider. </p>
-            </div>           
         </div>
 
-        <div class="row">
+        <!-- CLIENT LOGO CAROUSEL -->
+        <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="container">
+            <section class="customer-logos autoplay">
+                <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-1.svg"></div>
+                <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-2.svg"></div>
+                <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-3.svg"></div>
+                <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-4.svg"></div>
+                <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-5.svg"></div>
+                <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-6.svg"></div>
+                <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-1.svg"></div>
+                <div class="slide"><img src="/web/assets/general/testimonial/client_logos/Client-icon-2.svg"></div>
+            </section>
+        </div> 
+        
+    </div>      
+</div>
 
-            <!-- Reason one -->
-            <div class="broker-reason-container col-md-4">
+<!-- LANDING PAGE SECTION FOUR - WHY USE US-->
+<div id="lp_section-four" class="section">
+
+    <div class="row">
+        <!-- WY USE US - HEADING -->
+        <div class="why-use-us">
+            <h2 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="Why-use-us-heading">Why use us?</h2>
+            <p data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="Why-use-us-text">In times of uncertainty businesses need a seamless and safe solution. Fulcrum remains SA’s most trusted, professional and reliable provider. </p>
+        </div>           
+    </div>
+
+    <div class="row">
+        <!-- REASON ONE -->
+            <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="broker-reason-container col-md-4">
                 <div id="broker-reason-one">
-                    <h2 class="broker-reason-heading animate__animated animate__zoomIn animate__delay-1s">R900</h2>
-                    <h3 class="broker-reason-subheading animate__animated animate__zoomIn animate__delay-1s">Million</h3>
-                    <p class="broker-reason-text animate__animated animate__zoomIn animate__delay-1s">Standard Premium<br>Finance Business</p>
+                    <h4  class="broker-reason-heading">R900</h4>
+                    <h2 class="broker-reason-subheading">Million</h2>
+                    <p class="broker-reason-text">Standard Premium<br>Finance Business</p>
                 </div>     
             </div>
 
-            <!-- Reason two -->
-            <div class="broker-reason-container col-md-4">
+            <!-- REASON TWO -->
+            <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="broker-reason-container col-md-4">
                 <div id="broker-reason-two">
-                    <h4 class="broker-reason-heading animate__animated animate__zoomIn animate__delay-1s">R100</h4>
-                    <h2 class="broker-reason-subheading animate__animated animate__zoomIn animate__delay-1s">Million</h2>
-                    <p class="broker-reason-text animate__animated animate__zoomIn animate__delay-1s">Schemes Premium<br>Finance Business</p>
+                    <h4 class="broker-reason-heading">R100</h4>
+                    <h2 class="broker-reason-subheading">Million</h2>
+                    <p class="broker-reason-text">Schemes Premium<br>Finance Business</p>
                 </div>     
             </div>
 
-            <!-- Reason three -->
-            <div class="broker-reason-container col-md-4">
+            <!-- REASON THREE -->
+            <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="broker-reason-container col-md-4">
                 <div id="broker-reason-three">
-                    <h4 class="broker-reason-heading animate__animated animate__zoomIn animate__delay-1s">R1</h4>
-                    <h2 class="broker-reason-subheading animate__animated animate__zoomIn animate__delay-1s">Billion</h2>
-                    <p class="broker-reason-text animate__animated animate__zoomIn animate__delay-1s">Premium Financed<br>Per Annum</p>
+                    <h4 class="broker-reason-heading">R1</h4>
+                    <h2 class="broker-reason-subheading">Billion</h2>
+                    <p class="broker-reason-text">Premium Financed<br>Per Annum</p>
                 </div>     
             </div>
 
@@ -235,73 +187,96 @@
         </div>  
     </div>
 
-    <div class="bubble-graphic"><img class="animate__animated animate__zoomIn animate__delay-1s" src="/web/assets/general/misc/Fulcrum-gradient_circles-02.png" ></div>
 
-<!-- Landing page section six HOW WE ADD IT ALL UP-->
-    <div id="lp_section-six" class="">
-        <div class="how-we-add-it-up_container animate__animated animate__slideInRight">
+
+
+
+<!-- LANDING PAGE SECTION FIVE - HOW WE ADD IT ALL UP -->
+    <div id="lp_section-six" class="how-we-add-it-all-up">
+        <div class="how-we-add-it-up_container">
             <div class="row">
             
-                <!-- Final Pitch text -->
+                <!-- FINAL PITCH TEXT -->
                 <div class="how-add-it-up-text-container">
-                    <h2 class="how-add-it-up-heading animate__animated animate__zoomIn animate__delay-1s">How we add it all up</h2>  
+                    <h2 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="how-add-it-up-heading">How we add it all up</h2>  
                 </div>
 
 
-                <div class="how-we-add-it-up_cal_container">
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="how-we-add-it-up_cal_container">
                     <div class="how-we-add-it-up-table">
-                        <table>
-                            <tr>
-                                <th class"how-we-add-it-header">Annual Premium</th>
-                                <th class"how-we-add-it-header">R500,000.00</th>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm">Interest Rate @ e.g. 3.6% ﬂat:</td>
-                                <td class"how-we-add-it-text">R18,000.00</td>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm">(9.53% NACM*)</td>
-                                <td class"how-we-add-it-text"></td>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm">Admin Fee</td>
-                                <td class"how-we-add-it-text">TBA</td>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm">Total Amount Due</td>
-                                <td class"how-we-add-it-text">R518,000.00</td>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm">Repayable:</td>
-                                <td class"how-we-add-it-text"></td>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm">First Installment is collected</td>
-                                <td class"how-we-add-it-text">R51,800.00</td>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm">(On signature of agreement)</td>
-                                <td class"how-we-add-it-text"></td>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm" >Remaining nine installments collected</td>
-                                <td class"how-we-add-it-text">R51,800.00</td>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm">(Monthly by Debit order)</td>
-                                <td class"how-we-add-it-text"></td>
-                            </tr>
-                            <tr>
-                                <td class"how-we-add-it-text left-colm">VAT Beneﬁt:</td>
-                                <td class"how-we-add-it-text"></td>
+                        <table class="how-we-add-it-up_cal_container">
+                            <tr class="how-we-add-it-heading-row">
+	                            <th class="how-we-add-it-header  left-colm">Annual Premium</th>
+	                            <th class="how-we-add-it-header right-colm">R500,000.00</th>
                             </tr>
 
-                                <td class"how-we-add-it-text ">(Claimable upfront at beginning of period)</td>
-                                <td class"how-we-add-it-text">R62,217.39</td>
+                            <tr class="how-we-add-it-row">
+	                            <td class="how-we-add-it-text left-colm">Interest Rate @ e.g. 3.6% ﬂat:</td>
+	                            <td class="how-we-add-it-text right-colm"><strong>R18,000.00</strong></td>
                             </tr>
-                
+
+                            <tr>
+	                            <td class="how-we-add-it-text left-colm">(9.53% NACM*)</td>
+	                            <td class="how-we-add-it-text right-colm"></td>
+                            </tr>
+
+                            <tr class="how-we-add-it-row divider-line">
+	                            <td class="how-we-add-it-text left-colm">Admin Fee</td>
+	                            <td class="how-we-add-it-text right-colm"><strong>TBA</strong></td>
+                            </tr>
+
+                            <tr class="table-spacing">
+	                            <td class="how-we-add-it-text left-colm table-spacing">Total Amount Due</td>
+	                            <td class="how-we-add-it-text right-colm table-spacing"><strong>R518,000.00</strong></td>
+                            </tr>
+
+                            <tr class="how-we-add-it-row">
+	                            <td class="how-we-add-it-text left-colm">Repayable:</td>
+	                            <td class="how-we-add-it-text right-colm"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="how-we-add-it-text left-colm">&nbsp;</td>
+                                <td class="how-we-add-it-text right-colm">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+                                <td class="how-we-add-it-text left-colm divider-line">First Installment is collected</td>
+                                <td class="how-we-add-it-text right-colm divider-line">R51,800.00</td>
+                            </tr>
+
+                            <tr class="how-we-add-it-row">
+	                            <td class="how-we-add-it-text left-colm table-spacing">(On signature of agreement)</td>
+	                            <td class="how-we-add-it-text right-colm table-spacing"></td>
+                            </tr>
+
+                            <tr>
+                                <td class="how-we-add-it-text left-colm divider-line" >Remaining nine installments collected</td>
+                                <td class="how-we-add-it-text right-colm divider-line">R51,800.00</td>
+                            </tr>
+
+                            <tr class="how-we-add-it-row">
+	                            <td class="how-we-add-it-text left-colm table-spacing">(Monthly by Debit order)</td>
+	                            <td class="how-we-add-it-text right-colm table-spacing"></td>
+                            <tr>
+
+                            <tr>
+                                <td class="how-we-add-it-text left-colm">&nbsp;</td>
+                                <td class="how-we-add-it-text left-colm">&nbsp;</td>
+                            </tr>
+
+                            <tr>
+	                            <td class="how-we-add-it-text left-colm divider-line">VAT Beneﬁt:</td>
+	                            <td class="how-we-add-it-text right-colm divider-line"></td>
+                            </tr>
+
+                            <tr class="how-we-add-it-row">
+	                            <td class="how-we-add-it-text left-colm">(Claimable upfront at beginning of period)</td>
+	                            <td class="how-we-add-it-text right-colm">R62,217.39</td>
+                            </tr>
+
                         </table>
-                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -309,16 +284,21 @@
     </div>
 
 
+<!-- BUBBLE GRAPHIC -->
+    <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="bubble-graphic"><img src="/web/assets/general/misc/Fulcrum-gradient_circles-02.png" ></div>
 
-<!-- Landing page section five FINAL PITCH-->
+
+
+
+<!-- LANDING PAGE SECTION SIX - FINAL PITCH -->
     <div id="lp_section-five" class="section-grey">
             <div class="row">
             
                 <!-- Final Pitch text -->
                 <div class="final-pitch-container">
-                    <h2 class="final-heading animate__animated animate__zoomIn animate__delay-1s">A trusted and attractive financing solution for businesses with complex or costly annualised insurance.</h2>
-                    <p class="final-text animate__animated animate__zoomIn animate__delay-1s">Where your clients have multiple lines of insurance with different insurers or where those insurers require premiums to be paid annually, Premium Finance may be the only solution.</p>
-                    <a class="contact-btn standard-btn animate__animated animate__zoomIn animate__delay-2s" onclick="openForm()">Contact us today</a>
+                    <h2 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="final-heading">A trusted and attractive financing solution for businesses with complex or costly annualised insurance.</h2>
+                    <p data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="final-text">Where your clients have multiple lines of insurance with different insurers or where those insurers require premiums to be paid annually, Premium Finance may be the only solution.</p>
+                    <a data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="contact-btn standard-btn" onclick="openForm()">Contact us today</a>
                 </div>
         
             </div>

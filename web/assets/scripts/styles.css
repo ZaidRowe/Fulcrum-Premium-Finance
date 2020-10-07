@@ -380,6 +380,7 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 .broker_bg-video { background-image: url(/web/assets/landingpages/broker/Fulcrum-Premium-Finance_Landing-page_header-video_BROKER0.jpg); background-size: cover; background-repeat: no-repeat;}
 .insured_bg-video { background-image: url(/web/assets/landingpages/insured/Fulcrum-Premium-Finance_Landing-page_header-video_INSURED0.jpg); background-size: cover; background-repeat: no-repeat;}
 
+
 /* FULCRUM HEADER LOGO */
 .lp-header-logo { position: absolute; left: 50px; top: 50px; display: block; width:70%; z-index: 999;}
 .lp-header-menu-logo img{width: 20%;}
@@ -395,121 +396,22 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 .lp-header-circle-container {height: 370px; z-index: 650;}
 .lp-header-circle-container img{ height: 350px; z-index: 650; margin-left: -100px; }
 
+
 /* SECTION 2 - ABOUT US */
-.bubble-animation-container {
-	width:80%;
-    width:900px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-transform: perspective(300px);
-    transform: perspective(300px);
-    background-color: transparent;
-}
-
-.bubble-animation-container:hover .about-us-heading .centre-circle .left-small .right-small .left-large .right-large {
-	transform: translateZ(50px) scaleY(1)
-}
-
-.about-us-heading {
-	position: absolute;
-	color: #fff;
-	z-index: 50;
-	width: 380px;
-	text-align: center;
-	font-family: museo;
-	font-weight: 400;
-	font-size: 32px;
-	line-height: 1.3em;
-    animation-name: text;
-  	animation-duration: 4s;
-    transform-style: preserve-3d;
-    text-shadow: 0 3px 23px rgba(0, 0, 0, 0.5);
-    z-index: 50;
-}
-
-.centre-circle {
-  width: 500px;
-  height: 500px;
-  background-color: tranparent;
-  position: absolute;
-  animation-name: circle;
-  animation-duration: 2s;
-  z-index: 10;
-  transform-style: preserve-3d;
-  border-radius: 50%;
-  box-shadow: 0 3px 23px rgba(0, 0, 0, 0.5);
-}
+.bubble-animation-container { width:80%; width:900px; height: 500px; display: flex; justify-content: center; align-items: center; margin: auto; -webkit-transform-style: preserve-3d; transform-style: preserve-3d; -webkit-transform: perspective(300px); transform: perspective(300px); background-color: transparent;}
+.bubble-animation-container:hover .about-us-heading .centre-circle .left-small .right-small .left-large .right-large { transform: translateZ(50px) scaleY(1); }
+.about-us-heading {position:absolute; color:#fff; z-index:50; width:380px; text-align:center; font-family:museo; font-weight:400; font-size:32px; line-height:1.3em; animation-name:text; animation-duration:4s; transform-style:preserve-3d; text-shadow: 0 3px 23px rgba(0, 0, 0, 0.5); z-index:50; }
+.centre-circle { width: 500px; height: 500px; background-color: tranparent; position: absolute;  z-index: 10; transform-style: preserve-3d; border-radius: 50%; box-shadow: 0 3px 23px rgba(0, 0, 0, 0.5); animation-name: cicrle; animation-duration: 3s;}
+.left-small {width: 180px; height: 180px; background-color: tranparent; position: relative; animation-name: left-small; animation-duration: 3s; opacity: 0.96; top: 20%; transform: translate(-160%, -50%); transform-style: preserve-3d; border-radius: 50%; }
+.right-small { width:180px; height:180px; background-color: tranparent; position: relative; animation-name: right-small; animation-duration: 3s; top: 20%; transform: translate(160%, -50%); opacity: 0.96; z-index: 5; transform-style: preserve-3d; border-radius: 50%; }
+.left-large { width:287px; height:287px; background-color: tranparent; position: relative; animation-name: left-large; animation-duration: 3s; top: 30%; transform: translate(25%, -50%); transform-style: preserve-3d; }
+.right-large { width: 287px; height: 287px; background-color:tranparent; position:relative; animation-name: right-large; animation-duration: 3s; top: 30%; transform: translate(-25%, -50%); transform-style: preserve-3d; }
 
 
-
-.left-small {
-  width: 180px;
-  height: 180px;
-  background-color: tranparent;
-  position: relative;
-  animation-name: left-small;
-  animation-duration: 3s;
-  opacity: 0.96;
-  top: 20%;
-  transform: translate(-160%, -50%);
-  transform-style: preserve-3d;
-  border-radius: 50%;
-  box-shadow: 0 3px 23px rgba(0, 0, 0, 0.5);
-}
-
-.right-small {
-  width: 180px;
-  height: 180px;
-  background-color: tranparent;
-  position: relative;
-  animation-name: right-small;
-  animation-duration: 3s;
-  top: 20%;
-  transform: translate(160%, -50%);
-  opacity: 0.96;
-  z-index: 5;
-  transform-style: preserve-3d;
-  border-radius: 50%;
-  box-shadow: 0 3px 23px rgba(0, 0, 0, 0.5);
-}
-
-.left-large {
-  width: 287px;
-  height: 287px;
-  background-color: tranparent;
-  position: relative;
-  animation-name: left-large;
-  animation-duration: 3s;
-  top: 30%;
-  transform: translate(25%, -50%);
-  transform-style: preserve-3d;
-}
-
-.right-large {
-  width: 287px;
-  height: 287px;
-  background-color: tranparent;
-  position: relative;
-  animation-name: right-large;
-  animation-duration: 3s;
-  top: 30%;
-  transform: translate(-25%, -50%);
-  transform-style: preserve-3d;
-}
-
-
-
-
-@keyframes text {
+@keyframes text{
   0%   {transform:scale(0.0)}
   100% {transform:scale(1)}
 }
-
 
 @keyframes circle {
   0%   {transform:scale(0.0)}
@@ -526,7 +428,6 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
   100% {opacity:0.96; transform: translate(160%, -50%);}
 }
 
-
 @keyframes left-large {
   0%  {opacity:0.0; transform: translate(100%, -50%);}
   100% {opacity:0.96; transform: translate(25%, -50%);}
@@ -541,18 +442,10 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 
 
 
-
-
-
-
-
-
 /* SECTION 2 - BENEFITS */
-#lp-section-two-second-container {background-image: url(/web/assets/landingpages/insured/lp-section-2-background-insured.png); background-size: 100%; background-repeat: no-repeat; background-position: center center; overflow: hidden; background-color: #fff;}
+#lp-section-two-second-container {background-color: #fff; background-image: url(/web/assets/landingpages/insured/lp-section-2-background-insured.png); background-size: 90%; background-repeat: no-repeat; background-position: bottom right; overflow: hidden; background-color: #fff;}
 #lp_broker-section-two {background-image: url(/web/assets/landingpages/broker/lp-section-2-background-broker.png); background-size: cover; background-repeat: no-repeat; min-height: 870px; background-position: center center; background-color: #f4f4f4;}
-.benefit-container:hover {  -ms-transform: scale(1.2); /* IE 9 */
-    -webkit-transform: scale(1.2); /* Safari 3-8 */
-    transform: scale(1.2); }
+.benefit-container:hover {  -ms-transform: scale(1.2)!important; /* IE 9 */ -webkit-transform: scale(1.2)!important; /* Safari 3-8 */ transform: scale(1.2)!important; }
 .benefits-header {text-align: center; font-size: 64px; padding: 50px; font-weight: 700!important;}
 .broker-benefits-header {font-family: museo; text-align: left; font-size: 64px; font-weight: 700!important; padding-left: 50px;}
 .broker-benefit-heading {font-family: museo; text-align: center; font-size: 30px; font-weight: 700!important; color:  #007E8C;}
@@ -579,6 +472,7 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 .Why-use-us-heading {text-align: center; font-size: 64px; padding-bottom: 25px;  font-weight: 700!important;}
 .Why-use-us-text {text-align: center; font-size: 18px; font-family: museo; padding-left: 15%; padding-right: 15%; font-weight: 300!important;}
 .reason-container {text-align: center; background-image: url(/web/assets/landingpages/insured/lp-options-section-box.svg); background-repeat: no-repeat; background-position: center; background-size: auto; height: 305px; padding-left: 3%; padding-right: 3%;}
+.reason-container:hover { -ms-transform: scale(1.2)!important; /* IE 9 */ -webkit-transform: scale(1.2)!important; /* Safari 3-8 */ transform: scale(1.2)!important; }
 .reason-subheading {padding-top: 40px; text-align: center; font-size: 18px; font-family: museo; color: #0C3A39;}
 .reason-heading {text-align: center; font-size: 50px; font-weight:700!important;}
 .reason-hr {border: 2px solid #DEDD00; width: 60px; margin-top: 20px; margin-bottom: 25px;}
@@ -587,6 +481,7 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 
 /* WHY USE US BROKER */
 .broker-reason-container {text-align: center; padding-left: 3%; padding-right: 3%;}
+.broker-reason-container:hover {-ms-transform: scale(1.2)!important; /* IE 9 */ -webkit-transform: scale(1.2)!important; /* Safari 3-8 */ transform: scale(1.2)!important; }
 .broker-reason-heading {text-align: center; font-size: 70px; font-weight:900!important; color:  #007E8C;  line-height: 0.8em;}
 .broker-reason-subheading {text-align: center; font-size: 50px; font-weight:300!important; color:  #DEDD00;  line-height: 1em}
 .broker-reason-text {text-align: center; font-size: 20px; font-weight:100!important; color: #3E4545;  line-height: 1em}
@@ -597,50 +492,37 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 .bubble-graphic {position:sticky; z-index: 9999999;}
 
 
-/* SECTION 5 - FINAL PITCH */
+/* SECTION 5 - HOWE WE ADD IT ALL UP */
+#lp_section-six {z-index: -3;}
+.how-we-add-it-up_container {background-image: url(/web/assets/landingpages/fulcrum-premium-finance_how-we-add-it-all-up_BACKGROUND.jpg); background-size:cover; background-position:center; height:850px; }
+.how-add-it-up-text-container {margin: auto;}
+.how-add-it-up-heading {padding-top:80px; text-align:center!important;}
+
+.how-we-add-it-up_cal_container {
+  width:615px;
+  height: 454px;
+transform: translate(44%, 10%);
+display: block;
+padding: 15px 20px;
+border-collapse:collapse;
+}
+
+.how-we-add-it-header {font-size:28px; font-family:museo; color:#007E8C; Font-weight:900; }
+.how-we-add-it-text {font-size:16px; font-family:museo; color:#007E8C; Font-weight:500; }
+.left-colm {width:75%!important; text-align:left; border-collapse:collapse; }
+.right-colm {text-align:right; border-collapse:collapse; }
+.how-we-add-it-heading-row { height: 30px; }
+.how-we-add-it-row {height:35px; }
+.divider-line {padding-bottom:5px; border-bottom: 5px solid #DEDD00; }
+.table-spacing {padding-top:5px; }
+
+
+/* SECTION 6 - FINAL PITCH */
 .final-heading {text-align: center; font-size: 45px; padding: 0px 5% 25px 5%; font-weight: 700!important;}
 .final-text {text-align: center; font-size: 18px; font-family: museo; padding: 0 5%; margin-bottom: 5%; font-weight: 300;}
 .final-pitch-container {text-align: center; margin: auto;}
 
 
-/* SECTION 5 - HOWE WE ADD IT ALL UP */
-#lp_section-six {z-index: -3;}
-.how-we-add-it-up_container {background-image: url(/web/assets/landingpages/fulcrum-premium-finance_how-we-add-it-all-up_BACKGROUND.jpg); background-size: cover; background-position: center; height: 850px;}
-.how-add-it-up-text-container {margin: auto;}
-.how-add-it-up-heading {padding-top: 80px; text-align: center!important;}
-
-.how-we-add-it-up_cal_container {
-  width:615px;
-  height: 454px;
-  top: 56%;
-left: 50%;
-transform: translate(-50%, -50%);
-display: block;
-position: absolute;
-padding: 20px;
-}
-
-.how-we-add-it-header {
-  font-size: 40px;
-  font-family: museo;
-  color: #007E8C;
-  Font-weight: 900;
-
-}
-
-.how-we-add-it-text {
-  font-size: 18px;
-  font-family: museo;
-  color: #007E8C;
-  Font-weight: 300;
-  
-}
-
-.left-colm {
-  width: 75%!important;
-}
-
-
 
 
 
@@ -656,24 +538,3 @@ padding: 20px;
 
 
 
-/* Slider */
-.slick-slide {margin: 0px 20px;}
-.slick-slide img {width: 100%;}
-.slick-slider {position: relative; display: block; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent;}
-.slick-list {position: relative; display: block; overflow: hidden; margin: 0; padding: 0;}
-.slick-list:focus {outline: none;}
-.slick-list.dragging {cursor: pointer; cursor: hand;}
-.slick-slider .slick-track, .slick-slider .slick-list {-webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
-.slick-track {position: relative; top: 0; left: 0; display: block;}
-.slick-track:before, .slick-track:after {display: table; content: '';}
-.slick-track:after {clear: both;}
-.slick-loading .slick-track {visibility: hidden;}
-.slick-slide {display: none; float: left; height: 100%; min-height: 1px;}
-[dir='rtl'] .slick-slide {float: right;}
-.slick-slide img {display: block;}
-.slick-slide.slick-loading img {display: none;}
-.slick-slide.dragging img {pointer-events: none;}
-.slick-initialized .slick-slide {display: block;}
-.slick-loading .slick-slide {visibility: hidden;}
-.slick-vertical .slick-slide {display: block; height: auto; border: 1px solid transparent;}
-.slick-arrow.slick-hidden {display: none;}

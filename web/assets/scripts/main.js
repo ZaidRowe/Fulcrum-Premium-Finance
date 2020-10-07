@@ -41,7 +41,3 @@ function openForm() {
   }
 
 
-	VanillaTilt.init(document.querySelector(".bubble-animation-container"), {
-		max: 25,
-		speed: 400
-	});
