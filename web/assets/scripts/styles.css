@@ -395,12 +395,12 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 
 .get-started-container {
   margin: auto;
-  margin-top: 15px;
+  margin-top: 20px;
   z-index: 999999;
 }
 
 .about-us-video {
-  width: 100%!important;
+  width: 1100px!important;
 }
  /* ABOUT US [ END ]
    ========================================================================== */
