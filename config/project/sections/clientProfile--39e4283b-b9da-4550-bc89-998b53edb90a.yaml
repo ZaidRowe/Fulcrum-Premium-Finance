@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: clientProfile
+name: 'Client Profile'
+propagationMethod: all
+siteSettings:
+  41905891-4bbc-4780-afc6-911415166f01:
+    enabledByDefault: true
+    hasUrls: true
+    template: _fulcrum-premium-finance/_entry/_client-profile-entry
+    uriFormat: 'client-profile/{slug}'
+type: channel

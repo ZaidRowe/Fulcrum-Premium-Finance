@@ -1,5 +1,16 @@
 # Changelog
 
+### 7.8.4 (2020-09-06)
+
+- fix some internal Generator usage
+- add more support for Generics + phpstan checks
+
+### 7.8.3 (2020-08-22)
+
+- use more Generators v3
+- auto-generate the README
+- use property type check for "Arrayy->unshift(...)"
+
 ### 7.8.2 (2020-07-28)
 
 - use more Generators v2

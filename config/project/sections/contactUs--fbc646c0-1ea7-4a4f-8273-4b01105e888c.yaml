@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: contactUs
+name: 'Contact us'
+propagationMethod: all
+siteSettings:
+  41905891-4bbc-4780-afc6-911415166f01:
+    enabledByDefault: true
+    hasUrls: true
+    template: _fulcrum-premium-finance/_singles/_contact-us
+    uriFormat: contact-us
+type: single

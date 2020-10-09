@@ -61,6 +61,8 @@ class ElementQuery extends Query implements ElementQueryInterface
 
     /**
      * @event PopulateElementEvent The event that is triggered after an element is populated.
+     *
+     * If [[PopulateElementEvent::$element]] is replaced by an event handler, the replacement will be returned by [[createElement()]] instead.
      */
     const EVENT_AFTER_POPULATE_ELEMENT = 'afterPopulateElement';
 
@@ -470,7 +472,7 @@ class ElementQuery extends Query implements ElementQueryInterface
     public function __isset($name)
     {
         if ($name === 'order') {
-            Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The “order” element query param has been deprecated. Use “orderBy” instead.');
+            Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The `order` element query param has been deprecated. Use `orderBy` instead.');
 
             return $this->orderBy !== null;
         }
@@ -487,7 +489,7 @@ class ElementQuery extends Query implements ElementQueryInterface
         // (https://stackoverflow.com/a/8146455)
         switch ((string)$name) {
             case 'locale':
-                Craft::$app->getDeprecator()->log('ElementQuery::locale()', 'The “locale” element query param has been deprecated. Use “site” or “siteId” instead.');
+                Craft::$app->getDeprecator()->log('ElementQuery::locale()', 'The `locale` element query param has been deprecated. Use `site` or `siteId` instead.');
                 if ($this->siteId && is_numeric($this->siteId) && ($site = Craft::$app->getSites()->getSiteById($this->siteId))) {
                     return $site->handle;
                 }
@@ -495,7 +497,7 @@ class ElementQuery extends Query implements ElementQueryInterface
                 return null;
 
             case 'order':
-                Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The “order” element query param has been deprecated. Use “orderBy” instead.');
+                Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The `order` element query param has been deprecated. Use `orderBy` instead.');
 
                 return $this->orderBy;
 
@@ -518,11 +520,11 @@ class ElementQuery extends Query implements ElementQueryInterface
                 $this->enabledForSite = $value;
                 break;
             case 'locale':
-                Craft::$app->getDeprecator()->log('ElementQuery::locale()', 'The “locale” element query param has been deprecated. Use “site” or “siteId” instead.');
+                Craft::$app->getDeprecator()->log('ElementQuery::locale()', 'The `locale` element query param has been deprecated. Use `site` or `siteId` instead.');
                 $this->site($value);
                 break;
             case 'order':
-                Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The “order” element query param has been deprecated. Use “orderBy” instead.');
+                Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The `order` element query param has been deprecated. Use `orderBy` instead.');
                 $this->orderBy = $value;
                 break;
             default:
@@ -536,7 +538,7 @@ class ElementQuery extends Query implements ElementQueryInterface
     public function __call($name, $params)
     {
         if ($name === 'order') {
-            Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The “order” element query param has been deprecated. Use “orderBy” instead.');
+            Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The `order` element query param has been deprecated. Use `orderBy` instead.');
 
             if (count($params) == 1) {
                 $this->orderBy = $params[0];
@@ -557,7 +559,7 @@ class ElementQuery extends Query implements ElementQueryInterface
      */
     public function getIterator(): ArrayIterator
     {
-        Craft::$app->getDeprecator()->log('ElementQuery::getIterator()', 'Looping through element queries directly has been deprecated. Use the all() function to fetch the query results before looping over them.');
+        Craft::$app->getDeprecator()->log('ElementQuery::getIterator()', 'Looping through element queries directly has been deprecated. Use the `all()` function to fetch the query results before looping over them.');
         return new ArrayIterator($this->all());
     }
 
@@ -930,8 +932,10 @@ class ElementQuery extends Query implements ElementQueryInterface
      */
     public function site($value)
     {
-        if ($value === '*' || $value === null) {
-            $this->siteId = $value;
+        if ($value === null) {
+            $this->siteId = null;
+        } else if ($value === '*') {
+            $this->siteId = Craft::$app->getSites()->getAllSiteIds();
         } else if ($value instanceof Site) {
             $this->siteId = $value->id;
         } else if (is_string($value)) {
@@ -988,7 +992,7 @@ class ElementQuery extends Query implements ElementQueryInterface
      */
     public function locale(string $value)
     {
-        Craft::$app->getDeprecator()->log('ElementQuery::locale()', 'The “locale” element query param has been deprecated. Use “site” or “siteId” instead.');
+        Craft::$app->getDeprecator()->log('ElementQuery::locale()', 'The `locale` element query param has been deprecated. Use `site` or `siteId` instead.');
         $this->site($value);
         return $this;
     }
@@ -1035,7 +1039,7 @@ class ElementQuery extends Query implements ElementQueryInterface
      */
     public function localeEnabled($value = true)
     {
-        Craft::$app->getDeprecator()->log('ElementQuery::localeEnabled()', 'The “localeEnabled” element query param has been deprecated. `status()` should be used instead.');
+        Craft::$app->getDeprecator()->log('ElementQuery::localeEnabled()', 'The `localeEnabled` element query param has been deprecated. `status()` should be used instead.');
         $this->enabledForSite = $value;
         return $this;
     }
@@ -1297,9 +1301,8 @@ class ElementQuery extends Query implements ElementQueryInterface
             if (!$class::isLocalized()) {
                 // The criteria *must* be set to the primary site ID
                 $this->siteId = Craft::$app->getSites()->getPrimarySite()->id;
-            } else if (!$this->siteId) {
-                // Default to the current site
-                $this->siteId = Craft::$app->getSites()->getCurrentSite()->id;
+            } else {
+                $this->_normalizeSiteId();
             }
         } catch (SiteNotFoundException $e) {
             // Fail silently if Craft isn't installed yet or is in the middle of updating
@@ -1343,7 +1346,7 @@ class ElementQuery extends Query implements ElementQueryInterface
             ->limit($this->limit)
             ->addParams($this->params);
 
-        if ($this->siteId !== '*' && Craft::$app->getIsMultiSite(false, true)) {
+        if (Craft::$app->getIsMultiSite(false, true)) {
             $this->subQuery->andWhere(['elements_sites.siteId' => $this->siteId]);
         }
 
@@ -1553,7 +1556,7 @@ class ElementQuery extends Query implements ElementQueryInterface
         // TODO: Remove this in Craft 4
         // Make sure $db is not a list of attributes
         if ($this->_setAttributes($db)) {
-            Craft::$app->getDeprecator()->log('ElementQuery::ids($criteria)', 'Passing new criteria params to the ids() element query function is now deprecated. Set the parameters before calling ids().');
+            Craft::$app->getDeprecator()->log('ElementQuery::ids($criteria)', 'Passing new criteria params to the `ids()` element query function is now deprecated. Set the parameters before calling `ids()`.');
             $db = null;
         }
 
@@ -1799,10 +1802,12 @@ class ElementQuery extends Query implements ElementQueryInterface
 
         // Fire an 'afterPopulateElement' event
         if ($this->hasEventHandlers(self::EVENT_AFTER_POPULATE_ELEMENT)) {
-            $this->trigger(self::EVENT_AFTER_POPULATE_ELEMENT, new PopulateElementEvent([
+            $event = new PopulateElementEvent([
                 'element' => $element,
                 'row' => $row
-            ]));
+            ]);
+            $this->trigger(self::EVENT_AFTER_POPULATE_ELEMENT, $event);
+            return $event->element;
         }
 
         return $element;
@@ -1820,7 +1825,7 @@ class ElementQuery extends Query implements ElementQueryInterface
      */
     public function order(string $value)
     {
-        Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The “order” element query param has been deprecated. Use “orderBy” instead.');
+        Craft::$app->getDeprecator()->log('ElementQuery::order()', 'The `order` element query param has been deprecated. Use `orderBy` instead.');
 
         return $this->orderBy($value);
     }
@@ -1834,7 +1839,7 @@ class ElementQuery extends Query implements ElementQueryInterface
      */
     public function find(array $attributes = null): array
     {
-        Craft::$app->getDeprecator()->log('ElementQuery::find()', 'The find() function used to query for elements is now deprecated. Use all() instead.');
+        Craft::$app->getDeprecator()->log('ElementQuery::find()', 'The `find()` function used to query for elements is now deprecated. Use `all()` instead.');
         $this->_setAttributes($attributes);
 
         return $this->all();
@@ -1849,7 +1854,7 @@ class ElementQuery extends Query implements ElementQueryInterface
      */
     public function first(array $attributes = null)
     {
-        Craft::$app->getDeprecator()->log('ElementQuery::first()', 'The first() function used to query for elements is now deprecated. Use one() instead.');
+        Craft::$app->getDeprecator()->log('ElementQuery::first()', 'The `first()` function used to query for elements is now deprecated. Use `one()` instead.');
         $this->_setAttributes($attributes);
 
         return $this->one();
@@ -1864,7 +1869,7 @@ class ElementQuery extends Query implements ElementQueryInterface
      */
     public function last(array $attributes = null)
     {
-        Craft::$app->getDeprecator()->log('ElementQuery::last()', 'The last() function used to query for elements is now deprecated. Use inReverse().one() instead.');
+        Craft::$app->getDeprecator()->log('ElementQuery::last()', 'The `last()` function used to query for elements is now deprecated. Use `inReverse().one()` instead.');
         $this->_setAttributes($attributes);
         $count = $this->count();
         $offset = $this->offset;
@@ -1884,7 +1889,7 @@ class ElementQuery extends Query implements ElementQueryInterface
      */
     public function total(array $attributes = null): int
     {
-        Craft::$app->getDeprecator()->log('ElementQuery::total()', 'The total() function used to query for elements is now deprecated. Use count() instead.');
+        Craft::$app->getDeprecator()->log('ElementQuery::total()', 'The `total()` function used to query for elements is now deprecated. Use `count()` instead.');
         $this->_setAttributes($attributes);
 
         return $this->count();
@@ -1942,6 +1947,10 @@ class ElementQuery extends Query implements ElementQueryInterface
             // If specific IDs were requested, then use those
             if (is_numeric($this->id) || (is_array($this->id) && ArrayHelper::isNumeric($this->id))) {
                 $queryTags = (array)$this->id;
+            } else if ($this->drafts) {
+                $queryTags = ['drafts'];
+            } else if ($this->revisions) {
+                $queryTags = ['revisions'];
             } else {
                 $queryTags = $this->cacheTags() ?: ['*'];
             }
@@ -2075,12 +2084,9 @@ class ElementQuery extends Query implements ElementQueryInterface
             $placeholderSourceIds = [];
             $placeholderElements = Craft::$app->getElements()->getPlaceholderElements();
             if (!empty($placeholderElements)) {
-                $siteIds = $this->siteId !== '*' ? array_flip((array)$this->siteId) : null;
+                $siteIds = array_flip((array)$this->siteId);
                 foreach ($placeholderElements as $element) {
-                    if (
-                        $element instanceof $this->elementType &&
-                        ($siteIds === null || isset($siteIds[$element->siteId]))
-                    ) {
+                    if ($element instanceof $this->elementType && isset($siteIds[$element->siteId])) {
                         $placeholderSourceIds[] = $element->getSourceId();
                     }
                 }
@@ -2505,6 +2511,19 @@ class ElementQuery extends Query implements ElementQueryInterface
     }
 
     /**
+     * Normalizes the siteId param value.
+     */
+    private function _normalizeSiteId()
+    {
+        if (!$this->siteId) {
+            // Default to the current site
+            $this->siteId = Craft::$app->getSites()->getCurrentSite()->id;
+        } else if ($this->siteId === '*') {
+            $this->siteId = Craft::$app->getSites()->getAllSiteIds();
+        }
+    }
+
+    /**
      * Normalizes a structure param value to either an Element object or false.
      *
      * @param string $property The parameter’s property name.
@@ -2554,8 +2573,7 @@ class ElementQuery extends Query implements ElementQueryInterface
                 ->limit(null)
                 ->ids();
 
-            $siteId = $this->siteId === '*' ? null : $this->siteId;
-            $searchResults = Craft::$app->getSearch()->filterElementIdsByQuery($elementIds, $this->search, true, $siteId, true);
+            $searchResults = Craft::$app->getSearch()->filterElementIdsByQuery($elementIds, $this->search, true, $this->siteId, true);
 
             // No results?
             if (empty($searchResults)) {
@@ -2750,7 +2768,6 @@ class ElementQuery extends Query implements ElementQueryInterface
             !Craft::$app->getIsMultiSite(false, true) ||
             (
                 $this->siteId &&
-                $this->siteId !== '*' &&
                 (!is_array($this->siteId) || count($this->siteId) === 1)
             )
         ) {

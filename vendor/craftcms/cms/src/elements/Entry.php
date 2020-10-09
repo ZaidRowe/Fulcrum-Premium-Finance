@@ -26,6 +26,7 @@ use craft\elements\db\ElementQueryInterface;
 use craft\elements\db\EntryQuery;
 use craft\errors\UnsupportedSiteException;
 use craft\helpers\ArrayHelper;
+use craft\helpers\Cp;
 use craft\helpers\DateTimeHelper;
 use craft\helpers\Db;
 use craft\helpers\ElementHelper;
@@ -39,6 +40,7 @@ use craft\services\Structures;
 use craft\validators\DateTimeValidator;
 use yii\base\Exception;
 use yii\base\InvalidConfigException;
+use yii\db\Expression;
 
 /**
  * Entry represents an entry element.
@@ -425,13 +427,13 @@ class Entry extends Element
                 }
 
                 // Delete?
-                if (
-                    $userSession->checkPermission('deleteEntries:' . $section->uid) &&
-                    $userSession->checkPermission('deletePeerEntries:' . $section->uid)
-                ) {
+                $canDeleteEntries = $userSession->checkPermission('deleteEntries:' . $section->uid);
+                $canDeletePeerEntries = $userSession->checkPermission('deletePeerEntries:' . $section->uid);
+
+                if ($canDeleteEntries || $canDeletePeerEntries) {
                     $actions[] = Delete::class;
 
-                    if ($section->type === Section::TYPE_STRUCTURE) {
+                    if ($section->type === Section::TYPE_STRUCTURE && $canDeleteEntries && $canDeletePeerEntries) {
                         $actions[] = [
                             'type' => Delete::class,
                             'withDescendants' => true,
@@ -461,17 +463,41 @@ class Entry extends Element
             'title' => Craft::t('app', 'Title'),
             'slug' => Craft::t('app', 'Slug'),
             'uri' => Craft::t('app', 'URI'),
-            'postDate' => Craft::t('app', 'Post Date'),
-            'expiryDate' => Craft::t('app', 'Expiry Date'),
+            [
+                'label' => Craft::t('app', 'Post Date'),
+                'orderBy' => function(int $dir) {
+                    if ($dir === SORT_ASC) {
+                        if (Craft::$app->getDb()->getIsMysql()) {
+                            return new Expression('[[postDate]] IS NOT NULL DESC, [[postDate]] ASC');
+                        } else {
+                            return new Expression('[[postDate]] ASC NULLS LAST');
+                        }
+                    }
+                    if (Craft::$app->getDb()->getIsMysql()) {
+                        return new Expression('[[postDate]] IS NULL DESC, [[postDate]] DESC');
+                    } else {
+                        return new Expression('[[postDate]] DESC NULLS FIRST');
+                    }
+                },
+                'attribute' => 'postDate',
+                'defaultDir' => 'desc',
+            ],
+            [
+                'label' => Craft::t('app', 'Expiry Date'),
+                'orderBy' => 'expiryDate',
+                'defaultDir' => 'desc',
+            ],
             [
                 'label' => Craft::t('app', 'Date Created'),
                 'orderBy' => 'elements.dateCreated',
-                'attribute' => 'dateCreated'
+                'attribute' => 'dateCreated',
+                'defaultDir' => 'desc',
             ],
             [
                 'label' => Craft::t('app', 'Date Updated'),
                 'orderBy' => 'elements.dateUpdated',
-                'attribute' => 'dateUpdated'
+                'attribute' => 'dateUpdated',
+                'defaultDir' => 'desc',
             ],
             [
                 'label' => Craft::t('app', 'ID'),
@@ -900,7 +926,7 @@ class Entry extends Element
 
         return [
             'templates/render', [
-                'template' => $sectionSiteSettings[$siteId]->template,
+                'template' => (string)$sectionSiteSettings[$siteId]->template,
                 'variables' => [
                     'entry' => $this,
                 ]
@@ -1151,6 +1177,16 @@ class Entry extends Element
 
     /**
      * @inheritdoc
+     */
+    public function getIsDeletable(): bool
+    {
+        $userSession = Craft::$app->getUser();
+        $prefix = $userSession->getId() == $this->authorId ? 'deleteEntries' : 'deletePeerEntries';
+        return $userSession->checkPermission("$prefix:" . $this->getSection()->uid);
+    }
+
+    /**
+     * @inheritdoc
      *
      * ---
      * ```php
@@ -1210,7 +1246,7 @@ class Entry extends Element
         switch ($attribute) {
             case 'author':
                 $author = $this->getAuthor();
-                return $author ? Craft::$app->getView()->renderTemplate('_elements/element', ['element' => $author]) : '';
+                return $author ? Cp::elementHtml($author) : '';
 
             case 'section':
                 return Html::encode(Craft::t('site', $this->getSection()->name));
@@ -1243,7 +1279,7 @@ class Entry extends Element
                 ) {
                     return '';
                 }
-                return Craft::$app->getView()->renderTemplate('_elements/element', ['element' => $creator]);
+                return Cp::elementHtml($creator);
         }
 
         return parent::tableAttributeHtml($attribute);

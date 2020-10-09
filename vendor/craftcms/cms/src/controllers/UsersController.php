@@ -210,7 +210,7 @@ class UsersController extends Controller
      */
     public function actionGetRemainingSessionTime(): Response
     {
-        Craft::$app->getDeprecator()->log(__METHOD__, 'The users/get-remaining-session-time action is deprecated. Use users/session-info instead.');
+        Craft::$app->getDeprecator()->log(__METHOD__, 'The `users/get-remaining-session-time` action is deprecated. Use `users/session-info` instead.');
         return $this->runAction('session-info');
     }
 
@@ -881,6 +881,10 @@ class UsersController extends Controller
             $localeOptions = $userLanguage = $userLocale = null;
         }
 
+        // Determine whether user photo uploading should be possible
+        $volumeUid = Craft::$app->getProjectConfig()->get('users.photoVolumeUid');
+        $showPhotoField = $volumeUid && Craft::$app->getVolumes()->getVolumeByUid($volumeUid);
+
         // Load the resources and render the page
         // ---------------------------------------------------------------------
 
@@ -908,6 +912,7 @@ class UsersController extends Controller
             'title',
             'tabs',
             'selectedTab',
+            'showPhotoField',
             'fieldsHtml'
         ));
     }
@@ -939,6 +944,7 @@ class UsersController extends Controller
         $userSettings = Craft::$app->getProjectConfig()->get('users') ?? [];
         $requireEmailVerification = $userSettings['requireEmailVerification'] ?? true;
         $userVariable = $this->request->getValidatedBodyParam('userVariable') ?? 'user';
+        $returnCsrfToken = false;
 
         // Get the user being edited
         // ---------------------------------------------------------------------
@@ -1052,6 +1058,7 @@ class UsersController extends Controller
             if ($isCurrentUser) {
                 // If there was a newPassword input but it was empty, pretend it didn't exist
                 $user->newPassword = $this->request->getBodyParam('newPassword') ?: null;
+                $returnCsrfToken = $returnCsrfToken || $user->newPassword !== null;
             }
         }
 
@@ -1230,13 +1237,14 @@ class UsersController extends Controller
         // Is this public registration, and was the user going to be activated automatically?
         $publicActivation = $isPublicRegistration && $user->getStatus() === User::STATUS_ACTIVE;
         $loggedIn = $publicActivation && $this->_maybeLoginUserAfterAccountActivation($user);
+        $returnCsrfToken = $returnCsrfToken || $loggedIn;
 
         if ($this->request->getAcceptsJson()) {
             $return = [
                 'success' => true,
                 'id' => $user->id
             ];
-            if ($loggedIn && $generalConfig->enableCsrfProtection) {
+            if ($returnCsrfToken && $generalConfig->enableCsrfProtection) {
                 $return['csrfTokenValue'] = $this->request->getCsrfToken();
             }
             return $this->asJson($return);

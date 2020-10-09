@@ -8,10 +8,15 @@
 namespace craft\helpers;
 
 use Craft;
+use craft\base\ElementInterface;
 use craft\errors\GqlException;
 use craft\gql\base\Directive;
+use craft\gql\ElementQueryConditionBuilder;
 use craft\gql\GqlEntityRegistry;
 use craft\models\GqlSchema;
+use GraphQL\Language\AST\ListValueNode;
+use GraphQL\Language\AST\ValueNode;
+use GraphQL\Language\AST\VariableNode;
 use GraphQL\Type\Definition\NonNull;
 use GraphQL\Type\Definition\ResolveInfo;
 use GraphQL\Type\Definition\Type;
@@ -335,8 +340,7 @@ class Gql
 
                 if (isset($directive->arguments[0])) {
                     foreach ($directive->arguments as $argument) {
-                        $argumentValue = (!empty($argument->value->kind) && $argument->value->kind === 'Variable') ? $resolveInfo->variableValues[$argument->value->name->value] : $argument->value->value;
-                        $arguments[$argument->name->value] = $argumentValue;
+                        $arguments[$argument->name->value] = self::_convertArgumentValue($argument->value, $resolveInfo->variableValues);
                     }
                 }
 
@@ -346,12 +350,12 @@ class Gql
         return $value;
     }
 
-
     /**
      * Prepare arguments intended for Asset transforms.
      *
      * @param array $arguments
      * @return array|string
+     * @since 3.5.3
      */
     public static function prepareTransformArguments(array $arguments)
     {
@@ -366,5 +370,53 @@ class Gql
         }
 
         return $transform;
+    }
+
+    /**
+     * @param ValueNode|VariableNode $value
+     * @param array $variableValues
+     * @return array|array[]|mixed
+     */
+    private static function _convertArgumentValue($value, array $variableValues = [])
+    {
+        if ($value instanceof VariableNode) {
+            return $variableValues[$value->name->value];
+        }
+
+        if ($value instanceof ListValueNode) {
+            return array_map(function($node) {
+                return self::_convertArgumentValue($node);
+            }, iterator_to_array($value->values));
+        }
+
+        return $value->value;
+    }
+
+    /**
+     * Looking at the resolve information and the source queried, return the field name or it's alias, if used.
+     *
+     * @param ResolveInfo $resolveInfo
+     * @param $source
+     * @param $context
+     * @return string
+     */
+    public static function getFieldNameWithAlias(ResolveInfo $resolveInfo, $source, $context): string
+    {
+        $fieldName = is_array($resolveInfo->path) ? array_slice($resolveInfo->path, -1)[0] : $resolveInfo->fieldName;
+        $isAlias = $fieldName !== $resolveInfo->fieldName;
+
+        /** @var ElementQueryConditionBuilder $conditionBuilder */
+        $conditionBuilder = $context['conditionBuilder'] ?? null;
+
+        if ($isAlias) {
+            $cannotBeAliased = $conditionBuilder && !$conditionBuilder->canNodeBeAliased($fieldName);
+            $aliasNotEagerLoaded = !$source instanceof ElementInterface || $source->getEagerLoadedElements($fieldName) === null;
+
+            if ($cannotBeAliased || $aliasNotEagerLoaded) {
+                $fieldName = $resolveInfo->fieldName;
+            }
+        }
+
+        return $fieldName;
     }
 }

@@ -1,8 +1,0 @@
-handle: general
-hasUrls: true
-name: General
-settings:
-  path: '@webroot/assets/general'
-sortOrder: 2
-type: craft\volumes\Local
-url: '@web/assets/general'

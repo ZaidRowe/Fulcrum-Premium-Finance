@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: aboutUs
+name: 'About us'
+propagationMethod: all
+siteSettings:
+  41905891-4bbc-4780-afc6-911415166f01:
+    enabledByDefault: true
+    hasUrls: true
+    template: _fulcrum-premium-finance/_singles/_about-us
+    uriFormat: about-us
+type: single

@@ -1,8 +1,0 @@
-baseUrl: $DEFAULT_SITE_URL
-handle: FulcrumPremiumFinance
-hasUrls: true
-language: en-GB
-name: Fulcrum
-primary: true
-siteGroup: cd9203f1-f3bc-4c60-8ce5-80a53f630852
-sortOrder: 1

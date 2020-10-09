@@ -4,6 +4,23 @@ $vendorDir = dirname(__DIR__);
 $rootDir = dirname(dirname(__DIR__));
 
 return array (
+  'craftcms/redactor' => 
+  array (
+    'class' => 'craft\\redactor\\Plugin',
+    'basePath' => $vendorDir . '/craftcms/redactor/src',
+    'handle' => 'redactor',
+    'aliases' => 
+    array (
+      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
+    ),
+    'name' => 'Redactor',
+    'version' => '2.8.1',
+    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
+    'developer' => 'Pixel & Tonic',
+    'developerUrl' => 'https://pixelandtonic.com/',
+    'developerEmail' => 'support@craftcms.com',
+    'documentationUrl' => 'https://github.com/craftcms/redactor/blob/v2/README.md',
+  ),
   'doublesecretagency/craft-bootstrap' => 
   array (
     'class' => 'doublesecretagency\\bootstrap\\Bootstrap',
@@ -22,42 +39,64 @@ return array (
     'documentationUrl' => 'https://github.com/doublesecretagency/craft-bootstrap/blob/v4/README.md',
     'changelogUrl' => 'https://raw.githubusercontent.com/doublesecretagency/craft-bootstrap/v4/CHANGELOG.md',
   ),
-  'craftcms/contact-form' => 
+  'chasegiunta/scss' => 
   array (
-    'class' => 'craft\\contactform\\Plugin',
-    'basePath' => $vendorDir . '/craftcms/contact-form/src',
-    'handle' => 'contact-form',
+    'class' => 'chasegiunta\\scss\\Scss',
+    'basePath' => $vendorDir . '/chasegiunta/scss/src',
+    'handle' => 'scss',
     'aliases' => 
     array (
-      '@craft/contactform' => $vendorDir . '/craftcms/contact-form/src',
+      '@chasegiunta/scss' => $vendorDir . '/chasegiunta/scss/src',
     ),
-    'name' => 'Contact Form',
-    'version' => '2.2.7',
-    'description' => 'Add a simple contact form to your Craft CMS site',
-    'developer' => 'Pixel & Tonic',
-    'developerUrl' => 'https://pixelandtonic.com/',
-    'developerEmail' => 'support@craftcms.com',
-    'documentationUrl' => 'https://github.com/craftcms/contact-form/blob/v2/README.md',
+    'name' => 'SCSS',
+    'version' => '1.0.0',
+    'description' => 'Compiler for SCSS',
+    'developer' => 'Chase Giunta',
+    'developerUrl' => 'https://chasegiunta.com',
+    'documentationUrl' => 'https://github.com/chasegiunta/scss/blob/master/README.md',
+    'changelogUrl' => 'https://raw.githubusercontent.com/chasegiunta/scss/master/CHANGELOG.md',
+    'hasCpSettings' => false,
+    'hasCpSection' => false,
     'components' => 
     array (
-      'mailer' => 'craft\\contactform\\Mailer',
+      'scssService' => 'chasegiunta\\scss\\services\\ScssService',
     ),
   ),
-  'craftcms/redactor' => 
+  'utakka/redactor-anchors' => 
   array (
-    'class' => 'craft\\redactor\\Plugin',
-    'basePath' => $vendorDir . '/craftcms/redactor/src',
-    'handle' => 'redactor',
+    'class' => 'utakka\\redactoranchors\\RedactorAnchors',
+    'basePath' => $vendorDir . '/utakka/redactor-anchors/src',
+    'handle' => 'redactor-anchors',
     'aliases' => 
     array (
-      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
+      '@utakka/redactoranchors' => $vendorDir . '/utakka/redactor-anchors/src',
     ),
-    'name' => 'Redactor',
-    'version' => '2.7.1',
-    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
-    'developer' => 'Pixel & Tonic',
-    'developerUrl' => 'https://pixelandtonic.com/',
-    'developerEmail' => 'support@craftcms.com',
-    'documentationUrl' => 'https://github.com/craftcms/redactor/blob/v2/README.md',
+    'name' => 'Redactor Anchors',
+    'version' => '1.1.0',
+    'schemaVersion' => '2.0',
+    'description' => 'Support for anchors in Craft 3 Redactor',
+    'developer' => 'Lars Heidkämper',
+    'developerUrl' => 'https://github.com/utakka',
+    'documentationUrl' => 'https://github.com/utakka/craft-redactor-anchors/blob/master/README.md',
+    'changelogUrl' => 'https://github.com/Utakka/craft-redactor-anchors/blob/master/CHANGELOG.md',
+    'hasCpSettings' => false,
+    'hasCpSection' => false,
+  ),
+  'swdevelopment/animate' => 
+  array (
+    'class' => 'swdevelopment\\animate\\Animate',
+    'basePath' => $vendorDir . '/swdevelopment/animate/src',
+    'handle' => 'animate',
+    'aliases' => 
+    array (
+      '@swdevelopment/animate' => $vendorDir . '/swdevelopment/animate/src',
+    ),
+    'name' => 'Animate',
+    'version' => '1.0.2',
+    'description' => 'This will animate HTML elements using the AOS library.',
+    'developer' => 'Tim Strawbridge',
+    'developerUrl' => 'https://swdevteam.com',
+    'documentationUrl' => 'https://github.com/sw-development-services/animate-plugin/blob/master/README.md',
+    'changelogUrl' => 'https://github.com/sw-development-services/animate-plugin/master/CHANGELOG.md',
   ),
 );

@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
+class ComposerStaticInitf2675da14860c5611deb0962f062d8cb
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -15,12 +15,12 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
+        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'b46ad4fe52f4d1899a2951c7e6ea56b0' => __DIR__ . '/..' . '/voku/portable-utf8/bootstrap.php',
         '7e9bd612cc444b3eed788ebbe46263a0' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/autoload.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'a0edc8309cc5e1d60e3047b5df6b7052' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/functions_include.php',
-        '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
@@ -53,9 +53,17 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
             'voku\\helper\\' => 12,
             'voku\\' => 5,
         ),
+        'u' => 
+        array (
+            'utakka\\redactoranchors\\' => 23,
+        ),
         't' => 
         array (
             'tubalmartin\\CssMin\\' => 19,
+        ),
+        's' => 
+        array (
+            'swdevelopment\\animate\\' => 22,
         ),
         'p' => 
         array (
@@ -80,9 +88,9 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
             'crafttests\\fixtures\\' => 20,
             'craftcms\\oauth2\\client\\' => 23,
             'craft\\redactor\\' => 15,
-            'craft\\contactform\\' => 18,
             'craft\\composer\\' => 15,
             'craft\\' => 6,
+            'chasegiunta\\scss\\' => 17,
             'cebe\\markdown\\' => 14,
         ),
         'W' => 
@@ -135,6 +143,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
             'LitEmoji\\' => 9,
             'League\\OAuth2\\Client\\' => 21,
             'League\\Flysystem\\' => 17,
+            'Leafo\\ScssPhp\\' => 14,
             'Laminas\\ZendFrameworkBridge\\' => 28,
             'Laminas\\Stdlib\\' => 15,
             'Laminas\\Feed\\' => 13,
@@ -257,9 +266,17 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
             1 => __DIR__ . '/..' . '/voku/portable-utf8/src/voku',
             2 => __DIR__ . '/..' . '/voku/stop-words/src/voku',
         ),
+        'utakka\\redactoranchors\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/utakka/redactor-anchors/src',
+        ),
         'tubalmartin\\CssMin\\' => 
         array (
             0 => __DIR__ . '/..' . '/tubalmartin/cssmin/src',
+        ),
+        'swdevelopment\\animate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/swdevelopment/animate/src',
         ),
         'phpDocumentor\\Reflection\\' => 
         array (
@@ -299,10 +316,6 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         array (
             0 => __DIR__ . '/..' . '/craftcms/redactor/src',
         ),
-        'craft\\contactform\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/craftcms/contact-form/src',
-        ),
         'craft\\composer\\' => 
         array (
             0 => __DIR__ . '/..' . '/craftcms/plugin-installer/src',
@@ -310,6 +323,10 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\' => 
         array (
             0 => __DIR__ . '/..' . '/craftcms/cms/src',
+        ),
+        'chasegiunta\\scss\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/chasegiunta/scss/src',
         ),
         'cebe\\markdown\\' => 
         array (
@@ -434,6 +451,10 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'League\\Flysystem\\' => 
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
+        ),
+        'Leafo\\ScssPhp\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/leafo/scssphp/src',
         ),
         'Laminas\\ZendFrameworkBridge\\' => 
         array (
@@ -561,6 +582,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'Arrayy\\Arrayy' => __DIR__ . '/..' . '/voku/arrayy/src/Arrayy.php',
         'Arrayy\\ArrayyIterator' => __DIR__ . '/..' . '/voku/arrayy/src/ArrayyIterator.php',
         'Arrayy\\ArrayyMeta' => __DIR__ . '/..' . '/voku/arrayy/src/ArrayyMeta.php',
+        'Arrayy\\ArrayyRewindableExtendedGenerator' => __DIR__ . '/..' . '/voku/arrayy/src/ArrayyRewindableExtendedGenerator.php',
         'Arrayy\\ArrayyRewindableGenerator' => __DIR__ . '/..' . '/voku/arrayy/src/ArrayyRewindableGenerator.php',
         'Arrayy\\ArrayyStrict' => __DIR__ . '/..' . '/voku/arrayy/src/ArrayyStrict.php',
         'Arrayy\\Collection\\AbstractCollection' => __DIR__ . '/..' . '/voku/arrayy/src/Collection/AbstractCollection.php',
@@ -1165,8 +1187,11 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'GuzzleHttp\\Promise\\AggregateException' => __DIR__ . '/..' . '/guzzlehttp/promises/src/AggregateException.php',
         'GuzzleHttp\\Promise\\CancellationException' => __DIR__ . '/..' . '/guzzlehttp/promises/src/CancellationException.php',
         'GuzzleHttp\\Promise\\Coroutine' => __DIR__ . '/..' . '/guzzlehttp/promises/src/Coroutine.php',
+        'GuzzleHttp\\Promise\\Create' => __DIR__ . '/..' . '/guzzlehttp/promises/src/Create.php',
+        'GuzzleHttp\\Promise\\Each' => __DIR__ . '/..' . '/guzzlehttp/promises/src/Each.php',
         'GuzzleHttp\\Promise\\EachPromise' => __DIR__ . '/..' . '/guzzlehttp/promises/src/EachPromise.php',
         'GuzzleHttp\\Promise\\FulfilledPromise' => __DIR__ . '/..' . '/guzzlehttp/promises/src/FulfilledPromise.php',
+        'GuzzleHttp\\Promise\\Is' => __DIR__ . '/..' . '/guzzlehttp/promises/src/Is.php',
         'GuzzleHttp\\Promise\\Promise' => __DIR__ . '/..' . '/guzzlehttp/promises/src/Promise.php',
         'GuzzleHttp\\Promise\\PromiseInterface' => __DIR__ . '/..' . '/guzzlehttp/promises/src/PromiseInterface.php',
         'GuzzleHttp\\Promise\\PromisorInterface' => __DIR__ . '/..' . '/guzzlehttp/promises/src/PromisorInterface.php',
@@ -1174,18 +1199,23 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'GuzzleHttp\\Promise\\RejectionException' => __DIR__ . '/..' . '/guzzlehttp/promises/src/RejectionException.php',
         'GuzzleHttp\\Promise\\TaskQueue' => __DIR__ . '/..' . '/guzzlehttp/promises/src/TaskQueue.php',
         'GuzzleHttp\\Promise\\TaskQueueInterface' => __DIR__ . '/..' . '/guzzlehttp/promises/src/TaskQueueInterface.php',
+        'GuzzleHttp\\Promise\\Utils' => __DIR__ . '/..' . '/guzzlehttp/promises/src/Utils.php',
         'GuzzleHttp\\Psr7\\AppendStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/AppendStream.php',
         'GuzzleHttp\\Psr7\\BufferStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/BufferStream.php',
         'GuzzleHttp\\Psr7\\CachingStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/CachingStream.php',
         'GuzzleHttp\\Psr7\\DroppingStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/DroppingStream.php',
         'GuzzleHttp\\Psr7\\FnStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/FnStream.php',
+        'GuzzleHttp\\Psr7\\Header' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/Header.php',
         'GuzzleHttp\\Psr7\\InflateStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/InflateStream.php',
         'GuzzleHttp\\Psr7\\LazyOpenStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/LazyOpenStream.php',
         'GuzzleHttp\\Psr7\\LimitStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/LimitStream.php',
+        'GuzzleHttp\\Psr7\\Message' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/Message.php',
         'GuzzleHttp\\Psr7\\MessageTrait' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/MessageTrait.php',
+        'GuzzleHttp\\Psr7\\MimeType' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/MimeType.php',
         'GuzzleHttp\\Psr7\\MultipartStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/MultipartStream.php',
         'GuzzleHttp\\Psr7\\NoSeekStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/NoSeekStream.php',
         'GuzzleHttp\\Psr7\\PumpStream' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/PumpStream.php',
+        'GuzzleHttp\\Psr7\\Query' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/Query.php',
         'GuzzleHttp\\Psr7\\Request' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/Request.php',
         'GuzzleHttp\\Psr7\\Response' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/Response.php',
         'GuzzleHttp\\Psr7\\Rfc7230' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/Rfc7230.php',
@@ -1197,6 +1227,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'GuzzleHttp\\Psr7\\Uri' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/Uri.php',
         'GuzzleHttp\\Psr7\\UriNormalizer' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/UriNormalizer.php',
         'GuzzleHttp\\Psr7\\UriResolver' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/UriResolver.php',
+        'GuzzleHttp\\Psr7\\Utils' => __DIR__ . '/..' . '/guzzlehttp/psr7/src/Utils.php',
         'GuzzleHttp\\RedirectMiddleware' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RedirectMiddleware.php',
         'GuzzleHttp\\RequestOptions' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RequestOptions.php',
         'GuzzleHttp\\RetryMiddleware' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RetryMiddleware.php',
@@ -1763,6 +1794,33 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'Laminas\\ZendFrameworkBridge\\Module' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/Module.php',
         'Laminas\\ZendFrameworkBridge\\Replacements' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/Replacements.php',
         'Laminas\\ZendFrameworkBridge\\RewriteRules' => __DIR__ . '/..' . '/laminas/laminas-zendframework-bridge/src/RewriteRules.php',
+        'Leafo\\ScssPhp\\Base\\Range' => __DIR__ . '/..' . '/leafo/scssphp/src/Base/Range.php',
+        'Leafo\\ScssPhp\\Block' => __DIR__ . '/..' . '/leafo/scssphp/src/Block.php',
+        'Leafo\\ScssPhp\\Colors' => __DIR__ . '/..' . '/leafo/scssphp/src/Colors.php',
+        'Leafo\\ScssPhp\\Compiler' => __DIR__ . '/..' . '/leafo/scssphp/src/Compiler.php',
+        'Leafo\\ScssPhp\\Compiler\\Environment' => __DIR__ . '/..' . '/leafo/scssphp/src/Compiler/Environment.php',
+        'Leafo\\ScssPhp\\Exception\\CompilerException' => __DIR__ . '/..' . '/leafo/scssphp/src/Exception/CompilerException.php',
+        'Leafo\\ScssPhp\\Exception\\ParserException' => __DIR__ . '/..' . '/leafo/scssphp/src/Exception/ParserException.php',
+        'Leafo\\ScssPhp\\Exception\\RangeException' => __DIR__ . '/..' . '/leafo/scssphp/src/Exception/RangeException.php',
+        'Leafo\\ScssPhp\\Exception\\ServerException' => __DIR__ . '/..' . '/leafo/scssphp/src/Exception/ServerException.php',
+        'Leafo\\ScssPhp\\Formatter' => __DIR__ . '/..' . '/leafo/scssphp/src/Formatter.php',
+        'Leafo\\ScssPhp\\Formatter\\Compact' => __DIR__ . '/..' . '/leafo/scssphp/src/Formatter/Compact.php',
+        'Leafo\\ScssPhp\\Formatter\\Compressed' => __DIR__ . '/..' . '/leafo/scssphp/src/Formatter/Compressed.php',
+        'Leafo\\ScssPhp\\Formatter\\Crunched' => __DIR__ . '/..' . '/leafo/scssphp/src/Formatter/Crunched.php',
+        'Leafo\\ScssPhp\\Formatter\\Debug' => __DIR__ . '/..' . '/leafo/scssphp/src/Formatter/Debug.php',
+        'Leafo\\ScssPhp\\Formatter\\Expanded' => __DIR__ . '/..' . '/leafo/scssphp/src/Formatter/Expanded.php',
+        'Leafo\\ScssPhp\\Formatter\\Nested' => __DIR__ . '/..' . '/leafo/scssphp/src/Formatter/Nested.php',
+        'Leafo\\ScssPhp\\Formatter\\OutputBlock' => __DIR__ . '/..' . '/leafo/scssphp/src/Formatter/OutputBlock.php',
+        'Leafo\\ScssPhp\\Node' => __DIR__ . '/..' . '/leafo/scssphp/src/Node.php',
+        'Leafo\\ScssPhp\\Node\\Number' => __DIR__ . '/..' . '/leafo/scssphp/src/Node/Number.php',
+        'Leafo\\ScssPhp\\Parser' => __DIR__ . '/..' . '/leafo/scssphp/src/Parser.php',
+        'Leafo\\ScssPhp\\SourceMap\\Base64' => __DIR__ . '/..' . '/leafo/scssphp/src/SourceMap/Base64.php',
+        'Leafo\\ScssPhp\\SourceMap\\Base64VLQ' => __DIR__ . '/..' . '/leafo/scssphp/src/SourceMap/Base64VLQ.php',
+        'Leafo\\ScssPhp\\SourceMap\\Base64VLQEncoder' => __DIR__ . '/..' . '/leafo/scssphp/src/SourceMap/Base64VLQEncoder.php',
+        'Leafo\\ScssPhp\\SourceMap\\SourceMapGenerator' => __DIR__ . '/..' . '/leafo/scssphp/src/SourceMap/SourceMapGenerator.php',
+        'Leafo\\ScssPhp\\Type' => __DIR__ . '/..' . '/leafo/scssphp/src/Type.php',
+        'Leafo\\ScssPhp\\Util' => __DIR__ . '/..' . '/leafo/scssphp/src/Util.php',
+        'Leafo\\ScssPhp\\Version' => __DIR__ . '/..' . '/leafo/scssphp/src/Version.php',
         'League\\Flysystem\\AdapterInterface' => __DIR__ . '/..' . '/league/flysystem/src/AdapterInterface.php',
         'League\\Flysystem\\Adapter\\AbstractAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractAdapter.php',
         'League\\Flysystem\\Adapter\\AbstractFtpAdapter' => __DIR__ . '/..' . '/league/flysystem/src/Adapter/AbstractFtpAdapter.php',
@@ -2047,6 +2105,20 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'Psr\\Log\\Test\\LoggerInterfaceTest' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/LoggerInterfaceTest.php',
         'Psr\\Log\\Test\\TestLogger' => __DIR__ . '/..' . '/psr/log/Psr/Log/Test/TestLogger.php',
         'RequirementsChecker' => __DIR__ . '/..' . '/craftcms/server-check/server/requirements/RequirementsChecker.php',
+        'SebastianBergmann\\Diff\\Chunk' => __DIR__ . '/..' . '/sebastian/diff/src/Chunk.php',
+        'SebastianBergmann\\Diff\\Diff' => __DIR__ . '/..' . '/sebastian/diff/src/Diff.php',
+        'SebastianBergmann\\Diff\\Differ' => __DIR__ . '/..' . '/sebastian/diff/src/Differ.php',
+        'SebastianBergmann\\Diff\\Exception' => __DIR__ . '/..' . '/sebastian/diff/src/Exception/Exception.php',
+        'SebastianBergmann\\Diff\\InvalidArgumentException' => __DIR__ . '/..' . '/sebastian/diff/src/Exception/InvalidArgumentException.php',
+        'SebastianBergmann\\Diff\\Line' => __DIR__ . '/..' . '/sebastian/diff/src/Line.php',
+        'SebastianBergmann\\Diff\\LongestCommonSubsequenceCalculator' => __DIR__ . '/..' . '/sebastian/diff/src/LongestCommonSubsequenceCalculator.php',
+        'SebastianBergmann\\Diff\\MemoryEfficientLongestCommonSubsequenceCalculator' => __DIR__ . '/..' . '/sebastian/diff/src/MemoryEfficientLongestCommonSubsequenceCalculator.php',
+        'SebastianBergmann\\Diff\\Output\\AbstractChunkOutputBuilder' => __DIR__ . '/..' . '/sebastian/diff/src/Output/AbstractChunkOutputBuilder.php',
+        'SebastianBergmann\\Diff\\Output\\DiffOnlyOutputBuilder' => __DIR__ . '/..' . '/sebastian/diff/src/Output/DiffOnlyOutputBuilder.php',
+        'SebastianBergmann\\Diff\\Output\\DiffOutputBuilderInterface' => __DIR__ . '/..' . '/sebastian/diff/src/Output/DiffOutputBuilderInterface.php',
+        'SebastianBergmann\\Diff\\Output\\UnifiedDiffOutputBuilder' => __DIR__ . '/..' . '/sebastian/diff/src/Output/UnifiedDiffOutputBuilder.php',
+        'SebastianBergmann\\Diff\\Parser' => __DIR__ . '/..' . '/sebastian/diff/src/Parser.php',
+        'SebastianBergmann\\Diff\\TimeEfficientLongestCommonSubsequenceCalculator' => __DIR__ . '/..' . '/sebastian/diff/src/TimeEfficientLongestCommonSubsequenceCalculator.php',
         'Seld\\CliPrompt\\CliPrompt' => __DIR__ . '/..' . '/seld/cli-prompt/src/CliPrompt.php',
         'Seld\\JsonLint\\DuplicateKeyException' => __DIR__ . '/..' . '/seld/jsonlint/src/Seld/JsonLint/DuplicateKeyException.php',
         'Seld\\JsonLint\\JsonParser' => __DIR__ . '/..' . '/seld/jsonlint/src/Seld/JsonLint/JsonParser.php',
@@ -2604,6 +2676,12 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'cebe\\markdown\\tests\\MarkdownTest' => __DIR__ . '/..' . '/cebe/markdown/tests/MarkdownTest.php',
         'cebe\\markdown\\tests\\ParserTest' => __DIR__ . '/..' . '/cebe/markdown/tests/ParserTest.php',
         'cebe\\markdown\\tests\\TestParser' => __DIR__ . '/..' . '/cebe/markdown/tests/ParserTest.php',
+        'chasegiunta\\scss\\Scss' => __DIR__ . '/..' . '/chasegiunta/scss/src/Scss.php',
+        'chasegiunta\\scss\\models\\Settings' => __DIR__ . '/..' . '/chasegiunta/scss/src/models/Settings.php',
+        'chasegiunta\\scss\\services\\ScssService' => __DIR__ . '/..' . '/chasegiunta/scss/src/services/ScssService.php',
+        'chasegiunta\\scss\\twigextensions\\ScssNode' => __DIR__ . '/..' . '/chasegiunta/scss/src/twigextensions/ScssNode.php',
+        'chasegiunta\\scss\\twigextensions\\ScssTokenParser' => __DIR__ . '/..' . '/chasegiunta/scss/src/twigextensions/ScssTokenParser.php',
+        'chasegiunta\\scss\\twigextensions\\ScssTwigExtension' => __DIR__ . '/..' . '/chasegiunta/scss/src/twigextensions/ScssTwigExtension.php',
         'craft\\app\\web\\UrlRule' => __DIR__ . '/..' . '/craftcms/cms/src/app/web/UrlRule.php',
         'craft\\assetpreviews\\Image' => __DIR__ . '/..' . '/craftcms/cms/src/assetpreviews/Image.php',
         'craft\\assetpreviews\\Pdf' => __DIR__ . '/..' . '/craftcms/cms/src/assetpreviews/Pdf.php',
@@ -2637,6 +2715,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\base\\Image' => __DIR__ . '/..' . '/craftcms/cms/src/base/Image.php',
         'craft\\base\\LocalVolumeInterface' => __DIR__ . '/..' . '/craftcms/cms/src/base/LocalVolumeInterface.php',
         'craft\\base\\LogTargetTrait' => __DIR__ . '/..' . '/craftcms/cms/src/base/LogTargetTrait.php',
+        'craft\\base\\MemoizableArray' => __DIR__ . '/..' . '/craftcms/cms/src/base/MemoizableArray.php',
         'craft\\base\\MissingComponentInterface' => __DIR__ . '/..' . '/craftcms/cms/src/base/MissingComponentInterface.php',
         'craft\\base\\MissingComponentTrait' => __DIR__ . '/..' . '/craftcms/cms/src/base/MissingComponentTrait.php',
         'craft\\base\\Model' => __DIR__ . '/..' . '/craftcms/cms/src/base/Model.php',
@@ -2666,6 +2745,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\behaviors\\SessionBehavior' => __DIR__ . '/..' . '/craftcms/cms/src/behaviors/SessionBehavior.php',
         'craft\\cache\\AppPathDependency' => __DIR__ . '/..' . '/craftcms/cms/src/cache/AppPathDependency.php',
         'craft\\cache\\DbCache' => __DIR__ . '/..' . '/craftcms/cms/src/cache/DbCache.php',
+        'craft\\cache\\FileCache' => __DIR__ . '/..' . '/craftcms/cms/src/cache/FileCache.php',
         'craft\\composer\\Factory' => __DIR__ . '/..' . '/craftcms/cms/src/composer/Factory.php',
         'craft\\composer\\Installer' => __DIR__ . '/..' . '/craftcms/plugin-installer/src/Installer.php',
         'craft\\composer\\InvalidPluginException' => __DIR__ . '/..' . '/craftcms/plugin-installer/src/InvalidPluginException.php',
@@ -2690,6 +2770,8 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\console\\controllers\\InvalidateTagsController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/InvalidateTagsController.php',
         'craft\\console\\controllers\\MailerController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/MailerController.php',
         'craft\\console\\controllers\\MigrateController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/MigrateController.php',
+        'craft\\console\\controllers\\OffController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/OffController.php',
+        'craft\\console\\controllers\\OnController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/OnController.php',
         'craft\\console\\controllers\\PluginController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/PluginController.php',
         'craft\\console\\controllers\\ProjectConfigController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/ProjectConfigController.php',
         'craft\\console\\controllers\\ResaveController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/ResaveController.php',
@@ -2702,12 +2784,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\console\\controllers\\utils\\FixElementUidsController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/utils/FixElementUidsController.php',
         'craft\\console\\controllers\\utils\\PruneRevisionsController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/utils/PruneRevisionsController.php',
         'craft\\console\\controllers\\utils\\RepairController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/utils/RepairController.php',
-        'craft\\contactform\\Mailer' => __DIR__ . '/..' . '/craftcms/contact-form/src/Mailer.php',
-        'craft\\contactform\\Plugin' => __DIR__ . '/..' . '/craftcms/contact-form/src/Plugin.php',
-        'craft\\contactform\\controllers\\SendController' => __DIR__ . '/..' . '/craftcms/contact-form/src/controllers/SendController.php',
-        'craft\\contactform\\events\\SendEvent' => __DIR__ . '/..' . '/craftcms/contact-form/src/events/SendEvent.php',
-        'craft\\contactform\\models\\Settings' => __DIR__ . '/..' . '/craftcms/contact-form/src/models/Settings.php',
-        'craft\\contactform\\models\\Submission' => __DIR__ . '/..' . '/craftcms/contact-form/src/models/Submission.php',
+        'craft\\console\\controllers\\utils\\UpdateUsernamesController' => __DIR__ . '/..' . '/craftcms/cms/src/console/controllers/utils/UpdateUsernamesController.php',
         'craft\\controllers\\AppController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/AppController.php',
         'craft\\controllers\\AssetSettingsController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/AssetSettingsController.php',
         'craft\\controllers\\AssetTransformsController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/AssetTransformsController.php',
@@ -2840,6 +2917,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\errors\\GqlException' => __DIR__ . '/..' . '/craftcms/cms/src/errors/GqlException.php',
         'craft\\errors\\ImageException' => __DIR__ . '/..' . '/craftcms/cms/src/errors/ImageException.php',
         'craft\\errors\\InvalidElementException' => __DIR__ . '/..' . '/craftcms/cms/src/errors/InvalidElementException.php',
+        'craft\\errors\\InvalidFieldException' => __DIR__ . '/..' . '/craftcms/cms/src/errors/InvalidFieldException.php',
         'craft\\errors\\InvalidLicenseKeyException' => __DIR__ . '/..' . '/craftcms/cms/src/errors/InvalidLicenseKeyException.php',
         'craft\\errors\\InvalidPluginException' => __DIR__ . '/..' . '/craftcms/cms/src/errors/InvalidPluginException.php',
         'craft\\errors\\InvalidSubpathException' => __DIR__ . '/..' . '/craftcms/cms/src/errors/InvalidSubpathException.php',
@@ -3011,6 +3089,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\fields\\RadioButtons' => __DIR__ . '/..' . '/craftcms/cms/src/fields/RadioButtons.php',
         'craft\\fields\\Table' => __DIR__ . '/..' . '/craftcms/cms/src/fields/Table.php',
         'craft\\fields\\Tags' => __DIR__ . '/..' . '/craftcms/cms/src/fields/Tags.php',
+        'craft\\fields\\Time' => __DIR__ . '/..' . '/craftcms/cms/src/fields/Time.php',
         'craft\\fields\\Url' => __DIR__ . '/..' . '/craftcms/cms/src/fields/Url.php',
         'craft\\fields\\Users' => __DIR__ . '/..' . '/craftcms/cms/src/fields/Users.php',
         'craft\\fields\\data\\ColorData' => __DIR__ . '/..' . '/craftcms/cms/src/fields/data/ColorData.php',
@@ -3225,7 +3304,6 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\migrations\\m170303_140500_asset_field_source_settings' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m170303_140500_asset_field_source_settings.php',
         'craft\\migrations\\m170306_150500_asset_temporary_uploads' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m170306_150500_asset_temporary_uploads.php',
         'craft\\migrations\\m170523_190652_element_field_layout_ids' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m170523_190652_element_field_layout_ids.php',
-        'craft\\migrations\\m170612_000000_route_index_shuffle' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m170612_000000_route_index_shuffle.php',
         'craft\\migrations\\m170621_195237_format_plugin_handles' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m170621_195237_format_plugin_handles.php',
         'craft\\migrations\\m170630_161027_deprecation_line_nullable' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m170630_161027_deprecation_line_nullable.php',
         'craft\\migrations\\m170630_161028_deprecation_changes' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m170630_161028_deprecation_changes.php',
@@ -3346,6 +3424,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\migrations\\m200716_110900_replace_file_asset_permissions' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m200716_110900_replace_file_asset_permissions.php',
         'craft\\migrations\\m200716_153800_public_token_settings_in_project_config' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m200716_153800_public_token_settings_in_project_config.php',
         'craft\\migrations\\m200720_175543_drop_unique_constraints' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m200720_175543_drop_unique_constraints.php',
+        'craft\\migrations\\m200825_051217_project_config_version' => __DIR__ . '/..' . '/craftcms/cms/src/migrations/m200825_051217_project_config_version.php',
         'craft\\models\\AssetIndexData' => __DIR__ . '/..' . '/craftcms/cms/src/models/AssetIndexData.php',
         'craft\\models\\AssetTransform' => __DIR__ . '/..' . '/craftcms/cms/src/models/AssetTransform.php',
         'craft\\models\\AssetTransformIndex' => __DIR__ . '/..' . '/craftcms/cms/src/models/AssetTransformIndex.php',
@@ -3562,6 +3641,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\validators\\SlugValidator' => __DIR__ . '/..' . '/craftcms/cms/src/validators/SlugValidator.php',
         'craft\\validators\\StringValidator' => __DIR__ . '/..' . '/craftcms/cms/src/validators/StringValidator.php',
         'craft\\validators\\TemplateValidator' => __DIR__ . '/..' . '/craftcms/cms/src/validators/TemplateValidator.php',
+        'craft\\validators\\TimeValidator' => __DIR__ . '/..' . '/craftcms/cms/src/validators/TimeValidator.php',
         'craft\\validators\\UniqueValidator' => __DIR__ . '/..' . '/craftcms/cms/src/validators/UniqueValidator.php',
         'craft\\validators\\UriFormatValidator' => __DIR__ . '/..' . '/craftcms/cms/src/validators/UriFormatValidator.php',
         'craft\\validators\\UriValidator' => __DIR__ . '/..' . '/craftcms/cms/src/validators/UriValidator.php',
@@ -3637,6 +3717,7 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'craft\\web\\assets\\sites\\SitesAsset' => __DIR__ . '/..' . '/craftcms/cms/src/web/assets/sites/SitesAsset.php',
         'craft\\web\\assets\\systemmessages\\SystemMessagesAsset' => __DIR__ . '/..' . '/craftcms/cms/src/web/assets/systemmessages/SystemMessagesAsset.php',
         'craft\\web\\assets\\tablesettings\\TableSettingsAsset' => __DIR__ . '/..' . '/craftcms/cms/src/web/assets/tablesettings/TableSettingsAsset.php',
+        'craft\\web\\assets\\tests\\TestsAsset' => __DIR__ . '/..' . '/craftcms/cms/src/web/assets/tests/TestsAsset.php',
         'craft\\web\\assets\\timepicker\\TimepickerAsset' => __DIR__ . '/..' . '/craftcms/cms/src/web/assets/timepicker/TimepickerAsset.php',
         'craft\\web\\assets\\updater\\UpdaterAsset' => __DIR__ . '/..' . '/craftcms/cms/src/web/assets/updater/UpdaterAsset.php',
         'craft\\web\\assets\\updates\\UpdatesAsset' => __DIR__ . '/..' . '/craftcms/cms/src/web/assets/updates/UpdatesAsset.php',
@@ -3820,10 +3901,18 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
         'phpDocumentor\\Reflection\\Types\\String_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/String_.php',
         'phpDocumentor\\Reflection\\Types\\This' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/This.php',
         'phpDocumentor\\Reflection\\Types\\Void_' => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src/Types/Void_.php',
+        'swdevelopment\\animate\\Animate' => __DIR__ . '/..' . '/swdevelopment/animate/src/Animate.php',
+        'swdevelopment\\animate\\controllers\\DefaultController' => __DIR__ . '/..' . '/swdevelopment/animate/src/controllers/DefaultController.php',
+        'swdevelopment\\animate\\fields\\Fields' => __DIR__ . '/..' . '/swdevelopment/animate/src/fields/Fields.php',
+        'swdevelopment\\animate\\models\\Settings' => __DIR__ . '/..' . '/swdevelopment/animate/src/models/Settings.php',
+        'swdevelopment\\animate\\variables\\AnimateVariable' => __DIR__ . '/..' . '/swdevelopment/animate/src/variables/AnimateVariable.php',
+        'swdevelopment\\animate\\web\\assets\\animate\\AnimateAsset' => __DIR__ . '/..' . '/swdevelopment/animate/src/web/assets/animate/AnimateAsset.php',
+        'swdevelopment\\animate\\web\\assets\\animatecpsection\\AnimateCPSectionAsset' => __DIR__ . '/..' . '/swdevelopment/animate/src/web/assets/animatecpsection/AnimateCPSectionAsset.php',
         'tubalmartin\\CssMin\\Colors' => __DIR__ . '/..' . '/tubalmartin/cssmin/src/Colors.php',
         'tubalmartin\\CssMin\\Command' => __DIR__ . '/..' . '/tubalmartin/cssmin/src/Command.php',
         'tubalmartin\\CssMin\\Minifier' => __DIR__ . '/..' . '/tubalmartin/cssmin/src/Minifier.php',
         'tubalmartin\\CssMin\\Utils' => __DIR__ . '/..' . '/tubalmartin/cssmin/src/Utils.php',
+        'utakka\\redactoranchors\\RedactorAnchors' => __DIR__ . '/..' . '/utakka/redactor-anchors/src/RedactorAnchors.php',
         'voku\\helper\\ASCII' => __DIR__ . '/..' . '/voku/portable-ascii/src/voku/helper/ASCII.php',
         'voku\\helper\\AntiXSS' => __DIR__ . '/..' . '/voku/anti-xss/src/voku/helper/AntiXSS.php',
         'voku\\helper\\Bootup' => __DIR__ . '/..' . '/voku/portable-utf8/src/voku/helper/Bootup.php',
@@ -4377,10 +4466,10 @@ class ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitcb22dcbc54b094ae495d3a1a2c56038f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitf2675da14860c5611deb0962f062d8cb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitf2675da14860c5611deb0962f062d8cb::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitf2675da14860c5611deb0962f062d8cb::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitf2675da14860c5611deb0962f062d8cb::$classMap;
 
         }, null, ClassLoader::class);
     }

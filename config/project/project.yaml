@@ -1,40 +1,34 @@
-dateModified: 1597495573
+dateModified: 1602225328
 email:
   fromEmail: zatonihon@gmail.com
-  fromName: Fulcrum
+  fromName: 'Fulcrum Premium Finance'
   transportType: craft\mail\transportadapters\Sendmail
-graphql:
-  publicToken:
-    enabled: false
-    expiryDate: null
 plugins:
+  animate:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
   bootstrap:
     edition: standard
     enabled: true
     schemaVersion: 0.0.0
-    settings:
-      includeJquery: '1'
-      includePopper: '1'
-      production: production
-      useCdn: '1'
-      useEverywhere: '1'
-  contact-form:
-    edition: standard
-    enabled: true
-    schemaVersion: 1.0.0
   redactor:
     edition: standard
     enabled: true
     schemaVersion: 2.3.0
+  scss:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true
-  name: Fulcrum
-  schemaVersion: 3.5.12
+  name: 'Fulcrum Premium Finance'
+  schemaVersion: 3.5.13
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
   defaultGroup: null
-  photoSubpath: ''
+  photoSubpath: null
   photoVolumeUid: null
   requireEmailVerification: true

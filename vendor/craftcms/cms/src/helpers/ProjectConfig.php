@@ -13,7 +13,12 @@ use craft\services\Gql as GqlService;
 use craft\services\ProjectConfig as ProjectConfigService;
 use craft\services\Sites;
 use craft\services\UserGroups;
+use SebastianBergmann\Diff\Differ;
+use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
+use Symfony\Component\Yaml\Yaml;
 use yii\base\InvalidConfigException;
+use yii\caching\ChainedDependency;
+use yii\caching\ExpressionDependency;
 
 /**
  * Class ProjectConfig
@@ -52,12 +57,14 @@ class ProjectConfig
      */
     public static function ensureAllFieldsProcessed()
     {
-        if (static::$_processedFields) {
+        $projectConfig = Craft::$app->getProjectConfig();
+
+        if (static::$_processedFields || !$projectConfig->getIsApplyingYamlChanges()) {
             return;
         }
+
         static::$_processedFields = true;
 
-        $projectConfig = Craft::$app->getProjectConfig();
         $allGroups = $projectConfig->get(Fields::CONFIG_FIELDGROUP_KEY, true) ?? [];
         $allFields = $projectConfig->get(Fields::CONFIG_FIELDS_KEY, true) ?? [];
 
@@ -77,12 +84,14 @@ class ProjectConfig
      */
     public static function ensureAllSitesProcessed()
     {
-        if (static::$_processedSites) {
+        $projectConfig = Craft::$app->getProjectConfig();
+
+        if (static::$_processedSites || !$projectConfig->getIsApplyingYamlChanges()) {
             return;
         }
+
         static::$_processedSites = true;
 
-        $projectConfig = Craft::$app->getProjectConfig();
         $allGroups = $projectConfig->get(Sites::CONFIG_SITEGROUP_KEY, true) ?? [];
         $allSites = $projectConfig->get(Sites::CONFIG_SITES_KEY, true) ?? [];
 
@@ -102,12 +111,14 @@ class ProjectConfig
      */
     public static function ensureAllUserGroupsProcessed()
     {
-        if (static::$_processedUserGroups) {
+        $projectConfig = Craft::$app->getProjectConfig();
+
+        if (static::$_processedUserGroups || !$projectConfig->getIsApplyingYamlChanges()) {
             return;
         }
+
         static::$_processedUserGroups = true;
 
-        $projectConfig = Craft::$app->getProjectConfig();
         $allGroups = $projectConfig->get(UserGroups::CONFIG_USERPGROUPS_KEY, true);
 
         if (is_array($allGroups)) {
@@ -124,12 +135,14 @@ class ProjectConfig
      */
     public static function ensureAllGqlSchemasProcessed()
     {
-        if (static::$_processedGqlSchemas) {
+        $projectConfig = Craft::$app->getProjectConfig();
+
+        if (static::$_processedGqlSchemas || !$projectConfig->getIsApplyingYamlChanges()) {
             return;
         }
+
         static::$_processedGqlSchemas = true;
 
-        $projectConfig = Craft::$app->getProjectConfig();
         $allSchemas = $projectConfig->get(GqlService::CONFIG_GQL_SCHEMAS_KEY, true);
 
         if (is_array($allSchemas)) {
@@ -430,5 +443,41 @@ class ProjectConfig
         }
 
         return true;
+    }
+
+    /**
+     * Returns a diff of the pending project config YAML changes, compared to the currently loaded project config.
+     *
+     * @return string
+     * @since 3.5.6
+     */
+    public static function diff(): string
+    {
+        $projectConfig = Craft::$app->getProjectConfig();
+
+        return Craft::$app->getCache()->getOrSet(ProjectConfigService::DIFF_CACHE_KEY, function() use ($projectConfig): string {
+            $currentConfig = $projectConfig->get();
+            $pendingConfig = $projectConfig->get(null, true);
+            $currentYaml = Yaml::dump(static::cleanupConfig($currentConfig), 20, 2);
+            $pendingYaml = Yaml::dump(static::cleanupConfig($pendingConfig), 20, 2);
+            $builder = new UnifiedDiffOutputBuilder('');
+            $differ = new Differ($builder);
+            $diff = $differ->diff($currentYaml, $pendingYaml);
+
+            // Cleanup
+            $diff = preg_replace("/^@@ @@\n/", '', $diff);
+            $diff = preg_replace('/^[\+\-]?/m', '$0 ', $diff);
+            $diff = str_replace(' @@ @@', '...', $diff);
+            $diff = rtrim($diff);
+
+            return $diff;
+        }, null, new ChainedDependency([
+            'dependencies' => [
+                $projectConfig->getCacheDependency(),
+                new ExpressionDependency([
+                    'expression' => 'md5(' . Json::class . '::encode('. Craft::class . '::$app->getProjectConfig()->get(null, true)))',
+                ]),
+            ],
+        ]));
     }
 }

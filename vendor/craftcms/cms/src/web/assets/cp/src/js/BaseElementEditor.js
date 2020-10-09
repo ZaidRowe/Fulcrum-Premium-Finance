@@ -122,8 +122,16 @@ Craft.BaseElementEditor = Garnish.Base.extend(
 
                 var $footer = $('<div class="hud-footer"/>').appendTo(this.$form),
                     $buttonsContainer = $('<div class="buttons right"/>').appendTo($footer);
-                this.$cancelBtn = $('<div class="btn">' + Craft.t('app', 'Cancel') + '</div>').appendTo($buttonsContainer);
-                this.$saveBtn = $('<input class="btn submit" type="submit" value="' + Craft.t('app', 'Save') + '"/>').appendTo($buttonsContainer);
+                this.$cancelBtn = $('<button/>', {
+                    type: 'button',
+                    class: 'btn',
+                    text: Craft.t('app', 'Cancel'),
+                }).appendTo($buttonsContainer);
+                this.$saveBtn = $('<button/>', {
+                    type: 'submit',
+                    class: 'btn submit',
+                    text: Craft.t('app', 'Save'),
+                }).appendTo($buttonsContainer);
                 this.$spinner = $('<div class="spinner hidden"/>').appendTo($buttonsContainer);
 
                 $hudContents = $hudContents.add(this.$form);
@@ -140,6 +148,9 @@ Craft.BaseElementEditor = Garnish.Base.extend(
                         onHide: this.onHideHud.bind(this),
                         onSubmit: this.saveElement.bind(this),
                     });
+
+                    Garnish.shortcutManager.registerShortcut(Garnish.ESC_KEY, this.maybeCloseHud.bind(this));
+                    this.hud.addListener(this.hud.$shade, 'click', this.maybeCloseHud.bind(this));
 
                     this.hud.$hud.data('elementEditor', this);
 
@@ -164,10 +175,7 @@ Craft.BaseElementEditor = Garnish.Base.extend(
         },
 
         switchSite: function() {
-            if (
-                this.hud.$body.serialize() !== this.initialData &&
-                !confirm(Craft.t('app', 'Switching sites will lose unsaved changes. Are you sure you want to switch sites?'))
-            ) {
+            if (this.isDirty() && !confirm(Craft.t('app', 'Switching sites will lose unsaved changes. Are you sure you want to switch sites?'))) {
                 this.$siteSelect.val(this.siteId);
                 return;
             }
@@ -285,7 +293,25 @@ Craft.BaseElementEditor = Garnish.Base.extend(
             }, this));
         },
 
+        isDirty: function() {
+            return this.hud.$body.serialize() !== this.initialData;
+        },
+
+        maybeCloseHud: function(ev) {
+            if (!this.hud || !this.hud.showing) {
+                return;
+            }
+
+            if (!this.isDirty() || confirm('Are you sure you want to close the editor? Any changes will be lost.')) {
+                this.closeHud();
+            }
+        },
+
         closeHud: function() {
+            if (!this.hud || !this.hud.showing) {
+                return;
+            }
+
             this.hud.hide();
             delete this.hud;
         },

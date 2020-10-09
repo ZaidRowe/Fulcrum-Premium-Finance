@@ -315,6 +315,97 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 
 
 
+/* ABOUT US [ START ]
+   ========================================================================== */
+
+/* ABOUT US HEADER SECTION 1 */
+.about-us-header{background: linear-gradient(0deg, rgba(0, 0, 0, 0.65),  rgba(0, 0, 0, 0.65)), url(/web/assets/general/about-us/fulcrum-premium-finance-about-us-header-background.png); background-blend-mode: multiply; background-size: cover; background-repeat: no-repeat; height: 768px; background-position: center center; display:flex; justify-content: center;}
+.about-us-heading-text{ 
+  color: #fff;
+  font-size: 64px;
+  width: 80%;
+  margin-bottom: 100px;
+  line-height: 1.2em;
+}    
+.core-values-contianer {
+  text-align: center;
+
+}
+.core-values-tagline{
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+  line-height: 1.2em;
+}
+
+.core-values-heading {
+  font-size: 61px;
+  text-align: center;
+  width:90%;
+  padding: 50px 0px;
+  margin: auto;
+  line-height: 1.2em;
+  
+}
+.core-values-text { 
+  font-size: 24px;
+  color: #3E4545;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  line-height: 1.2em;
+  margin-bottom: 100px;
+}
+
+
+.core-value-container {
+  background-color: #F4F4F4;
+  padding: 35px;
+  box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.5);
+}
+
+.core-value-tagline{
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+  line-height: 1.2em;
+}
+
+.core-value-heading {
+  font-size: 36px;
+  text-align: center;
+  width:60%;
+  padding: 25px 0px;
+  margin: auto;
+  line-height: 1.2em;
+  
+}
+.core-value-text { 
+  font-size: 18px;
+  color: #3E4545;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  line-height: 1.2em;
+}
+
+
+/*  BUBBLE GRAPHIC */
+.bubble-graphic-about-us img {width: 54em; margin-bottom: -23em; margin-top: -24em; margin-left: -28em;}
+
+.get-started-container {
+  margin: auto;
+  margin-top: 15px;
+  z-index: 999999;
+}
+
+.about-us-video {
+  width: 100%!important;
+}
+ /* ABOUT US [ END ]
+   ========================================================================== */
+
+
 
 
 

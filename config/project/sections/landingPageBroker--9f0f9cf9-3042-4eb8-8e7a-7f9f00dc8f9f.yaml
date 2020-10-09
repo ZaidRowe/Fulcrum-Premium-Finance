@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: landingPageBroker
+name: 'Landing Page Broker'
+propagationMethod: all
+siteSettings:
+  41905891-4bbc-4780-afc6-911415166f01:
+    enabledByDefault: true
+    hasUrls: true
+    template: _fulcrum-premium-finance/_landingpages/_brokers-landingpage
+    uriFormat: broker
+type: single
