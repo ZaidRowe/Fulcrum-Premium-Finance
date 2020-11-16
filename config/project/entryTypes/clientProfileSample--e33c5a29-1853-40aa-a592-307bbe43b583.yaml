@@ -1,0 +1,38 @@
+fieldLayouts:
+  8059d0bb-1d86-41fd-8fe6-b6ea5fc810fc:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\EntryTitleField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: clientProfileSample
+hasTitleField: false
+name: 'Client Profile Sample'
+section: a4e270bf-92ae-43c8-8432-b8ebec1eeae2
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

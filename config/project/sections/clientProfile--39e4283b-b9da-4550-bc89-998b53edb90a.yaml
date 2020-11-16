@@ -7,5 +7,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _fulcrum-premium-finance/_entry/_client-profile-entry
-    uriFormat: 'client-profile/{slug}'
+    uriFormat: 'web/client-profile/{slug}'
 type: channel

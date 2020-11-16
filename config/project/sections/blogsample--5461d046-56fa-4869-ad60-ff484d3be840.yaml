@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: blogsample
+name: Blogsample
+propagationMethod: all
+siteSettings:
+  41905891-4bbc-4780-afc6-911415166f01:
+    enabledByDefault: true
+    hasUrls: true
+    template: _fulcrum-premium-finance/_entry/_blog-entry
+    uriFormat: web/blogsample
+type: single

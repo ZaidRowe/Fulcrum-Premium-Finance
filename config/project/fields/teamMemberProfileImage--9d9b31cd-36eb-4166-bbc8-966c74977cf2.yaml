@@ -1,0 +1,32 @@
+contentColumnType: string
+fieldGroup: 1ed2b35c-7eee-4016-bd2a-4eb363ede170
+handle: teamMemberProfileImage
+instructions: 'Team member''s profile image,which should preferably be 1080x1080px which is required the size for this profile.'
+name: 'Profile Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:e3ae8ead-03ef-4d93-9df2-ad4501b795c5'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: 'Add profile image'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:e3ae8ead-03ef-4d93-9df2-ad4501b795c5'
+  singleUploadLocationSubpath: web/assets/team-members
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

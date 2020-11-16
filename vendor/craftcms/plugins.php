@@ -4,23 +4,6 @@ $vendorDir = dirname(__DIR__);
 $rootDir = dirname(dirname(__DIR__));
 
 return array (
-  'craftcms/redactor' => 
-  array (
-    'class' => 'craft\\redactor\\Plugin',
-    'basePath' => $vendorDir . '/craftcms/redactor/src',
-    'handle' => 'redactor',
-    'aliases' => 
-    array (
-      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
-    ),
-    'name' => 'Redactor',
-    'version' => '2.8.1',
-    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
-    'developer' => 'Pixel & Tonic',
-    'developerUrl' => 'https://pixelandtonic.com/',
-    'developerEmail' => 'support@craftcms.com',
-    'documentationUrl' => 'https://github.com/craftcms/redactor/blob/v2/README.md',
-  ),
   'doublesecretagency/craft-bootstrap' => 
   array (
     'class' => 'doublesecretagency\\bootstrap\\Bootstrap',
@@ -82,6 +65,46 @@ return array (
     'hasCpSettings' => false,
     'hasCpSection' => false,
   ),
+  'craftcms/redactor' => 
+  array (
+    'class' => 'craft\\redactor\\Plugin',
+    'basePath' => $vendorDir . '/craftcms/redactor/src',
+    'handle' => 'redactor',
+    'aliases' => 
+    array (
+      '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
+    ),
+    'name' => 'Redactor',
+    'version' => '2.8.3',
+    'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
+    'developer' => 'Pixel & Tonic',
+    'developerUrl' => 'https://pixelandtonic.com/',
+    'developerEmail' => 'support@craftcms.com',
+    'documentationUrl' => 'https://github.com/craftcms/redactor/blob/v2/README.md',
+  ),
+  'matt-west/craft-recaptcha' => 
+  array (
+    'class' => 'mattwest\\craftrecaptcha\\CraftRecaptcha',
+    'basePath' => $vendorDir . '/matt-west/craft-recaptcha/src',
+    'handle' => 'recaptcha',
+    'aliases' => 
+    array (
+      '@mattwest/craftrecaptcha' => $vendorDir . '/matt-west/craft-recaptcha/src',
+    ),
+    'name' => 'reCAPTCHA',
+    'version' => '1.5.0',
+    'description' => 'Integrate Google’s reCAPTCHA into your forms.',
+    'developer' => 'Matt West',
+    'developerUrl' => 'https://mattwest.io',
+    'documentationUrl' => 'https://github.com/matt-west/craft-recaptcha/blob/master/README.md',
+    'changelogUrl' => 'https://raw.githubusercontent.com/matt-west/craft-recaptcha/master/CHANGELOG.md',
+    'hasCpSettings' => true,
+    'hasCpSection' => false,
+    'components' => 
+    array (
+      'craftRecaptchaService' => 'mattwest\\craftrecaptcha\\services\\CraftRecaptchaService',
+    ),
+  ),
   'swdevelopment/animate' => 
   array (
     'class' => 'swdevelopment\\animate\\Animate',
@@ -92,7 +115,7 @@ return array (
       '@swdevelopment/animate' => $vendorDir . '/swdevelopment/animate/src',
     ),
     'name' => 'Animate',
-    'version' => '1.0.2',
+    'version' => 'v1.0.6',
     'description' => 'This will animate HTML elements using the AOS library.',
     'developer' => 'Tim Strawbridge',
     'developerUrl' => 'https://swdevteam.com',

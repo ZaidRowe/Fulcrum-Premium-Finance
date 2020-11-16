@@ -1,23 +1,28 @@
 {% extends "_layout"%}
 {% block content %}
 {% include "_fulcrum-premium-finance/_includes/_nav" %}
+<!--  VIDEO BACKGROUND  -->
+<video class="broker_bg-video" autoplay muted loop id="myVideo">
+  <source src="/web/assets/landingpages/broker/Fulcrum-Premium-Finance_Landing-page_header-video_BROKER_1.mp4" type="video/mp4">
+</video>
+
 <!-- HEADER - Section 1-->
-<div id="homepage" class="homepage-header section animate__animated animate__slideInRight">
+<div id="homepage" data-aos="fade-up" data-aos-once="true" data-aos-duration="1000" class="homepage-header section">
     <div class="row">
 
         <!-- Homepage heading -->
         <div id="homepage-header-container" class="col-md-8">
-            <h1 class="homepage-heading animate__animated animate__zoomIn animate__delay-1s">South Africa's <br>trusted provider<br> of insurance Premium Financing</h1>
-            <p class="homepage-header-text animate__animated animate__zoomIn animate__delay-2s">Fulcrum is the largest and most reputable provider of Premium Finance solutions within the South African marketplace.</p>
+            <h1 data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="homepage-heading animate__animated animate__zoomIn animate__delay-1s">South Africa's <br>trusted provider<br> of insurance Premium Financing</h1>
+            <p data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="homepage-header-text animate__animated animate__zoomIn animate__delay-2s">Fulcrum is the largest and most reputable provider of Premium Finance solutions within the South African marketplace.</p>
             
             <!-- Homepage Header Buttons -->
             <div class="homepage-header-buttons-container">
                 
                 <!-- WATCH VIDEO BUTTON -->
-                <a class="watch-video-button" href=""><img src=""/>Watch Video</a>
+                <a data-aos="fade-up" data-aos-once="true" data-aos-delay="2000" data-aos-duration="2000" class="watch-video-button" href=""><img src=""/>Watch Video</a>
 
                 <!-- LEARN MORE BUTTON -->
-                <a class="learn-more-button standard-btn" href="">Learn more</a>
+                <a data-aos="fade-up" data-aos-once="true" data-aos-delay="3000" data-aos-duration="2000" class="learn-more-button standard-btn" href="/web/about-us">Learn more</a>
             
             </div>
 
@@ -31,48 +36,44 @@
     <div class="row">
 
         <!-- FULCRUM LOGO -->
-        <div class="about-us-fulcrum-logo"><img src="/web/assets/general/homepage/fulcrun_homepage-about-us-logo.svg" alt=""></div>
+        <div data-aos="zoom-in"  data-aos-duration="2000" class="about-us-fulcrum-logo"><img src="/web/assets/general/homepage/fulcrun_homepage-about-us-logo.svg" alt=""></div>
         
         <!-- ABOUT US BUBBLE GRAPHIC -->
-        <div class="about-us-graphic-container">
-            <div class="about-us-graphic">
-                <img src="/web/assets/general/homepage/home-page-about-us-temp-image.png">
-            </div>
-        </div>
+        {% include "_fulcrum-premium-finance/_includes/_about-us" %}
 
     </div>
 </div>
 
 <!-- WHY OUR CLIENTS CHOOSE US - Section 3 -->
-<div class="homepage-why-us section-grey">
+<div data-aos="fade-left" data-aos-once="true" data-aos-duration="1000" class="homepage-why-us section-grey">
     <div class="row">    
         <div class="col-md-6">
 
             <!-- WHY OUR CLIENTS CHOOSE US - Header -->
             <div class="why-our-clients-container">
-                <h3 class="why-our-clients-tagline">South Africa’s trusted provider of insurance Premium Financing</h3>
-                <h2 class="why-our-clients-heading">Why our clients choose us</h2>
-                <p class="why-our-clients-text">Our highly experienced team of specialists, backed by best-in-class systems, delivers an unparalleled experience to discerning clients.</p>
+                <h3 data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="why-our-clients-tagline">South Africa’s trusted provider of insurance Premium Financing</h3>
+                <h2 data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="why-our-clients-heading">Why our clients choose us</h2>
+                <p data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="why-our-clients-text">Our highly experienced team of specialists, backed by best-in-class systems, delivers an unparalleled experience to discerning clients.</p>
             </div>
 
             <!-- WHY OUR CLIENTS CHOOSE US - Reasona container -->
             <div class="why-our-clients-reasons-container">
 
                 <!-- WHY OUR CLIENTS CHOOSE US - Reason 1 -->
-                <div class="why-our-clients-reason"> 
-                    <img class="why-our-clients-icon" src="/web/assets/general/homepage/why-our-clients-icons/why-our-clients-choose-us_icon-1.svg">
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="why-our-clients-reason hvr-scale"> 
+                    <img class="why-our-clients-icon hvr-bob" src="/web/assets/general/homepage/why-our-clients-icons/why-our-clients-choose-us_icon-1.svg">
                     <p class="why-our-clients-reason-text">Frees up cash flow for reinvestment in operations</p>
                 </div>
 
                 <!-- WHY OUR CLIENTS CHOOSE US - Reason 2 -->
-                <div class="why-our-clients-reason"> 
-                    <img class="why-our-clients-icon" src="/web/assets/general/homepage/why-our-clients-icons/why-our-clients-choose-us_icon-2.svg">
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="why-our-clients-reason hvr-scale"> 
+                    <img class="why-our-clients-icon hvr-bob" src="/web/assets/general/homepage/why-our-clients-icons/why-our-clients-choose-us_icon-2.svg">
                     <p class="why-our-clients-reason-text">Enables leverage at attractive, sustainable rates</p>
                 </div>
 
                 <!-- WHY OUR CLIENTS CHOOSE US - Reason 3 -->
-                <div class="why-our-clients-reason"> 
-                    <img class="why-our-clients-icon" src="/web/assets/general/homepage/why-our-clients-icons/why-our-clients-choose-us_icon-3.svg">
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="why-our-clients-reason hvr-scale"> 
+                    <img class="why-our-clients-icon hvr-bob" src="/web/assets/general/homepage/why-our-clients-icons/why-our-clients-choose-us_icon-3.svg">
                     <p class="why-our-clients-reason-text">Claim sustantial VAT refunds upfront</p>
                 </div>
 
@@ -80,7 +81,7 @@
                
             <!-- WHY OUR CLIENTS CHOOSE US - learn more button -->
             <div class="">
-                <a href="" class="standard-btn">Learn more</a>
+                <a href="/web/what-we-offer" data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="standard-btn">Learn more</a>
             </div>
 
         </div>
@@ -88,31 +89,31 @@
 </div>
 
 <!-- WHAT ARE THE BENEFITS - Section 4 -->
-<div class="homepage-benefits section">
+<div data-aos="fade-left" data-aos-once="true" data-aos-duration="1000" class="homepage-benefits section">
     <div class="row">
 
         <div class="homepage-benefits-container">
 
             <!-- Benefits header -->
-            <h2 class="hompage-benefits-heading">What are the benefits of <br>Premium Financing for brokers?<h2>
+            <h2 data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="hompage-benefits-heading">What are the benefits of <br>Premium Financing for brokers?<h2>
 
             <!-- Benfits points -->
             <div class="hompage-benefits-point-container">
                 
-                <div class="homepage-benefit">
-                    <img class="homepage-benefit-icon" src="/web/assets/general/homepage/benefit-icons/fulcrum-premium-finance_benefits-icon-1.svg">
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="homepage-benefit hvr-scale">
+                    <img class="homepage-benefit-icon hvr-bob" src="/web/assets/general/homepage/benefit-icons/fulcrum-premium-finance_benefits-icon-1.svg">
                     <h2 class="homepage-benfits-header">Financial Benefit</h2>
                     <p class="homepage-benefit-text">Brokers will receive their full annual fees and commissions upfront.</p>
                 </div>
 
-                <div class="homepage-benefit">
-                    <img class="homepage-benefit-icon" src="/web/assets/general/homepage/benefit-icons/fulcrum-premium-finance_benefits-icon-2.svg">
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="homepage-benefit hvr-scale">
+                    <img class="homepage-benefit-icon hvr-bob" src="/web/assets/general/homepage/benefit-icons/fulcrum-premium-finance_benefits-icon-2.svg">
                     <h2 class="homepage-benfits-header">Client retention</h2>
                     <p class="homepage-benefit-text">Financed clients are less susceptible to being poached by other Brokers during the term of the policy.</p>
                 </div>
 
-                <div class="homepage-benefit">
-                    <img class="homepage-benefit-icon" src="/web/assets/general/homepage/benefit-icons/fulcrum-premium-finance_benefits-icon-3.svg">
+                <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="homepage-benefit hvr-scale">
+                    <img class="homepage-benefit-icon hvr-bob" src="/web/assets/general/homepage/benefit-icons/fulcrum-premium-finance_benefits-icon-3.svg">
                     <h2 class="homepage-benfits-header">Reduced administration</h2>
                     <p class="homepage-benefit-text">Fulcrum handles the debit orders and credit control collections, covered</p>
                 </div>
@@ -124,17 +125,17 @@
 </div>
 
 <!-- TESTIMONIALS - Section 5 -->
-<div class="homepage-testimonials section-grad">
+<div data-aos="zoom-in" data-aos-once="true" data-aos-duration="1000" class="homepage-testimonials section-grad">
 
     <div class="row">
 
         <div class="client-testimonial-header">
-            <h2 class="client-testimonial-heading">People talk about us</h2>
+            <h2 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="client-testimonial-heading">People talk about us</h2>
         </div>
 
     </div>
 
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" id="myCarousel" class="carousel slide" data-ride="carousel">
     
         <div class="row">
 
@@ -166,7 +167,7 @@
 
                 </div>
 
-                <div class="item">
+                <!-- <div class="item">
 
                     <div class="testimonials-container">
                         <div class="testimonial-image">
@@ -217,7 +218,7 @@
                         </div>
                     </div>
 
-                </div>   
+                </div>   -->
             </div>
         </div>
     
@@ -229,16 +230,16 @@
         <a class="right carousel-control" href="#myCarousel" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
             <span class="sr-only">Next</span>
-        </a>
+        </a> 
 
         <div class="row">
 
-            <!-- Indicators -->
+            <!-- Indicators 
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
+            </ol>-->
 
         </div>
 
@@ -255,14 +256,14 @@
 </div>
 
 <!-- OUR PREMIUM FINANCING SOLUTION - Section 6 -->
-<div id="our-premium-financing" class="section">
+<div data-aos="fade-left" data-aos-once="true" data-aos-duration="1000" id="our-premium-financing" class="section">
     <div class="row">
         
         <!-- Left Column -->
         <div class="col-md-6">
-            <h2 class="our-premium-heading">Our Premium Financing solution</h2>
-            <p class="our-premium-text">Our simple, established and independently funded financing solution is provided at sustainable rates that still beat the bank and undercut the premiums charged by insurers themselves. </p>
-            <a href="" class="our-premium-btn standard-btn">Learn more</a>
+            <h2 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="our-premium-heading">Our Premium Financing solution</h2>
+            <p data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="our-premium-text">Our simple, established and independently funded financing solution is provided at sustainable rates that still beat the bank and undercut the premiums charged by insurers themselves. </p>
+            <a data-aos="zoom-in" data-aos-once="true" data-aos-delay="2000" data-aos-duration="2000" href="" class="our-premium-btn standard-btn">Learn more</a>
         </div>
 
         <!-- Bubble graphic -->
@@ -278,7 +279,7 @@
     <div class="row">
 
         <!-- Reason one -->
-        <div class="reason-container col-md-4">
+        <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="3000" data-aos-duration="2000" class="reason-container col-md-4 hvr-bob hvr-scale">
             <div id="reason-one">
                 <h4 class="reason-subheading">SAVINGS</h4>
                 <h2 class="reason-heading">Over R20k</h2>
@@ -288,7 +289,7 @@
         </div>
 
         <!-- Reason two -->
-        <div class="reason-container col-md-4">
+        <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="3000" data-aos-duration="2000" class="reason-container col-md-4 hvr-bob hvr-scale">
             <div id="reason-two">
                 <h4 class="reason-subheading">CLIENTS</h4>
                 <h2 class="reason-heading">2 800+</h2>
@@ -298,7 +299,7 @@
         </div>
 
         <!-- Reason three -->
-        <div class="reason-container col-md-4">
+        <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="3000" data-aos-duration="2000" class="reason-container col-md-4 hvr-bob hvr-scale">
             <div id="reason-three">
                 <h4 class="reason-subheading">BROKERS</h4>
                 <h2 class="reason-heading">80+</h2>
@@ -311,7 +312,7 @@
 </div>
 
 <!-- BUBBLE GRAPHIC-->
-<div class="bubble-graphic-homepage"><img src="/web/assets/general/misc/Fulcrum-gradient_circles-03.png" ></div>
+<div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="bubble-graphic-homepage"><img src="/web/assets/general/misc/Fulcrum-gradient_circles-03.png" ></div>
 
 <!-- HOW TO DECIDE - Section 8 -->
 <div class="how-to-decide section">
@@ -319,13 +320,13 @@
         
         <!-- HEADING -->
         <div class="how-to-decide-container">
-            <h2 class="how-to-decide-heading">How to decide if Premium Finance is right for you?</h2>
-            <p class="how-to-decide-text">In times of uncertainty businesses need a seamless and safe solution. Fulcrum remains SA’s most trusted, professional and reliable provider. </p>
-            <a href="" class="how-to-decide-letstalk-btn standard-btn">Lets talk</a>
+            <h2 data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="how-to-decide-heading">How to decide if Premium Finance is right for you?</h2>
+            <p data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="how-to-decide-text">In times of uncertainty businesses need a seamless and safe solution. Fulcrum remains SA’s most trusted, professional and reliable provider. </p>
+            <a data-aos="zoom-in" data-aos-once="true" data-aos-delay="2000" data-aos-duration="2000" href="" class="how-to-decide-letstalk-btn standard-btn">Lets talk</a>
         </div>
 
         <!-- Client logo Carousel -->
-        <div class="container">
+        <div data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="3000" class="container">
             <section class="customer-logos autoplay">
                 <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-1-grey.svg"></div>
                 <div class="slide"><img src="/web/assets/general/homepage/client-slider-logos/Client-icon-2-grey.svg"></div>

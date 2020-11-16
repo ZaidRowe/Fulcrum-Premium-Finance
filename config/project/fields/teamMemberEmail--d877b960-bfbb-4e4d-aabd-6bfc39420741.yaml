@@ -1,0 +1,11 @@
+contentColumnType: string
+fieldGroup: 1ed2b35c-7eee-4016-bd2a-4eb363ede170
+handle: teamMemberEmail
+instructions: 'Team member''s email address'
+name: Email
+searchable: true
+settings:
+  placeholder: info@fulcrumpremiumfinance.co.za
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Email

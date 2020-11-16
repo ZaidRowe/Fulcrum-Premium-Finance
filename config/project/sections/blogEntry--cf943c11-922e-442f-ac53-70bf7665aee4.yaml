@@ -7,5 +7,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: _fulcrum-premium-finance/_entry/_blog-entry
-    uriFormat: 'blog/{slug}'
+    uriFormat: 'web/blog/{slug}'
 type: channel

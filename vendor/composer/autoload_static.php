@@ -73,6 +73,7 @@ class ComposerStaticInitf2675da14860c5611deb0962f062d8cb
         array (
             'modules\\' => 8,
             'mikehaertl\\shellcommand\\' => 24,
+            'mattwest\\craftrecaptcha\\' => 24,
         ),
         'e' => 
         array (
@@ -291,6 +292,10 @@ class ComposerStaticInitf2675da14860c5611deb0962f062d8cb
         'mikehaertl\\shellcommand\\' => 
         array (
             0 => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src',
+        ),
+        'mattwest\\craftrecaptcha\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/matt-west/craft-recaptcha/src',
         ),
         'enshrined\\svgSanitize\\' => 
         array (
@@ -2797,6 +2802,7 @@ class ComposerStaticInitf2675da14860c5611deb0962f062d8cb
         'craft\\controllers\\ConfigSyncController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/ConfigSyncController.php',
         'craft\\controllers\\DashboardController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/DashboardController.php',
         'craft\\controllers\\DraftsController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/DraftsController.php',
+        'craft\\controllers\\EditController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/EditController.php',
         'craft\\controllers\\ElementIndexSettingsController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/ElementIndexSettingsController.php',
         'craft\\controllers\\ElementIndexesController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/ElementIndexesController.php',
         'craft\\controllers\\ElementsController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/ElementsController.php',
@@ -2815,6 +2821,7 @@ class ComposerStaticInitf2675da14860c5611deb0962f062d8cb
         'craft\\controllers\\ProjectConfigController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/ProjectConfigController.php',
         'craft\\controllers\\QueueController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/QueueController.php',
         'craft\\controllers\\RebrandController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/RebrandController.php',
+        'craft\\controllers\\RedirectController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/RedirectController.php',
         'craft\\controllers\\RoutesController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/RoutesController.php',
         'craft\\controllers\\SectionsController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/SectionsController.php',
         'craft\\controllers\\SitesController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/SitesController.php',
@@ -2830,6 +2837,7 @@ class ComposerStaticInitf2675da14860c5611deb0962f062d8cb
         'craft\\controllers\\VolumesController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/VolumesController.php',
         'craft\\controllers\\pluginstore\\InstallController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/pluginstore/InstallController.php',
         'craft\\controllers\\pluginstore\\RemoveController' => __DIR__ . '/..' . '/craftcms/cms/src/controllers/pluginstore/RemoveController.php',
+        'craft\\db\\ActiveQuery' => __DIR__ . '/..' . '/craftcms/cms/src/db/ActiveQuery.php',
         'craft\\db\\ActiveRecord' => __DIR__ . '/..' . '/craftcms/cms/src/db/ActiveRecord.php',
         'craft\\db\\Command' => __DIR__ . '/..' . '/craftcms/cms/src/db/Command.php',
         'craft\\db\\Connection' => __DIR__ . '/..' . '/craftcms/cms/src/db/Connection.php',
@@ -3828,6 +3836,11 @@ class ComposerStaticInitf2675da14860c5611deb0962f062d8cb
         'lessc_formatter_compressed' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
         'lessc_formatter_lessjs' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
         'lessc_parser' => __DIR__ . '/..' . '/marcusschwarz/lesserphp/lessc.inc.php',
+        'mattwest\\craftrecaptcha\\CraftRecaptcha' => __DIR__ . '/..' . '/matt-west/craft-recaptcha/src/CraftRecaptcha.php',
+        'mattwest\\craftrecaptcha\\controllers\\RecaptchaController' => __DIR__ . '/..' . '/matt-west/craft-recaptcha/src/controllers/RecaptchaController.php',
+        'mattwest\\craftrecaptcha\\models\\Settings' => __DIR__ . '/..' . '/matt-west/craft-recaptcha/src/models/Settings.php',
+        'mattwest\\craftrecaptcha\\services\\CraftRecaptchaService' => __DIR__ . '/..' . '/matt-west/craft-recaptcha/src/services/CraftRecaptchaService.php',
+        'mattwest\\craftrecaptcha\\variables\\CraftRecaptchaVariable' => __DIR__ . '/..' . '/matt-west/craft-recaptcha/src/variables/CraftRecaptchaVariable.php',
         'mikehaertl\\shellcommand\\Command' => __DIR__ . '/..' . '/mikehaertl/php-shellcommand/src/Command.php',
         'modules\\Module' => __DIR__ . '/../..' . '/modules/Module.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',

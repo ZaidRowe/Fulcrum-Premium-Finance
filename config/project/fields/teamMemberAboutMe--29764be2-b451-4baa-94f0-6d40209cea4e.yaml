@@ -1,0 +1,18 @@
+contentColumnType: string(600)
+fieldGroup: 1ed2b35c-7eee-4016-bd2a-4eb363ede170
+handle: teamMemberAboutMe
+instructions: 'A small description about this team member. [150 Characters]'
+name: 'About me'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 150
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: '1'
+  placeholder: ''
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

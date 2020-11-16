@@ -1,0 +1,24 @@
+ <div class="team-member-container">
+    <div class="profile-image-container col-md-6">
+        <div class="profile-image">
+            {% if entry.teamMemberProfileImage|length %}
+                {% for image in entry.profile.all() %}
+                  <img src="{{ teamMemberProfileImage.url }}" alt="{{ teamMemberProfileImage.title }}" />
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+
+        <div class="about-me-container col-md-6">
+            <div class="about-me">
+                <h2 class="team-member-quote">Fulcrum provides seamless, rapid Premium Finance solutions while taking care of collections</h2>
+                <h3 class="team-member-name">Delarey van Dyk</h3>
+                <p class="team-member-position">Managing Director</p>
+                <img class="team-logo" src="/web/assets/general/misc/Fulcrum_Premium_Finance-White_logo.svg"/>
+            </div>
+        </div>    
+    </div>
+  </div>  
+
+
+  

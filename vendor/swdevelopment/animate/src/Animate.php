@@ -27,8 +27,6 @@ use craft\web\UrlManager;
 use craft\web\twig\variables\CraftVariable;
 use craft\events\RegisterUrlRulesEvent;
 
-
-
 /**
  * Craft plugins are very much like little applications in and of themselves. We’ve made
  * it as simple as we can, but the training wheels are off. A little prior knowledge is
@@ -87,7 +85,7 @@ class Animate extends Plugin
     public $hasCpSection = false;
 
     public $versions = [
-        'animate' => '1.0.2'
+        'animate' => '1.0.4'
     ];
 
     public $useCDN = false;

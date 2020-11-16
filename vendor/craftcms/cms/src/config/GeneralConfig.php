@@ -140,12 +140,12 @@ class GeneralConfig extends BaseObject
     public $backupOnUpdate = true;
 
     /**
-     * @var string|null The shell command that Craft should execute to create a database backup.
+     * @var string|false|null The shell command that Craft should execute to create a database backup.
      *
-     * By default Craft will run `mysqldump` or `pg_dump`, provided that those libraries are in the `$PATH` variable for the system user running
-     * the web server.
+     * When set to `null` (default), Craft will run `mysqldump` or `pg_dump`, provided that those libraries are in the `$PATH` variable
+     * for the system user running the web server.
      *
-     * There are several tokens you can use that Craft will swap out at runtime:
+     * You may provide your own command optionally using several tokens Craft will swap out at runtime:
      *
      * - `{path}` - the target backup file path
      * - `{port}` - the current database port
@@ -313,8 +313,10 @@ class GeneralConfig extends BaseObject
     public $defaultCookieDomain = '';
 
     /**
-     * @var string|null The default language the control panel should use for users who haven’t set a preferred language yet.
+     * @var string|null The default language the control panel should use for users who haven’t set a preferred language yet,
+     * as well as for console requests.
      * @group System
+     * @todo Rename to `defaultLanguage` in Craft 4, since it also determines the language for console requests
      */
     public $defaultCpLanguage;
 
@@ -419,17 +421,26 @@ class GeneralConfig extends BaseObject
     public $devMode = false;
 
     /**
-     * @var string[] Array of plugin handles that should be disabled, regardless of what the project config says.
-     * ---
+     * @var string[]|string|null Array of plugin handles that should be disabled, regardless of what the project config says.
+     *
      * ```php
      * 'dev' => [
      *     'disabledPlugins' => ['webhooks'],
      * ],
      * ```
+     *
+     * This can also be set to `'*'` to disable **all** plugins.
+     *
+     * ```php
+     * 'dev' => [
+     *     'disabledPlugins' => '*',
+     * ],
+     * ```
+     *
      * @since 3.1.9
      * @group System
      */
-    public $disabledPlugins = [];
+    public $disabledPlugins;
 
     /**
      * @var bool Whether front end requests should respond with `X-Robots-Tag: none` HTTP headers, indicating that pages should not be indexed,
@@ -941,7 +952,7 @@ class GeneralConfig extends BaseObject
      * Set to `0` to disable this feature.
      *
      * See [[ConfigHelper::durationInSeconds()]] for a list of supported value types.
-     * 
+     *
      * ::: tip
      * Users will only be purged when [garbage collection](https://craftcms.com/docs/3.x/gc.html) is run.
      * :::
@@ -1117,6 +1128,24 @@ class GeneralConfig extends BaseObject
      * @group Routing
      */
     public $setPasswordPath = 'setpassword';
+
+    /**
+     * @var mixed The URI to the page where users can request to change their password.
+     *
+     * See [[ConfigHelper::localizedValue()]] for a list of supported value types.
+     *
+     * If this is set, Craft will redirect [.well-known/change-password requests](https://w3c.github.io/webappsec-change-password-url/) to this URI.
+     *
+     * ::: tip
+     * You will also need to set the <config:setPasswordPath> config setting, which determines the URI and template path for your Set Password form,
+     * which is where the user will actually reset their password, once they’ve clicked the link in the Password Reset email.
+     * :::
+     *
+     * @see getSetPasswordRequestPath()
+     * @group Routing
+     * @since 3.5.14
+     */
+    public $setPasswordRequestPath;
 
     /**
      * @var mixed The URI Craft should redirect users to after setting their password from the front end.
@@ -1513,6 +1542,7 @@ class GeneralConfig extends BaseObject
         $this->elevatedSessionDuration = ConfigHelper::durationInSeconds($this->elevatedSessionDuration);
         $this->invalidLoginWindowDuration = ConfigHelper::durationInSeconds($this->invalidLoginWindowDuration);
         $this->purgePendingUsersDuration = ConfigHelper::durationInSeconds($this->purgePendingUsersDuration);
+        $this->purgeUnsavedDraftsDuration = ConfigHelper::durationInSeconds($this->purgeUnsavedDraftsDuration);
         $this->rememberUsernameDuration = ConfigHelper::durationInSeconds($this->rememberUsernameDuration);
         $this->rememberedUserSessionDuration = ConfigHelper::durationInSeconds($this->rememberedUserSessionDuration);
         $this->softDeleteDuration = ConfigHelper::durationInSeconds($this->softDeleteDuration);
@@ -1669,6 +1699,19 @@ class GeneralConfig extends BaseObject
     public function getSetPasswordPath(string $siteHandle = null): string
     {
         return ConfigHelper::localizedValue($this->setPasswordPath, $siteHandle);
+    }
+
+    /**
+     * Returns the localized Set Password Request Path value.
+     *
+     * @param string|null $siteHandle The site handle the value should be defined for. Defaults to the current site.
+     * @return string|null
+     * @see setPasswordRequestPath
+     * @since 3.5.14
+     */
+    public function getSetPasswordRequestPath(string $siteHandle = null)
+    {
+        return ConfigHelper::localizedValue($this->setPasswordRequestPath, $siteHandle);
     }
 
     /**
