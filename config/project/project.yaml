@@ -1,4 +1,4 @@
-dateModified: 1604058766
+dateModified: 1605596217
 email:
   fromEmail: zatonihon@gmail.com
   fromName: 'Fulcrum Premium Finance'
@@ -6,7 +6,7 @@ email:
 plugins:
   animate:
     edition: standard
-    enabled: true
+    enabled: false
     schemaVersion: 1.0.0
   bootstrap:
     edition: standard

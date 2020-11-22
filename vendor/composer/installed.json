@@ -386,19 +386,19 @@
     },
     {
         "name": "composer/xdebug-handler",
-        "version": "1.4.3",
-        "version_normalized": "1.4.3.0",
+        "version": "1.4.5",
+        "version_normalized": "1.4.5.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/ebd27a9866ae8254e873866f795491f02418c5a5",
-            "reference": "ebd27a9866ae8254e873866f795491f02418c5a5",
+            "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/f28d44c286812c714741478d968104c5e604a1d4",
+            "reference": "f28d44c286812c714741478d968104c5e604a1d4",
             "shasum": ""
         },
         "require": {
             "php": "^5.3.2 || ^7.0 || ^8.0",
             "psr/log": "^1.0"
         },
-        "time": "2020-08-19T10:27:58+00:00",
+        "time": "2020-11-13T08:04:11+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -423,18 +423,18 @@
     },
     {
         "name": "craftcms/cms",
-        "version": "3.5.14",
-        "version_normalized": "3.5.14.0",
+        "version": "3.5.15.1",
+        "version_normalized": "3.5.15.1",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/craftcms/cms/zipball/81a574b56f0f08e3847ad01f80242e78cdb18195",
-            "reference": "81a574b56f0f08e3847ad01f80242e78cdb18195",
+            "url": "https://api.github.com/repos/craftcms/cms/zipball/523a2d915ec328d832bd2cf62df695a1eafb3ab7",
+            "reference": "523a2d915ec328d832bd2cf62df695a1eafb3ab7",
             "shasum": ""
         },
         "require": {
             "composer/composer": "1.10.10",
             "craftcms/oauth2-craftid": "~1.0.0",
-            "craftcms/plugin-installer": "~1.5.3",
+            "craftcms/plugin-installer": "~1.5.6",
             "craftcms/server-check": "~1.1.0",
             "creocoder/yii2-nested-sets": "~0.9.0",
             "elvanto/litemoji": "^1.3.1",
@@ -456,11 +456,11 @@
             "mrclay/minify": "^3.0.7",
             "php": ">=7.0.0",
             "pixelandtonic/imagine": "~1.2.2.1",
-            "sebastian/diff": "^2.0 || ^3.0 || ^4.0",
+            "sebastian/diff": "^2.0|^3.0|^4.0",
             "seld/cli-prompt": "^1.0.3",
             "symfony/yaml": "^3.2|^4.0",
             "true/punycode": "^2.1.0",
-            "twig/twig": "~2.12.5 || ~2.13.1",
+            "twig/twig": "~2.12.5|~2.13.1|~2.14.0",
             "voku/portable-utf8": "^5.4.28",
             "voku/stringy": "^6.2.2",
             "webonyx/graphql-php": "^0.12.0",
@@ -484,7 +484,7 @@
             "ext-imagick": "Adds support for more image processing formats and options.",
             "ext-intl": "Adds rich internationalization support."
         },
-        "time": "2020-10-20T22:27:53+00:00",
+        "time": "2020-11-04T11:25:55+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -562,21 +562,19 @@
     },
     {
         "name": "craftcms/plugin-installer",
-        "version": "1.5.5",
-        "version_normalized": "1.5.5.0",
+        "version": "1.5.6",
+        "version_normalized": "1.5.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/42c23ded70ccadf7dea7eab28660d7808dd3022a",
-            "reference": "42c23ded70ccadf7dea7eab28660d7808dd3022a",
+            "url": "https://api.github.com/repos/craftcms/plugin-installer/zipball/4d24e227a086db3d8784a705f59060c49cf989ad",
+            "reference": "4d24e227a086db3d8784a705f59060c49cf989ad",
             "shasum": ""
         },
         "require": {
-            "composer-plugin-api": "^1.0 || ^2.0"
+            "composer-plugin-api": "^1.0 || ^2.0",
+            "php": ">=5.4"
         },
-        "require-dev": {
-            "composer/composer": "^1.0 || ^2.0"
-        },
-        "time": "2020-04-17T23:11:17+00:00",
+        "time": "2020-10-26T23:34:21+00:00",
         "type": "composer-plugin",
         "extra": {
             "class": "craft\\composer\\Plugin"
@@ -587,7 +585,6 @@
                 "craft\\composer\\": "src/"
             }
         },
-        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
@@ -892,12 +889,12 @@
     },
     {
         "name": "egulias/email-validator",
-        "version": "2.1.22",
-        "version_normalized": "2.1.22.0",
+        "version": "2.1.24",
+        "version_normalized": "2.1.24.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/68e418ec08fbfc6f58f6fd2eea70ca8efc8cc7d5",
-            "reference": "68e418ec08fbfc6f58f6fd2eea70ca8efc8cc7d5",
+            "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/ca90a3291eee1538cd48ff25163240695bd95448",
+            "reference": "ca90a3291eee1538cd48ff25163240695bd95448",
             "shasum": ""
         },
         "require": {
@@ -908,7 +905,7 @@
         "suggest": {
             "ext-intl": "PHP Internationalization Libraries are required to use the SpoofChecking validation"
         },
-        "time": "2020-09-26T15:48:38+00:00",
+        "time": "2020-11-14T15:56:27+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1659,27 +1656,20 @@
     },
     {
         "name": "league/oauth2-client",
-        "version": "2.5.0",
-        "version_normalized": "2.5.0.0",
+        "version": "2.6.0",
+        "version_normalized": "2.6.0.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/d9f2a1e000dc14eb3c02e15d15759385ec7ff0fb",
-            "reference": "d9f2a1e000dc14eb3c02e15d15759385ec7ff0fb",
+            "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/badb01e62383430706433191b82506b6df24ad98",
+            "reference": "badb01e62383430706433191b82506b6df24ad98",
             "shasum": ""
         },
         "require": {
             "guzzlehttp/guzzle": "^6.0 || ^7.0",
-            "paragonie/random_compat": "^1|^2|^9.99",
-            "php": "^5.6|^7.0"
+            "paragonie/random_compat": "^1 || ^2 || ^9.99",
+            "php": "^5.6 || ^7.0 || ^8.0"
         },
-        "require-dev": {
-            "eloquent/liberator": "^2.0",
-            "eloquent/phony-phpunit": "^1.0|^3.0",
-            "jakub-onderka/php-parallel-lint": "^0.9.2",
-            "phpunit/phpunit": "^5.7|^6.0",
-            "squizlabs/php_codesniffer": "^2.3|^3.0"
-        },
-        "time": "2020-07-18T17:54:32+00:00",
+        "time": "2020-10-28T02:03:40+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1692,7 +1682,6 @@
                 "League\\OAuth2\\Client\\": "src/"
             }
         },
-        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
@@ -2091,18 +2080,18 @@
     },
     {
         "name": "opis/closure",
-        "version": "3.6.0",
-        "version_normalized": "3.6.0.0",
+        "version": "3.6.1",
+        "version_normalized": "3.6.1.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/opis/closure/zipball/c547f8262a5fa9ff507bd06cc394067b83a75085",
-            "reference": "c547f8262a5fa9ff507bd06cc394067b83a75085",
+            "url": "https://api.github.com/repos/opis/closure/zipball/943b5d70cc5ae7483f6aff6ff43d7e34592ca0f5",
+            "reference": "943b5d70cc5ae7483f6aff6ff43d7e34592ca0f5",
             "shasum": ""
         },
         "require": {
             "php": "^5.4 || ^7.0 || ^8.0"
         },
-        "time": "2020-10-11T21:42:15+00:00",
+        "time": "2020-11-07T02:01:34+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2741,18 +2730,18 @@
     },
     {
         "name": "seld/jsonlint",
-        "version": "1.8.2",
-        "version_normalized": "1.8.2.0",
+        "version": "1.8.3",
+        "version_normalized": "1.8.3.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/590cfec960b77fd55e39b7d9246659e95dd6d337",
-            "reference": "590cfec960b77fd55e39b7d9246659e95dd6d337",
+            "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/9ad6ce79c342fbd44df10ea95511a1b24dee5b57",
+            "reference": "9ad6ce79c342fbd44df10ea95511a1b24dee5b57",
             "shasum": ""
         },
         "require": {
             "php": "^5.3 || ^7.0 || ^8.0"
         },
-        "time": "2020-08-25T06:56:57+00:00",
+        "time": "2020-11-11T09:19:24+00:00",
         "bin": [
             "bin/jsonlint"
         ],
@@ -4045,19 +4034,19 @@
     },
     {
         "name": "voku/anti-xss",
-        "version": "4.1.28",
-        "version_normalized": "4.1.28.0",
+        "version": "4.1.30",
+        "version_normalized": "4.1.30.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/voku/anti-xss/zipball/8919a19846d2b100e664d9e3cecfcaba4f57d9b4",
-            "reference": "8919a19846d2b100e664d9e3cecfcaba4f57d9b4",
+            "url": "https://api.github.com/repos/voku/anti-xss/zipball/ff6e54f4a98ad1cd28f8b4a0f3c3f92f3c421f0a",
+            "reference": "ff6e54f4a98ad1cd28f8b4a0f3c3f92f3c421f0a",
             "shasum": ""
         },
         "require": {
             "php": ">=7.0.0",
-            "voku/portable-utf8": "~5.4.27"
+            "voku/portable-utf8": "~5.4.50"
         },
-        "time": "2020-08-27T22:43:59+00:00",
+        "time": "2020-11-12T00:30:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -4095,21 +4084,21 @@
     },
     {
         "name": "voku/arrayy",
-        "version": "7.8.4",
-        "version_normalized": "7.8.4.0",
+        "version": "7.8.5",
+        "version_normalized": "7.8.5.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/voku/Arrayy/zipball/1cf7833bf5408f6f5731083364d04abb6a25d9e6",
-            "reference": "1cf7833bf5408f6f5731083364d04abb6a25d9e6",
+            "url": "https://api.github.com/repos/voku/Arrayy/zipball/eacd7fa54f8584ffe919a12d11093b0516081ecf",
+            "reference": "eacd7fa54f8584ffe919a12d11093b0516081ecf",
             "shasum": ""
         },
         "require": {
             "ext-json": "*",
             "php": ">=7.0.0",
-            "phpdocumentor/reflection-docblock": "~4.3|~5.0",
+            "phpdocumentor/reflection-docblock": "~4.3 || ~5.0",
             "symfony/polyfill-mbstring": "~1.0"
         },
-        "time": "2020-09-06T19:10:55+00:00",
+        "time": "2020-11-02T22:37:00+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -4195,24 +4184,21 @@
     },
     {
         "name": "voku/portable-ascii",
-        "version": "1.5.3",
-        "version_normalized": "1.5.3.0",
+        "version": "1.5.6",
+        "version_normalized": "1.5.6.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/voku/portable-ascii/zipball/25bcbf01678930251fd572891447d9e318a6e2b8",
-            "reference": "25bcbf01678930251fd572891447d9e318a6e2b8",
+            "url": "https://api.github.com/repos/voku/portable-ascii/zipball/80953678b19901e5165c56752d087fc11526017c",
+            "reference": "80953678b19901e5165c56752d087fc11526017c",
             "shasum": ""
         },
         "require": {
             "php": ">=7.0.0"
         },
-        "require-dev": {
-            "phpunit/phpunit": "~6.0 || ~7.0"
-        },
         "suggest": {
             "ext-intl": "Use Intl for transliterator_transliterate() support"
         },
-        "time": "2020-07-22T23:32:04+00:00",
+        "time": "2020-11-12T00:07:28+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -4220,7 +4206,6 @@
                 "voku\\": "src/voku/"
             }
         },
-        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "MIT"
         ],
@@ -4240,12 +4225,12 @@
     },
     {
         "name": "voku/portable-utf8",
-        "version": "5.4.47",
-        "version_normalized": "5.4.47.0",
+        "version": "5.4.50",
+        "version_normalized": "5.4.50.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/voku/portable-utf8/zipball/c92522515a2d5ec9b03fd3c9e231b8b277c65121",
-            "reference": "c92522515a2d5ec9b03fd3c9e231b8b277c65121",
+            "url": "https://api.github.com/repos/voku/portable-utf8/zipball/f14ed68ea9ced6639e71ca989c6d907892115ba0",
+            "reference": "f14ed68ea9ced6639e71ca989c6d907892115ba0",
             "shasum": ""
         },
         "require": {
@@ -4255,10 +4240,7 @@
             "symfony/polyfill-intl-normalizer": "~1.0",
             "symfony/polyfill-mbstring": "~1.0",
             "symfony/polyfill-php72": "~1.0",
-            "voku/portable-ascii": "~1.5"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~6.0 || ~7.0"
+            "voku/portable-ascii": "~1.5.6"
         },
         "suggest": {
             "ext-ctype": "Use Ctype for e.g. hexadecimal digit detection",
@@ -4268,7 +4250,7 @@
             "ext-json": "Use JSON for string detection",
             "ext-mbstring": "Use Mbstring for best performance"
         },
-        "time": "2020-07-26T11:17:51+00:00",
+        "time": "2020-11-12T00:17:47+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -4279,7 +4261,6 @@
                 "bootstrap.php"
             ]
         },
-        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "(Apache-2.0 or GPL-2.0)"
         ],
@@ -4759,12 +4740,12 @@
     },
     {
         "name": "yiisoft/yii2-debug",
-        "version": "2.1.13",
-        "version_normalized": "2.1.13.0",
+        "version": "2.1.15",
+        "version_normalized": "2.1.15.0",
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/696712a2a3565b1a072ad3c9d298e262967e8282",
-            "reference": "696712a2a3565b1a072ad3c9d298e262967e8282",
+            "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/317f85c1ac7a8c0b73eea345a49066b5570aa2c6",
+            "reference": "317f85c1ac7a8c0b73eea345a49066b5570aa2c6",
             "shasum": ""
         },
         "require": {
@@ -4773,16 +4754,21 @@
             "php": ">=5.4",
             "yiisoft/yii2": "~2.0.13"
         },
-        "require-dev": {
-            "phpunit/phpunit": "<7",
-            "yiisoft/yii2-coding-standards": "~2.0",
-            "yiisoft/yii2-swiftmailer": "*"
-        },
-        "time": "2020-01-17T13:40:32+00:00",
+        "time": "2020-11-13T10:09:11+00:00",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
                 "dev-master": "2.0.x-dev"
+            },
+            "composer-exit-on-patch-failure": true,
+            "patches": {
+                "phpunit/phpunit-mock-objects": {
+                    "Fix PHP 7 and 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_mock_objects.patch"
+                },
+                "phpunit/phpunit": {
+                    "Fix PHP 7 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php7.patch",
+                    "Fix PHP 8 compatibility": "https://yiisoft.github.io/phpunit-patches/phpunit_php8.patch"
+                }
             }
         },
         "installation-source": "dist",
@@ -4791,7 +4777,6 @@
                 "yii\\debug\\": "src"
             }
         },
-        "notification-url": "https://packagist.org/downloads/",
         "license": [
             "BSD-3-Clause"
         ],

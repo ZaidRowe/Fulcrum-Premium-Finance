@@ -71,7 +71,7 @@
                                      |_|                                                                         
 ================================================================================================*/    
 
-
+html {scroll-behavior: smooth;}
 
 @media (max-width: 1920px) {
 /* BODY DEFAULT STYLING [ START ]
@@ -97,10 +97,10 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 .section-white {background-color: #fff; padding: 100px 0px; width: 100%; margin: auto;}
 .section-grey {background-color: #F4F4F4; padding: 100px 0px; width: 100%; margin: auto;}
 .section-grad {background: linear-gradient(269.8deg, #007E8C 0.17%, #0C3A39 99.83%), #007E8C; padding: 100px 0px; width: 100%; margin: auto;}
-.section-contact-form {background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(Fulcrum_Nebula_Med); padding: 100px 0px; width: 100%; margin: auto;}
+.section-contact-form {background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(Fulcrum_JHB_background.png); padding: 100px 0px; width: 100%; margin: auto;}
 .row {margin: auto!important; width: 90%; max-width: 1200px;}
 .row-wide {margin: auto!important; width: 90%; max-width: 1440px;}
-.standard-btn {font-family: museo, roboto, Arial, sans-serif; font-weight: 700; font-size: 25px; line-height: 30px; text-align: center; letter-spacing: 0.00855263px; color: #007E8C; background-color: #DEDD00; width: 218px; height: 55px; padding: 15px 30px;}
+.standard-btn {font-family: museo, roboto, Arial, sans-serif; font-weight: 700; font-size: 25px; line-height: 30px; text-align: center; letter-spacing: 0.00855263px; color: #007E8C; background-color: #DEDD00; min-width: 218px; height: 55px; padding: 15px 30px;}
 .standard-btn:hover {color:  #DEDD00; background-color: #007E8C; font-style: none; transform: scale(1.2); box-shadow: 7px 7px 20px rgba(0, 0, 0, .50)}
 
 /* BASIC CONTENT STYLING [ END ]
@@ -179,6 +179,8 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 
   .hvr-scale:hover{-ms-transform: scale(1.2)!important; /* IE 9 */ -webkit-transform: scale(1.2)!important; /* Safari 3-8 */ transform: scale(1.2)!important; }
 
+  .hvr-scale-right:hover{-ms-transform: scale(1.2)!important; -ms-transform-origin: right center; transition: all .3s ease-in-out; /* IE 9 */ -webkit-transform: scale(1.2)!important; -webkit-transform-origin: right center; /* Safari 3-8 */ transform: scale(1.2)!important; transform-origin: right center; }
+
 /* OBJECT & BUTTON ANIMATIONS [ END ]
 ========================================================================== */
 
@@ -194,6 +196,7 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 .menu_sidenav {height: 100%; width: 0; position: fixed; z-index: 1; top: 0; right: 0; background-color: rgba(0, 121, 140, 0.90); overflow-x: hidden; transition: 0.5s; padding-top: 100px;}
 .menu_sidenav a {padding: 8px 25px 8px 32px; text-decoration: none; font-size: 24px; color: #fff; display: block; transition: 0.3s; text-align: right; font-weight: 300; font-family: museo;}
 .menu_sidenav a:hover {color: #DEDD00;}
+.menu-item:active {color: #DEDD00;}
 .burgermenu {position: absolute; padding-top: 25px; right: 0;}
 .menu_sidenav .closebtn {position: absolute; top: 0; right: 0; font-size: 34px; margin-left: 50px; color: #DEDD00; margin-bottom: 50px;}
   
@@ -214,7 +217,7 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 /* CONTACT-FORM (FOOTER) START
 ========================================================================== */
 
-.contact-us-footer {background-image: url(/web/assets/general/misc/Fulcrum_Nebula_background.png); background-blend-mode: multiply; background-color: rgba(0, 121, 140, 0.47); background-position: center; background-size: cover;}
+.contact-us-footer {background-image: url(/web/assets/general/misc/Fulcrum_JHB_background+greenoverlay_01.png); background-blend-mode: multiply; background-color: rgba(0, 121, 140, 0.47); background-position: center; background-size: cover;}
 .contact-us-footer-container {background-color: #ffffff; width: 360px; padding: 40px; text-align: center;}
 .contact-us-footer-heading {font-size: 20px; font-weight: 700; line-height: 1.2em; color: #007E8C}
 .contact-us-footer-input {height: 40px; text-align: center; border: none; background-color: #f2f2f2; color: #003744; width: 100%; margin-bottom: 10px; font-family: museo; font-weight: 700;font-size: 14px;}
@@ -241,6 +244,7 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 .footer-menu-list {list-style-type: none; padding-left: 0px; line-height: 2.8em; color: #fff; font-size: 16px; font-weight: 100; font-family: museo;}
 .footer-menu-item-link {color: #fff;}
 .footer-menu-item-link:hover {color: #DEDD00; text-decoration-style: none; text-underline-position: none;}
+.footer-menu-item-link:active {color: #DEDD00; text-decoration-style: none; text-underline-position: none;}
 .footer-subscribe-container {display: block}
 .footer-subscribe-input {font-family: museo; font-size: 15px; padding-left: 10px; color: #fff; margin-left: -30px; width: 100%;}
 .footer-subscribe-submit-btn {height: 50px; width: 50px; background-color: #DEDD00; color: #007E8C; border: none; font-size: 16px; border: 1px solid #DEDD00;}
@@ -273,20 +277,24 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
    ========================================================================== */
 
 /* HOMEPAGE HEADER - SECTION 1 */
-.homepage-header {background: linear-gradient(0deg, rgba(0, 0, 0, 0.1),  rgba(0, 0, 0, 0.1)), url(/web/assets/general/homepage/fulcrum-premium-finance-homepage-header-background.png); background-blend-mode: multiply; background-size: cover; background-repeat: no-repeat; height: 768px; background-position: center center; display:flex; justify-content: center;}
-.homepage-heading {font-weight: 700; font-size: 64px; line-height: 1em;}
-.homepage-header-text {font-weight: 300; font-size: 19px; max-width: 520px; line-height: 1.2em; margin: 30px 0px 50px 0px;}
+.homepage-header {position: relative; background-repeat: none; background-color: rgba(0, 126, 140, 0.2); background-blend-mode: multiply; height: 100vh; overflow: hidden; align-items: center; justify-content: center; display: flex; z-index: 999; }
+.homepage-heading {font-weight: 700; font-size: 64px; line-height: 1.1em; color: #fff!important; padding-top:30px}
+.homepage-header-text {font-weight: 300; font-size: 19px; max-width: 60%; line-height: 1.4em; margin: 30px 0px 50px 0px; color:  #DEDD00}
 .watch-video-button {font-family: museo, roboto, Arial, sans-serif; font-weight: 100; font-size: 25px; line-height: 30px; text-align: center; letter-spacing: 0.00855263px; color: #dedd00; background-color: #007E8C; width: 218px; height: 55px; padding: 15px 30px; margin-right:0px;}
 .watch-video-button:hover {color:  #007E8C ; background-color: #DEDD00; font-style: none;}
 
 
 /* ABOUT US (HOME-PAGE) - SECTION 2 */
-.about-us-fulcrum-logo {padding-left: 50px; position: absolute; z-index: 5;}
+#about-us-homepage { background-image: linear-gradient(90deg, transparent 50%,  #fff 50%), url(/web/assets/general/homepage/fulcrum-premium-finance-about-us-homepage-background-image.png); background-repeat: no-repeat; background-position-x: -20%; background-size: contain;}
+.about-us-homepage-container { padding-left: 100px;}
+.about-us-fulcrum-logo {margin-bottom: 50px; z-index: 999; width: 80%;}
+.about-us-title {font-weight: 700; line-height: 1.1em; font-size: 50px; margin-bottom: 40px; width: 100%;}
+.about-us-sub-text {font-weight: 100; font-size: 18; line-height: 1.4em; margin-bottom: 80px; width: 100%;}
 .about-us-graphic-container {margin: auto; text-align: center;}
 
 
 /* WHY CHOOSE US - SECTION 3 */
-.homepage-why-us {background-image: url(/web/assets/general/homepage/homepage-section-2-background_why-our-clients-choose-us.png); background-repeat: no-repeat; background-position: center center; background-size: cover;}
+.homepage-why-us {background-image: url(/web/assets/general/homepage/homepage-section-2-background_why-our-clients-choose-us.png); background-repeat: no-repeat; background-position: center center; background-size: cover; background-color: #fff}
 .why-our-clients-tagline {font-weight: 900; font-size: 16px; color: #003744; margin-bottom: 40px;}
 .why-our-clients-heading {font-weight: 700; font-size: 64px; line-height: 1em; color: #007E8C; margin: 40px 0px;}
 .why-our-clients-text {color: #3E4545; font-weight: 100; font-size: 18px; line-height: 1.4em; width: 85%;}
@@ -297,6 +305,7 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 
 
 /* BENEFITS - SECTION 4 */
+.homepage-benefits {background-color:#fff!important; z-index: 999}
 .hompage-benefits-heading {font-weight: 700; font-size: 64px; text-align: center; margin-bottom: 100px;}
 .homepage-benefit {width: 32.5%; padding: 0% 6%; text-align:center; float: left;}
 .homepage-benefit-icon {text-align: center; margin-bottom: 15px;}
@@ -305,25 +314,23 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 
 
 /* TESTIMONIAL SLIDER - SECTION 5 */
-.item {float: left;}
 .client-testimonial-heading {font-weight: 700; font-size: 40px; color: #DEDD00; margin-bottom: 30px;}
-.testimonials-container {width: 48%; min-height: 235px; background-color: #fff; display: inline-flex;}
-.testimonials-container-right {width: 48%; min-height: 235px; background-color: #fff; display: inline-flex; float: right;}
-.testimonial-image {display: flex; justify-content: center; align-items: center; overflow: hidden; width:900px;}
+.testimonials-container {width: 100%; min-height: 280px; margin:2%; background-color: #fff; display: inline-flex; box-shadow: 7px 7px 10px rgba(0, 0, 0, .50)}
+.testimonial-image {display: flex; justify-content: center; align-items: center; overflow: hidden; min-width: 300px;}
 .testimonial-image img{flex-shrink: 0; min-width: 100%; min-height: 100%;}
-.testimonial-content {padding: 25px 30px; display: block; background-color: #fff;}
-.client-name {font-size: 16px; font-weight: 300;}
-.client-testimonial {font-size: 18px; font-weight: 700; line-height: 1.4em; color: #003744; margin: 20px 0px;}
-.client-company {font-weight: 700; font-size: 16px;}
+.testimonial-content {padding: 50px 50px; display: block; background-color: #fff;}
+.client-name {font-size: 24px; font-weight: 700; color: #003744}
+.client-job-title {font-size: 18px; font-weight: 300; color: #3e4545}
+.client-testimonial {font-size: 24px; font-weight: 300; line-height: 1.4em; color:#3e4545; margin: 20px 0px;}
+.client-company {font-weight: 700; font-size: 18px;}
 .carousel-control.left {background-image: none;}
 .carousel-control.right {background-image: none;}
-.carousel-indicators {position: relative; text-align: left; left: 30px; bottom: -30px;}
-.carousel-indicators li {margin-left: 10px;}
-.carousel-indicators li:active {margin-left: 10px;}
+.carousel-indicators {margin-top: 50px;}
+.carousel-inner {padding: 5%;}
 
 
 /* OUR PREMIUM FINANCING SOLUTION - SECTION 6 */
-#our-premium-financing {background-image: url(/web/assets/general/homepage/fulcrum-premium-finance-our-solution-background-image.png); background-repeat: no-repeat; background-position-x: 50vw; background-size: contain;}
+#our-premium-financing {background-image: url(/web/assets/general/homepage/fulcrum-premium-finance-our-solution-background-image.png); background-color: #fff; background-repeat: no-repeat; background-position-x: 50vw; background-size: contain;}
 .our-premium-heading {font-weight: 700; line-height: 1em; font-size: 55px; margin-bottom: 40px; width: 80%;}
 .our-premium-text {font-weight: 100; font-size: 18; line-height: 1.2em; margin-bottom: 80px; width: 80%;}
 
@@ -332,9 +339,12 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 .bubble-graphic-homepage img{width: 52em; z-index: 9999999; margin-bottom: -23em; margin-top: -24em; margin-left: -28em;}
 
 
+/* REASONS - SECTION 7 */
+.reasons-btn-container { width:100%; text-align: center; padding-top: 100px;}
 
-/* HOW TO DECIDE - SECTION 7 */
-.how-to-decide-container {text-align: center; width: 75%; margin: 0px auto; margin-bottom: 50px;}
+
+/* HOW TO DECIDE - SECTION 8 */
+.how-to-decide-container {text-align: center; width: 75%; margin: 0px auto; margin-bottom: 50px; background-color: #fff}
 .how-to-decide-heading {font-weight: 700; font-size: 55px; margin-bottom: 40px; text-align: center; line-height: 1.2em;}
 .how-to-decide-text {font-weight: 100; font-size: 20px; margin-bottom: 65px; line-height: 1.2em;}
 
@@ -921,7 +931,7 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
    ========================================================================== */
 
 .contact-us-main-header {
-  background-image: linear-gradient(90deg,  rgba(0, 0, 0, .50) 60%, #fff 40%), url(/web/assets/general/misc/Fulcrum_Nebula_background+greenoverlay.png);
+  background-image: linear-gradient(90deg,  rgba(0, 0, 0, .50) 60%, #fff 40%), url(/web/assets/general/misc/Fulcrum_JHB_background+greenoverlay.png);
   background-repeat: no-repeat;
   background-size: cover;
   border: none;
@@ -1089,9 +1099,9 @@ padding-top: 150px;
    ========================================================================== */
    
 /* VIDEO BACKGROUND */
-#myVideo { object-fit: cover; position: fixed; Left:0; right: 0; bottom: 0; width: 100vw; height: 100vh; top:0; background-color: rgba(0, 121, 140, 1);}
-.broker_bg-video { background-image: url(/web/assets/landingpages/broker/Fulcrum-Premium-Finance_Landing-page_header-video_BROKER0.jpg); background-size: cover; background-repeat: no-repeat; z-index: -999; opacity: 0.8; mix-blend-mode: multiply;}
-.insured_bg-video { background-image: url(/web/assets/landingpages/insured/Fulcrum-Premium-Finance_Landing-page_header-video_INSURED0.jpg); background-size: cover; background-repeat: no-repeat; z-index: -999; opacity: 0.8; mix-blend-mode: multiply;}
+#myVideo { object-fit: cover; position: absolute; Left:0; right: 0; bottom: 0; width: 100vw; height: 100vh; top:0; background-color: rgba(0, 121, 140, 1);}
+.broker_bg-video { background-image: url(/web/assets/landingpages/broker/Fulcrum-Premium-Finance_Landing-page_header-video_BROKER0.jpg); background-size: cover; background-repeat: no-repeat; z-index: -999; mix-blend-mode: darken;}
+.insured_bg-video { background-image: url(/web/assets/landingpages/insured/Fulcrum-Premium-Finance_Landing-page_header-video_INSURED0.jpg); background-size: cover; background-repeat: no-repeat; z-index: -999; mix-blend-mode: darken;}
 
 
 /* FULCRUM HEADER LOGO */
@@ -1283,7 +1293,7 @@ margin-bottom: 30px;
   .section-white {background-color: #fff; padding: 100px 0px; width: 100%; margin: auto;}
   .section-grey {background-color: #F4F4F4; padding: 100px 0px; width: 100%; margin: auto;}
   .section-grad {background: linear-gradient(269.8deg, #007E8C 0.17%, #0C3A39 99.83%), #007E8C; padding: 100px 0px; width: 100%; margin: auto;}
-  .section-contact-form {background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(Fulcrum_Nebula_Med); padding: 100px 0px; width: 100%; margin: auto;}
+  .section-contact-form {background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(Fulcrum_JHB_background.png); padding: 100px 0px; width: 100%; margin: auto;}
   .row {margin: auto!important; width: 90%; max-width: 1200px;}
   .row-wide {margin: auto!important; width: 90%; max-width: 1440px;}
   .standard-btn {font-family: museo, roboto, Arial, sans-serif; font-weight: 700; font-size: 25px; line-height: 30px; text-align: center; letter-spacing: 0.00855263px; color: #007E8C; background-color: #DEDD00; width: 218px; height: 55px; padding: 15px 30px;}
@@ -1350,7 +1360,7 @@ p {font-family: museo, Roboto, Arial, sans-serif; font-size: 1.667em; color: #3E
 .section-white {background-color: #fff; padding: 100px 0px; width: 100%; margin: auto;}
 .section-grey {background-color: #F4F4F4; padding: 100px 0px; width: 100%; margin: auto;}
 .section-grad {background: linear-gradient(269.8deg, #007E8C 0.17%, #0C3A39 99.83%), #007E8C; padding: 100px 0px; width: 100%; margin: auto;}
-.section-contact-form {background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(Fulcrum_Nebula_Med); padding: 100px 0px; width: 100%; margin: auto;}
+.section-contact-form {background: linear-gradient(0deg, rgba(0, 126, 140, 0.47), rgba(0, 126, 140, 0.47)), url(Fulcrum_JHB_background.png); padding: 100px 0px; width: 100%; margin: auto;}
 .row {margin: auto!important; width: 90%; max-width: 1200px;}
 .row-wide {margin: auto!important; width: 90%; max-width: 1440px;}
 .standard-btn {font-family: museo, roboto, Arial, sans-serif; font-weight: 700; font-size: 25px; line-height: 30px; text-align: center; letter-spacing: 0.00855263px; color: #007E8C; background-color: #DEDD00; width: 218px; height: 55px; padding: 15px 30px;}
