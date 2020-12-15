@@ -1,0 +1,15 @@
+contentColumnType: datetime
+fieldGroup: 9b1c99fc-8ca5-4b7d-a6d7-4fa11f4af2ea
+handle: blogPostDate
+instructions: 'The published date of the blog post.'
+name: 'Blog Post Date'
+searchable: false
+settings:
+  max: null
+  min: null
+  minuteIncrement: '30'
+  showDate: true
+  showTime: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Date

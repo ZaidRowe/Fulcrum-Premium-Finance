@@ -1,5 +1,5 @@
 fieldLayouts:
-  ffc6596d-5e2b-4b25-9ad9-b44de341f1fb:
+  f391d926-00f0-4f10-b1e4-630f2547d812:
     tabs:
       -
         elements:
@@ -28,11 +28,11 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: blog
+handle: privacyPolicy
 hasTitleField: true
-name: Blog
-section: cf943c11-922e-442f-ac53-70bf7665aee4
+name: 'Privacy Policy'
+section: 45ab6e70-8fad-4b7e-9ff9-2a27da034f69
 sortOrder: 1
-titleFormat: null
+titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

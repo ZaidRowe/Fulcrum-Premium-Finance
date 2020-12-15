@@ -1,5 +1,5 @@
 fieldLayouts:
-  7f375399-6275-449f-bd69-2af1a2dc906d:
+  f439edb4-ae54-4108-be98-d53a6f7bfdda:
     tabs:
       -
         elements:
@@ -28,10 +28,10 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: blogsample
-hasTitleField: false
-name: Blogsample
-section: 5461d046-56fa-4869-ad60-ff484d3be840
+handle: blog
+hasTitleField: true
+name: Blog
+section: 6244a622-609d-475c-b467-2f6040b5927f
 sortOrder: 1
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null

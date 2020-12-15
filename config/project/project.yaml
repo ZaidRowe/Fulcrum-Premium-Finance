@@ -1,4 +1,4 @@
-dateModified: 1605596217
+dateModified: 1607388933
 email:
   fromEmail: zatonihon@gmail.com
   fromName: 'Fulcrum Premium Finance'
@@ -6,8 +6,312 @@ email:
 plugins:
   animate:
     edition: standard
-    enabled: false
+    enabled: true
     schemaVersion: 1.0.0
+    settings:
+      activateAnimate: '1'
+      animateOptions:
+        - fade
+        - fade-up
+        - fade-down
+        - fade-left
+        - fade-right
+        - fade-up-right
+        - fade-up-left
+        - fade-down-right
+        - fade-down-left
+        - flip-up
+        - flip-down
+        - flip-left
+        - flip-right
+        - slide-up
+        - slide-down
+        - slide-left
+        - slide-right
+        - zoom-in
+        - zoom-in-up
+        - zoom-in-down
+        - zoom-in-left
+        - zoom-in-right
+        - zoom-out
+        - zoom-out-up
+        - zoom-out-down
+        - zoom-out-left
+        - zoom-out-right
+      defaultSettings:
+        __assoc__:
+          -
+            - offset
+            - 120
+          -
+            - delay
+            - 0
+          -
+            - duration
+            - 400
+          -
+            - easing
+            - ease
+          -
+            - once
+            - false
+          -
+            - mirror
+            - false
+          -
+            - anchorPlacement
+            - top-bottom
+      delay: '0'
+      duration: '400'
+      easing:
+        __assoc__:
+          -
+            - match
+            - '0'
+      easingOpts:
+        - linear
+        - ease
+        - ease-in
+        - ease-out
+        - ease-in-out
+        - ease-in-back
+        - ease-out-back
+        - ease-in-out-back
+        - ease-in-sine
+        - ease-out-sine
+        - ease-in-out-sine
+        - ease-in-quad
+        - ease-out-quad
+        - ease-in-out-quad
+        - ease-in-cubic
+        - ease-out-cubic
+        - ease-in-quart
+        - ease-out-quart
+        - ease-in-out-quart
+      fades:
+        -
+          __assoc__:
+            -
+              - effect
+              - fade
+            -
+              - usage
+              - 'data-aos="fade"'
+        -
+          __assoc__:
+            -
+              - effect
+              - fade-up
+            -
+              - usage
+              - 'data-aos="fade-up"'
+        -
+          __assoc__:
+            -
+              - effect
+              - fade-down
+            -
+              - usage
+              - 'data-aos="fade-down"'
+        -
+          __assoc__:
+            -
+              - effect
+              - fade-left
+            -
+              - usage
+              - 'data-aos="fade-left"'
+        -
+          __assoc__:
+            -
+              - effect
+              - fade-right
+            -
+              - usage
+              - 'data-aos="fade-right"'
+        -
+          __assoc__:
+            -
+              - effect
+              - fade-up-right
+            -
+              - usage
+              - 'data-aos="fade-up-right"'
+        -
+          __assoc__:
+            -
+              - effect
+              - fade-up-left
+            -
+              - usage
+              - 'data-aos="fade-up-left"'
+        -
+          __assoc__:
+            -
+              - effect
+              - fade-down-right
+            -
+              - usage
+              - 'data-aos="fade-down-right"'
+        -
+          __assoc__:
+            -
+              - effect
+              - fade-down-left
+            -
+              - usage
+              - 'data-aos="fade-down-left"'
+      flips:
+        -
+          __assoc__:
+            -
+              - effect
+              - flip-up
+            -
+              - usage
+              - 'data-aos="flip-up"'
+        -
+          __assoc__:
+            -
+              - effect
+              - flip-down
+            -
+              - usage
+              - 'data-aos="flip-down"'
+        -
+          __assoc__:
+            -
+              - effect
+              - flip-left
+            -
+              - usage
+              - 'data-aos="flip-left"'
+        -
+          __assoc__:
+            -
+              - effect
+              - flip-right
+            -
+              - usage
+              - 'data-aos="flip-right"'
+      offset: '120'
+      slides:
+        -
+          __assoc__:
+            -
+              - effect
+              - slide-up
+            -
+              - usage
+              - 'data-aos="slide-up"'
+        -
+          __assoc__:
+            -
+              - effect
+              - slide-down
+            -
+              - usage
+              - 'data-aos="slide-down"'
+        -
+          __assoc__:
+            -
+              - effect
+              - slide-left
+            -
+              - usage
+              - 'data-aos="slide-left"'
+        -
+          __assoc__:
+            -
+              - effect
+              - slide-right
+            -
+              - usage
+              - 'data-aos="slide-right"'
+      useCDN: '1'
+      useDefaultSettings: '1'
+      useOnEveryElement: false
+      zooms:
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-in
+            -
+              - usage
+              - 'data-aos="zoom-in"'
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-in-up
+            -
+              - usage
+              - 'data-aos="zoom-in-up"'
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-in-down
+            -
+              - usage
+              - 'data-aos="zoom-in-down"'
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-in-left
+            -
+              - usage
+              - 'data-aos="zoom-in-left"'
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-in-right
+            -
+              - usage
+              - 'data-aos="zoom-in-right"'
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-out
+            -
+              - usage
+              - 'data-aos="zoom-out"'
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-out-up
+            -
+              - usage
+              - 'data-aos="zoom-out-up"'
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-out-down
+            -
+              - usage
+              - 'data-aos="zoom-out-down"'
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-out-left
+            -
+              - usage
+              - 'data-aos="zoom-out-left"'
+        -
+          __assoc__:
+            -
+              - effect
+              - zoom-out-right
+            -
+              - usage
+              - 'data-aos="zoom-out-right"'
   bootstrap:
     edition: standard
     enabled: true

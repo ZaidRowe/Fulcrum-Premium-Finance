@@ -1,4 +1,10 @@
 {% extends "_layout"%}
+{% set blogPostFeaturedImage = {
+  mode: 'crop',
+  width: 330,
+  height: 250,
+  quality: 100
+} %}
 {% block content %}
 {% include "_fulcrum-premium-finance/_includes/_nav" %}
 <!-- BLOG HEADER - SECTION 1 -->
@@ -29,181 +35,44 @@
 </div>
 
 <div class="blog-blocks section">
+    <div class="row">
+            
+        {% for entry in craft.entries.section('blogPosts').limit(9).all()%}
 
+            <div class="col-md-4">
+                <div class="blog-post-container">
+                    
+                    <div class="blog-entry-container">
 
-<div class="row">
+                        <!-- BLOG POST URL LINK -->
+                        <a href="{{ entry.url }}" class="blog-entry-link"></a>
 
-    <div class="col-md-4">
-        <div class="blog-post-container">
-                <div class="blog-entry-container">
-                    <a href="" class="blog-entry-link"></a>
-                    <div class="blog-featured-image">
-                        <img src="/web/assets/blog/Sample-post-images/Blog-post-sample-featured-image-1.png" alt="">
+                        <!-- BLOG POST FEATURED IMAGE -->
+                        <div class="blog-featured-image">
+                            {% if entry.blogPostFeaturedImage|length %}
+                                {% for image in entry.blogPostFeaturedImage.all() %}
+                                    <img src="{{ image.getUrl(blogPostFeaturedImage) }}" alt="{{ image.title }}" />
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+
                     </div>
-                </div>
-                <div class="blog-post-content-container">
-                    <a href="" ><h2 class="plog-post-title">Lorem ipsum dolor sit amet, consectetur adipiscing ut aliqua. </h2></a>
-                    <p class="plog-post-content">Lorem ipsum dolor sit amet et dolore magna aliqua.</p>
-                    <h3 class="plog-most-meta">13 OCT 2018</a>
+
+                    <!-- BLOG POST TITLE -->
+                    <div class="blog-post-content-container">
+                        <a href=" {{ entry.url }}  " ><h2 class="plog-post-title">{{ entry.blogPostTitle }}</h2></a>
+                        <p class="blog-post-content">{{ entry.blogPostExcerpt }}</p>
+                        <h3 class="blog-most-meta">{{ entry.blogPostDate|date("j M Y") }}</h3>
+                    </div>
+
                 </div>
             </div>
-        </div>
 
-    
-
-
-
-    <div class="col-md-4">
-        <div class="blog-post-container">
-                <div class="blog-entry-container">
-                    <a href="" class="blog-entry-link"></a>
-                    <div class="blog-featured-image">
-                        <img src="/web/assets/blog/Sample-post-images/Blog-post-sample-featured-image-2.png" alt="">
-                    </div>
-                </div>
-                <div class="blog-post-content-container">
-                    <a href="" ><h2 class="plog-post-title">Lorem ipsum dolor sit amet, consectetur adipiscing ut aliqua. </h2></a>
-                    <p class="plog-post-content">Lorem ipsum dolor sit amet et dolore magna aliqua.</p>
-                    <h3 class="plog-most-meta">13 OCT 2018</a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-    <div class="col-md-4">
-        <div class="blog-post-container">
-                <div class="blog-entry-container">
-                    <a href="" class="blog-entry-link"></a>
-                    <div class="blog-featured-image">
-                        <img src="/web/assets/blog/Sample-post-images/Blog-post-sample-featured-image-3.png" alt="">
-                    </div>
-                </div>
-                <div class="blog-post-content-container">
-                    <a href="" ><h2 class="plog-post-title">Lorem ipsum dolor sit amet, consectetur adipiscing ut aliqua. </h2></a>
-                    <p class="plog-post-content">Lorem ipsum dolor sit amet et dolore magna aliqua.</p>
-                    <h3 class="plog-most-meta">13 OCT 2018</a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-    <div class="col-md-4">
-        <div class="blog-post-container">
-                <div class="blog-entry-container">
-                    <a href="" class="blog-entry-link"></a>
-                    <div class="blog-featured-image">
-                        <img src="/web/assets/blog/Sample-post-images/Blog-post-sample-featured-image-4.png" alt="">
-                    </div>
-                </div>
-                <div class="blog-post-content-container">
-                    <a href="" ><h2 class="plog-post-title">Lorem ipsum dolor sit amet, consectetur adipiscing ut aliqua. </h2></a>
-                    <p class="plog-post-content">Lorem ipsum dolor sit amet et dolore magna aliqua.</p>
-                    <h3 class="plog-most-meta">13 OCT 2018</a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-    <div class="col-md-4">
-        <div class="blog-post-container">
-                <div class="blog-entry-container">
-                    <a href="" class="blog-entry-link"></a>
-                    <div class="blog-featured-image">
-                        <img src="/web/assets/blog/Sample-post-images/Blog-post-sample-featured-image-5.png" alt="">
-                    </div>
-                </div>
-                <div class="blog-post-content-container">
-                    <a href="" ><h2 class="plog-post-title">Lorem ipsum dolor sit amet, consectetur adipiscing ut aliqua. </h2></a>
-                    <p class="plog-post-content">Lorem ipsum dolor sit amet et dolore magna aliqua.</p>
-                    <h3 class="plog-most-meta">13 OCT 2018</a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-    <div class="col-md-4">
-        <div class="blog-post-container">
-                <div class="blog-entry-container">
-                    <a href="" class="blog-entry-link"></a>
-                    <div class="blog-featured-image">
-                        <img src="/web/assets/blog/Sample-post-images/Blog-post-sample-featured-image-6.png" alt="">
-                    </div>
-                </div>
-                <div class="blog-post-content-container">
-                    <a href="" ><h2 class="plog-post-title">Lorem ipsum dolor sit amet, consectetur adipiscing ut aliqua. </h2></a>
-                    <p class="plog-post-content">Lorem ipsum dolor sit amet et dolore magna aliqua.</p>
-                    <h3 class="plog-most-meta">13 OCT 2018</a>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-    <div class="col-md-4">
-        <div class="blog-post-container">
-                <div class="blog-entry-container">
-                    <a href="" class="blog-entry-link"></a>
-                    <div class="blog-featured-image">
-                        <img src="/web/assets/blog/Sample-post-images/Blog-post-sample-featured-image-7.png" alt="">
-                    </div>
-                </div>
-                <div class="blog-post-content-container">
-                    <a href="" ><h2 class="plog-post-title">Lorem ipsum dolor sit amet, consectetur adipiscing ut aliqua. </h2></a>
-                    <p class="plog-post-content">Lorem ipsum dolor sit amet et dolore magna aliqua.</p>
-                    <h3 class="plog-most-meta">13 OCT 2018</a>
-                </div>
-            </div>
-        </div>
-
-
-
-    <div class="col-md-4">
-        <div class="blog-post-container">
-                <div class="blog-entry-container">
-                    <a href="" class="blog-entry-link"></a>
-                    <div class="blog-featured-image">
-                        <img src="/web/assets/blog/Sample-post-images/Blog-post-sample-featured-image-8.png" alt="">
-                    </div>
-                </div>
-                <div class="blog-post-content-container">
-                    <a href="" ><h2 class="plog-post-title">Lorem ipsum dolor sit amet, consectetur adipiscing ut aliqua. </h2></a>
-                    <p class="plog-post-content">Lorem ipsum dolor sit amet et dolore magna aliqua.</p>
-                    <h3 class="plog-most-meta">13 OCT 2018</a>
-                </div>
-            </div>
-        </div>
-
-
-
-    <div class="col-md-4">
-        <div class="blog-post-container">
-                <div class="blog-entry-container">
-                    <a href="" class="blog-entry-link"></a>
-                    <div class="blog-featured-image">
-                        <img src="/web/assets/blog/Sample-post-images/Blog-post-sample-featured-image-9.png" alt="">
-                    </div>
-                </div>
-                <div class="blog-post-content-container">
-                    <a href="" ><h2 class="plog-post-title">Lorem ipsum dolor sit amet, consectetur adipiscing ut aliqua. </h2></a>
-                    <p class="plog-post-content">Lorem ipsum dolor sit amet et dolore magna aliqua.</p>
-                    <h3 class="plog-most-meta">13 OCT 2018</a>
-                </div>
-            </div>
-        </div>
-
+        {% endfor %}
+    </div>
 </div>
+
+
 
 {% include "_fulcrum-premium-finance/_includes/_contact-form" %}
 {% include "_fulcrum-premium-finance/_includes/_footer" %}

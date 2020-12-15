@@ -1,0 +1,18 @@
+contentColumnType: string(540)
+fieldGroup: a72d6e86-5032-4e75-92e8-45e8f585fc0f
+handle: brokerTestimonialQuote
+instructions: 'The clients testimonial.'
+name: 'Broker Testimonial Quote'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 135
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Testimonial Quote'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

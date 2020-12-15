@@ -1,11 +1,11 @@
 enableVersioning: true
-handle: blogEntry
-name: 'Blog Entry'
+handle: blogPosts
+name: 'Blog Posts'
 propagationMethod: all
 siteSettings:
   41905891-4bbc-4780-afc6-911415166f01:
     enabledByDefault: true
     hasUrls: true
     template: _fulcrum-premium-finance/_entry/_blog-entry
-    uriFormat: 'web/blog/{slug}'
+    uriFormat: '{slug}'
 type: channel

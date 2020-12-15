@@ -1,0 +1,40 @@
+field: 91b78a2b-0153-4c0e-9743-9bcc91fb2b01
+fieldLayouts:
+  f8c8e224-df57-47d0-b25c-e843d1a3762a:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 063eb50b-d034-4df8-af14-1769c94818b2
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+fields:
+  063eb50b-d034-4df8-af14-1769c94818b2:
+    contentColumnType: text
+    fieldGroup: null
+    handle: blogContentSubHeading
+    instructions: ''
+    name: 'Blog Content Sub Heading'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: ''
+      columnType: null
+      initialRows: '4'
+      multiline: ''
+      placeholder: ''
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: blogSubHeading
+name: 'Blog Sub Heading'
+sortOrder: 2

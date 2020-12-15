@@ -65,6 +65,23 @@ return array (
     'hasCpSettings' => false,
     'hasCpSection' => false,
   ),
+  'swdevelopment/animate' => 
+  array (
+    'class' => 'swdevelopment\\animate\\Animate',
+    'basePath' => $vendorDir . '/swdevelopment/animate/src',
+    'handle' => 'animate',
+    'aliases' => 
+    array (
+      '@swdevelopment/animate' => $vendorDir . '/swdevelopment/animate/src',
+    ),
+    'name' => 'Animate',
+    'version' => 'v1.0.8',
+    'description' => 'This will animate HTML elements using the AOS library.',
+    'developer' => 'Tim Strawbridge',
+    'developerUrl' => 'https://swdevteam.com',
+    'documentationUrl' => 'https://github.com/sw-development-services/animate-plugin/blob/master/README.md',
+    'changelogUrl' => 'https://github.com/sw-development-services/animate-plugin/master/CHANGELOG.md',
+  ),
   'craftcms/redactor' => 
   array (
     'class' => 'craft\\redactor\\Plugin',
@@ -75,7 +92,7 @@ return array (
       '@craft/redactor' => $vendorDir . '/craftcms/redactor/src',
     ),
     'name' => 'Redactor',
-    'version' => '2.8.3',
+    'version' => '2.8.4',
     'description' => 'Edit rich text content in Craft CMS using Redactor by Imperavi.',
     'developer' => 'Pixel & Tonic',
     'developerUrl' => 'https://pixelandtonic.com/',
@@ -92,7 +109,7 @@ return array (
       '@mattwest/craftrecaptcha' => $vendorDir . '/matt-west/craft-recaptcha/src',
     ),
     'name' => 'reCAPTCHA',
-    'version' => '1.5.0',
+    'version' => '1.5.1',
     'description' => 'Integrate Google’s reCAPTCHA into your forms.',
     'developer' => 'Matt West',
     'developerUrl' => 'https://mattwest.io',
@@ -104,22 +121,5 @@ return array (
     array (
       'craftRecaptchaService' => 'mattwest\\craftrecaptcha\\services\\CraftRecaptchaService',
     ),
-  ),
-  'swdevelopment/animate' => 
-  array (
-    'class' => 'swdevelopment\\animate\\Animate',
-    'basePath' => $vendorDir . '/swdevelopment/animate/src',
-    'handle' => 'animate',
-    'aliases' => 
-    array (
-      '@swdevelopment/animate' => $vendorDir . '/swdevelopment/animate/src',
-    ),
-    'name' => 'Animate',
-    'version' => 'v1.0.6',
-    'description' => 'This will animate HTML elements using the AOS library.',
-    'developer' => 'Tim Strawbridge',
-    'developerUrl' => 'https://swdevteam.com',
-    'documentationUrl' => 'https://github.com/sw-development-services/animate-plugin/blob/master/README.md',
-    'changelogUrl' => 'https://github.com/sw-development-services/animate-plugin/master/CHANGELOG.md',
   ),
 );

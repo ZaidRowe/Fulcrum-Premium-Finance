@@ -41,3 +41,11 @@ function openForm() {
   }
 
 
+/*  HOME PAGE VIDEO OVERLAY */
+function openVideo() {
+  document.getElementById("watchVideo").style.height = "100%";
+}
+
+function closeVideo() {
+  document.getElementById("watchVideo").style.height = "0%";
+}

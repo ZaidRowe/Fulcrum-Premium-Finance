@@ -1,8 +1,8 @@
 contentColumnType: integer(10)
 fieldGroup: 1ed2b35c-7eee-4016-bd2a-4eb363ede170
-handle: TeeamMemberContactNumber
+handle: teamMemberContactNumber
 instructions: 'Team member''s contact number'
-name: 'Contact number'
+name: 'Team Member Contact Number'
 searchable: false
 settings:
   decimals: 0

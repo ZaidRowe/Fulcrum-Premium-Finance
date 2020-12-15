@@ -1,11 +1,11 @@
 enableVersioning: true
-handle: blogsample
-name: Blogsample
+handle: privacyPolicy
+name: 'Privacy Policy'
 propagationMethod: all
 siteSettings:
   41905891-4bbc-4780-afc6-911415166f01:
     enabledByDefault: true
     hasUrls: true
-    template: _fulcrum-premium-finance/_entry/_blog-entry
-    uriFormat: web/blogsample
+    template: _fulcrum-premium-finance/_singles/_privacy-policy1
+    uriFormat: web/privacy-policy
 type: single

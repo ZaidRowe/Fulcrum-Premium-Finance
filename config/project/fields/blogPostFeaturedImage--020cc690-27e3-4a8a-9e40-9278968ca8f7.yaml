@@ -1,0 +1,32 @@
+contentColumnType: string
+fieldGroup: 9b1c99fc-8ca5-4b7d-a6d7-4fa11f4af2ea
+handle: blogPostFeaturedImage
+instructions: 'Upload the blog post featured image the size 1920x1080 at 72dpi. PNG or JPG is best to use.'
+name: 'Blog Post Featured Image'
+searchable: false
+settings:
+  allowSelfRelations: true
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:e3ae8ead-03ef-4d93-9df2-ad4501b795c5'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: 'Add a featured image'
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: true
+  singleUploadLocationSource: 'volume:e3ae8ead-03ef-4d93-9df2-ad4501b795c5'
+  singleUploadLocationSubpath: web/assets/blog/featured_images/
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: true
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

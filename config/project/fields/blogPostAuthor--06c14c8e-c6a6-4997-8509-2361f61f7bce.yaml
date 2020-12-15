@@ -1,0 +1,20 @@
+contentColumnType: string
+fieldGroup: 9b1c99fc-8ca5-4b7d-a6d7-4fa11f4af2ea
+handle: blogPostAuthor
+instructions: 'The author of this blog post'
+name: 'Blog Post Author'
+searchable: true
+settings:
+  allowSelfRelations: true
+  limit: ''
+  localizeRelations: false
+  selectionLabel: 'Add a author'
+  showSiteMenu: false
+  source: null
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: true
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Users

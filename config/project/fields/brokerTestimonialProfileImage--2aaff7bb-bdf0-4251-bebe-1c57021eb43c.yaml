@@ -1,0 +1,32 @@
+contentColumnType: string
+fieldGroup: a72d6e86-5032-4e75-92e8-45e8f585fc0f
+handle: brokerTestimonialProfileImage
+instructions: 'Add a profile image for the client who quoted the testimonial'
+name: 'Broker Testimonial Profile Image'
+searchable: true
+settings:
+  allowSelfRelations: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  defaultUploadLocationSource: 'volume:e3ae8ead-03ef-4d93-9df2-ad4501b795c5'
+  defaultUploadLocationSubpath: ''
+  limit: '1'
+  localizeRelations: false
+  previewMode: full
+  restrictFiles: '1'
+  selectionLabel: 'Add a Profile Image'
+  showSiteMenu: true
+  showUnpermittedFiles: true
+  showUnpermittedVolumes: true
+  singleUploadLocationSource: 'volume:0e505b49-9713-49cb-a446-74ceb44798eb'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources: '*'
+  targetSiteId: null
+  useSingleFolder: true
+  validateRelatedElements: true
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

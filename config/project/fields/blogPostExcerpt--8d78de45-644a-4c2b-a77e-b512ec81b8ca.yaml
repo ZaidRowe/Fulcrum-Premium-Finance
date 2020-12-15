@@ -1,0 +1,18 @@
+contentColumnType: string(500)
+fieldGroup: 9b1c99fc-8ca5-4b7d-a6d7-4fa11f4af2ea
+handle: blogPostExcerpt
+instructions: 'A small extract from the blog post describing the blog post title.'
+name: 'Blog Post Excerpt'
+searchable: true
+settings:
+  byteLimit: null
+  charLimit: 125
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

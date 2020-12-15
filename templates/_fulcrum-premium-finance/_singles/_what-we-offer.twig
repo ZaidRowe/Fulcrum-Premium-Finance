@@ -29,76 +29,43 @@
         <div class="why-choose-us">
             <h2 class="why-choose-us-heading">Reasons why our clients choose us</h2>
         </div>
+
     </div>
 
+{% include "_fulcrum-premium-finance/_includes/_reasons-why" %}
     <!-- WHY CHOOSE US - carousel -->
-    <div class="row">
-        <div class="Why-choose-us-container">
-            <div class="number-row">
-
-                <!-- NUMBER ROW -->
-                <div class="number-column">
-                    <img class="demo cursor" src="" style="100%" onclick="currentSlide(1)" alt="">
-                </div>
-
-                <div class="number-column">
-                    <img class="demo cursor" src="" style="100%" onclick="currentSlide(1)" alt="">
-                </div>
-
-                <div class="number-column">
-                    <img class="demo cursor" src="" style="100%" onclick="currentSlide(1)" alt="">
-                </div>
-
-                <div class="number-column">
-                    <img class="demo cursor" src="" style="100%" onclick="currentSlide(1)" alt="">
-                </div>
-
-                <div class="number-column">
-                    <img class="demo cursor" src="" style="100%" onclick="currentSlide(1)" alt="">
-                </div>
-                
-                <!-- SLIDES -->
-                <div class="mySlides">
-  <div class="row">
-    <div class="team-member-container">
-        <div class="profile-image-container col-md-6">
-            <div class="profile-image">
-                <img src="/web/assets/general/about-us/team-members/team-member-3.png">
-            </div>
+ <div class="container">
+    <div class="row-1">
+        <div class="col-md-12">
+            <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+                <ol class="carousel-indicators list-inline">
+                    <li class="list-inline-item active"> <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#custCarousel"> <p class="number-icon">1</span> First</p> </a></li>
+                    <li class="list-inline-item"> <a id="carousel-selector-1" data-slide-to="1" data-target="#custCarousel"> <img src="https://i.imgur.com/Rpxx6wU.jpg" class="img-fluid"> </a> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-2" data-slide-to="2" data-target="#custCarousel"> <img src="https://i.imgur.com/83fandJ.jpg" class="img-fluid"> </a> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-3" data-slide-to="3" data-target="#custCarousel"> <img src="https://i.imgur.com/JiQ9Ppv.jpg" class="img-fluid"> </a> </li>
+                    <li class="list-inline-item"> <a id="carousel-selector-4" data-slide-to="4" data-target="#custCarousel"> <img src="https://i.imgur.com/83fandJ.jpg" class="img-fluid"> </a> </li>
+                </ol>
+                <!-- slides -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <div data-aos="zoom-in" data-aos-once="true" data-aos-duration="2000" class="col-md-6">
+            <h2 data-aos="zoom-in" data-aos-once="true" data-aos-delay="1000" data-aos-duration="2000" class="our-premium-heading">Our Premium Financing solution</h2>
+            <p data-aos="zoom-in" data-aos-once="true" data-aos-delay="2000" data-aos-duration="2000" class="our-premium-text">Our simple, established and independently funded financing solution is provided at sustainable rates that still beat the bank and undercut the premiums charged by insurers themselves. </p>
+            <a data-aos="zoom-in" data-aos-once="true" data-aos-delay="3000" data-aos-duration="2000" href="" class="our-premium-btn standard-btn">Learn more</a>
         </div>
 
-        <div class="about-me-container col-md-6">
-            <div class="about-me">
-                <h2 class="team-member-quote">Fulcrum provides seamless, rapid Premium Finance solutions while taking care of collections</h2>
-                <h3 class="team-member-name">Delarey van Dyk</h3>
-                <p class="team-member-position">Managing Director</p>
-                <img class="team-logo" src="/web/assets/general/misc/Fulcrum_Premium_Finance-White_logo.svg"/>
-            </div>
-        </div>    
-    </div>
-  </div>              
-</div>
+        
+        <div class="profile-image"><img src="/web/assets/general/about-us/team-members/team-member-1.png" alt="Delarey_van_Dyk"></div>
+                    
+                    </div>
+                    <div class="carousel-item"> <img src="https://i.imgur.com/Rpxx6wU.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="https://i.imgur.com/83fandJ.jpg" alt="Hills"> </div>
+                    <div class="carousel-item"> <img src="https://i.imgur.com/JiQ9Ppv.jpg" alt="Hills"> </div>
+                </div> <!-- Left right --> <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> <span class="carousel-control-prev-icon"></span> </a> <a class="carousel-control-next" href="#custCarousel" data-slide="next"> <span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
 
-                <div class="mySlides">
-                    <img src="img_woods_wide.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <img src="img_woods_wide.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <img src="img_woods_wide.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <img src="img_woods_wide.jpg" style="width:100%">
-                </div>
-                
             </div>
         </div>
     </div>
-
 </div>
 
 
@@ -156,9 +123,6 @@
 </div>
 
 
-<!-- BUBBLE GRAPHIC-->
-    <div class="bubble-graphic-wwo-one" src="/web/assets/general/misc/Fulcrum-gradient_circles-04.png" ></div>
-
 <!-- ABOUT FULCRUM - Section 4 -->
 <div id="about-fulcrum" class="section">
     <div class="row">
@@ -190,9 +154,6 @@
 </div>
 
 
-
-<!-- BUBBLE GRAPHIC-->
-    <div class="bubble-graphic-wwo-two"><img src="/web/assets/general/misc/Fulcrum-gradient_circles-01.png" ></div>
 
 
 
@@ -233,7 +194,6 @@
     </div>
 </div>
 
-<div class="bubble-graphic"><img src="/web/assets/general/misc/Fulcrum-gradient_circles-02.png" ></div>
 
 <!-- CASE STUDIES - Section 7 -->
 <div id="client-profiles" class="section-grad">

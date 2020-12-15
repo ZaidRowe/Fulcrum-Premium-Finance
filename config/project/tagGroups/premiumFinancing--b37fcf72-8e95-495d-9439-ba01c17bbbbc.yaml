@@ -1,0 +1,18 @@
+fieldLayouts:
+  fe9ec976-9f64-4383-b2ce-c8cf56b837bd:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 47830613-1746-49ad-b21f-fd827ef5c857
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: Content
+        sortOrder: 1
+handle: premiumFinancing
+name: 'Premium Financing'

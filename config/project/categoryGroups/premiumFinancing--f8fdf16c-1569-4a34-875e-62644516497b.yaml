@@ -1,5 +1,5 @@
 fieldLayouts:
-  ffa07242-fd91-4cd3-b64e-e53fe54314fc:
+  73066c03-9242-431b-b8aa-101583bd3c62:
     tabs:
       -
         elements:
@@ -23,16 +23,18 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\EntryTitleField
+            type: craft\fieldlayoutelements\TitleField
             warning: null
             width: 100
         name: Content
         sortOrder: 1
-handle: blog
-hasTitleField: false
-name: Blog
-section: bcf20270-d1c1-46be-a6b3-51bc75b1ca42
-sortOrder: 1
-titleFormat: '{section.name|raw}'
-titleTranslationKeyFormat: null
-titleTranslationMethod: site
+handle: premiumFinancing
+name: 'Premium Financing'
+siteSettings:
+  41905891-4bbc-4780-afc6-911415166f01:
+    hasUrls: true
+    template: null
+    uriFormat: 'premium-financing/{slug}'
+structure:
+  maxLevels: null
+  uid: 4c53fc2c-9851-43f8-88ed-1c1a9fdda3cd

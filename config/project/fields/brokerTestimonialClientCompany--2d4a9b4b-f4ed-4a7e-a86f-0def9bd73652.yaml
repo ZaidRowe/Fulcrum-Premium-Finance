@@ -1,8 +1,8 @@
 contentColumnType: text
-fieldGroup: 1ed2b35c-7eee-4016-bd2a-4eb363ede170
-handle: valueTestimonial
-instructions: 'The set value for this team member.'
-name: 'Their Value'
+fieldGroup: a72d6e86-5032-4e75-92e8-45e8f585fc0f
+handle: brokerTestimonialClientCompany
+instructions: 'The company the client works for.'
+name: 'Broker Testimonial Client Company'
 searchable: false
 settings:
   byteLimit: null
@@ -11,7 +11,7 @@ settings:
   columnType: null
   initialRows: '4'
   multiline: ''
-  placeholder: ''
+  placeholder: 'Client Company'
   uiMode: normal
 translationKeyFormat: null
 translationMethod: none

@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: brokerTestimonials
+name: 'Broker Testimonials'
+propagationMethod: all
+siteSettings:
+  41905891-4bbc-4780-afc6-911415166f01:
+    enabledByDefault: true
+    hasUrls: true
+    template: _fulcrum-premium-finance/_includes/_testimonials
+    uriFormat: 'testimonials/{slug}'
+type: channel
